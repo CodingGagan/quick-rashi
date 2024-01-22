@@ -4,8 +4,8 @@
      <div class="row">
          <div class="col-12">
              <nav class="navbar navbar-expand-xl nav-shadow" id="#navbar">
-                 <a class="navbar-brand" href="index.html"><img src="{{ asset('assets/images/company/logo.png') }}" class="logo"
-                         alt="logo"></a>
+                 <a class="navbar-brand" href="index.html"><img src="{{ asset('assets/images/company/logo.png') }}"
+                         class="logo" alt="logo"></a>
                  <a class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                      aria-controls="offcanvasRight">
                      <i class="bi bi-list"></i>
@@ -30,12 +30,12 @@
 
                              </li>
                              <li class="nav-item">
-                                 <a class="nav-link" href="contact.html">Contact us</a>
+                                 <a class="nav-link" href="{{ route('contact') }}">Contact us</a>
                              </li>
                          </ul>
                          <div class="nav-right d-none d-xl-block">
                              <div class="nav-right__search">
-                                 
+
                                  <a href="sign-in.html" class="btn_theme btn_theme_active">Sign In <i
                                          class="bi bi-arrow-up-right"></i><span></span></a>
                              </div>
@@ -101,7 +101,7 @@
                              </ul>
                          </li>
                          <li class="menu_item">
-                             <a class="menu_link" href="contact.html">contact us</a>
+                             <a class="menu_link" href="{{ route('contact') }}">contact us</a>
                          </li>
                          <li class="menu_item">
                              <a class="menu_link" href="sign-in.html">sign in</a>

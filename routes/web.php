@@ -29,6 +29,9 @@ Route::get('education',  function () {
 Route::get('personal',  function () {
     return view('pages/personal');
 })->name('personal');
+Route::get('contact',  function () {
+    return view('pages/contact');
+})->name('contact');
 
 
 Route::get('loan-form', function () {
