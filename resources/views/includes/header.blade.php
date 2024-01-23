@@ -36,7 +36,7 @@
                          <div class="nav-right d-none d-xl-block">
                              <div class="nav-right__search">
 
-                                 <a href="sign-in.html" class="btn_theme btn_theme_active">Sign In <i
+                                 <a href="{{ route('signin') }}" class="btn_theme btn_theme_active">Sign In <i
                                          class="bi bi-arrow-up-right"></i><span></span></a>
                              </div>
                              <div class="nav-right__search-inner">

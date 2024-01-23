@@ -32,8 +32,25 @@ Route::get('personal',  function () {
 Route::get('contact',  function () {
     return view('pages/contact');
 })->name('contact');
+Route::get('signin',  function () {
+    return view('pages/signin');
+})->name('signin');
+Route::get('signup',  function () {
+    return view('pages/signup');
+})->name('signup');
 
 
 Route::get('loan-form', function () {
     return view('loan.form');
 })->name('loan_form');
+
+
+
+/* Admin */
+Route::get('loan_apply', function () {
+    return view('pages.loan_application');
+})->name('loan_apply');
+
+Route::get('user_listing', function () {
+    return view('admin.userlisting');
+})->name('user_listing');
