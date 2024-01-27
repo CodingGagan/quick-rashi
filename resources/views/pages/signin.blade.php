@@ -42,11 +42,28 @@
                                     placeholder="Enter Your Email..." required>
                             </div>
                         </div>
-                        <p class="have_account mt-3">Do you have an account? <a href="{{ route('signup') }}" class="signin">Signup</a>
-                        </p>
+                        <div class="otp_verify_section d-none">
+                            <div class="input-single">
+                                <label class="label" for="email">Enter OTP</label>
+                                <input type="text" class="form-control" name="otp" id="otp"
+                                    placeholder="Enter Your OTP" required>
+                                <button type="button" class="btn_theme mt_32" name="submit" id="otp_verify">Verify OTP<i
+                                        class="bi bi-arrow-up-right"></i><span></span></button>
+                                <p class=" _rn_form_reverse-time">
+                                    Resend OTP in <reverseTime>00:00</reverseTime>
+                                    <a href="#!" class="js--resend_otp text-muted" title="Resend OTP">
+                                        Resend OTP
+                                    </a>
+
+                                </p>
+                            </div>
+                        </div>
                         <span id="msg"></span>
-                        <button type="submit" class="btn_theme mt_32" name="submit" id="submit">Sign In<i
+                        <button type="button" class="btn_theme mt_32" name="submit" id="signin_button">Sign In<i
                                 class="bi bi-arrow-up-right"></i><span></span></button>
+                        <p class="have_account mt-3">Do you have an account? <a href="{{ route('signup') }}"
+                                class="signin">Signup</a>
+                        </p>
                     </form>
                 </div>
                 <div class="col-12 col-sm-7 col-lg-5 col-xxl-5">

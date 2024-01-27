@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,10 +49,30 @@ Route::get('loan-form', function () {
 
 
 /* Admin */
-Route::get('loan_apply', function () {
-    return view('pages.loan_application');
-})->name('loan_apply');
+// Route::get('loan_apply', function () {
+//     return view('pages.loan_application');
+// })->name('loan_apply');
 
 Route::get('user_listing', function () {
     return view('admin.userlisting');
 })->name('user_listing');
+
+/* Contact */
+Route::post('submit_contact', [UserController::class, 'submit_contact'])->name('submit_contact');
+Route::post('submit_register', [AuthController::class, 'submit_register'])->name('submit_register');
+
+/* OTP Verification and send */
+Route::post('/emailOtpVerification', [AuthController::class, "emailOtpVerification"]);
+Route::post('generateOtp', [AuthController::class, 'sendOtpMail'])->name('otp');
+
+/* User Side */
+Route::get('user/dashboard/{id?}', [UserController::class, 'dashboard'])->name('user_dashboard');
+Route::post('product/image/upload', [UserController::class, 'uploadImage'])->name('user_product_image_upload');
+Route::get('/user/loans/history', [UserController::class, 'user_loan_list'])->name('user_loan_list');
+
+
+/* Fetch JS API => Fetch City By State ID */
+Route::get('fetchCitiesByStateId/{id}', [UserController::class, 'fetchCitiesByStateId'])->name('fetchCitiesByStateId');
+Route::post('save_form_first', [UserController::class, 'save_form_first'])->name('save_form_first');
+Route::post('save_form_second', [UserController::class, 'save_form_second'])->name('save_form_second');
+Route::post('save_form_third', [UserController::class, 'save_form_third'])->name('save_form_third');

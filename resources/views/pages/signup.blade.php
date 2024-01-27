@@ -33,17 +33,18 @@
         <div class="container">
             <div class="row gy-5 gy-xl-0 justify-content-center justify-content-lg-between align-items-center">
                 <div class="col-12 col-lg-7 col-xxl-6">
-                    <form method="POST" autocomplete="off" id="frmContactus"
+                    <form method="POST" autocomplete="off" id="signUpForm" action="{{ route('submit_register') }}"
                         class="sign-up__form me-lg-4 me-xxl-0 wow fadeInUp" data-wow-duration="0.8s">
+                        @csrf
                         <h3 class="sign-up__title wow fadeInUp" data-wow-duration="0.8s">Let’s Get Started!</h3>
                         <p class="sign-up__sub-title mb_40">Please enter your email address to join us</p>
                         <div class="sign-up__form-part">
                             <div class="input-single">
                                 <label class="label" for="email">Salutation</label>
-                                <select class="form-control cus-sel-active ">
-                                    <option data-display="new">Salutation</option>
-                                    <option value="1">Mr.</option>
-                                    <option value="2">Mrs.</option>
+                                <select class="form-control cus-sel-active" name="salu" id="salu" required>
+                                    <option data-display="new" disabled selected>Salutation</option>
+                                    <option value="Mr.">Mr.</option>
+                                    <option value="Mrs.">Mrs.</option>
                                 </select>
                             </div>
                             <div class="input-group">

@@ -30,8 +30,9 @@
         <div class="container">
             <div class="row gy-5 gy-xl-0 justify-content-center justify-content-lg-between">
                 <div class="col-12 col-lg-12 col-xxl-12">
-                    <form method="POST" autocomplete="off" id="frmContactus" class="sign-up__form wow fadeInDown"
+                    <form method="POST" autocomplete="off" action="{{ route('submit_contact') }}" id="formContactus" class="sign-up__form wow fadeInDown"
                         data-wow-duration="0.8s">
+                        @csrf
                         <h3 class="contact__title wow fadeInDown" data-wow-duration="0.8s">Get in touch with us.</h3>
                         <div class="sign-up__form-part">
                             <div class="input-group">

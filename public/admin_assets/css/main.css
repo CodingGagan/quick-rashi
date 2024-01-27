@@ -183,7 +183,7 @@
     padding: 8px 15px 8px 15px;
     border: 1px solid #ccc;
     border-radius: 0px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     margin-top: 2px;
     width: 100%;
     box-sizing: border-box;
@@ -334,9 +334,16 @@
 
 
 
+.view_img {
+  height: 100px;
+  object-fit: cover;
+  width: 100px;
+}
 
-
-
+.view_pdf {
+  height: 40px;
+  width: 40px;
+}
 
 
 

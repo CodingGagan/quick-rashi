@@ -1816,9 +1816,10 @@ a.conditions_apply::after {
 label.error {
   color: red;
   font-size: 14px;
-  position: absolute;
+  /* position: absolute; */
   left: 0;
-  top: 100%;
+  margin-bottom: 10px;
+  /* top: 100%; */
 }
 
 .message-error.error {

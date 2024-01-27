@@ -1,0 +1,43 @@
+#current_address {
+    background-color: rgb(224, 224, 224);
+    padding: 0 10px 10px 10px;
+
+}
+
+#current_address .head {
+    background-color: rgb(24, 209, 255);
+    padding: 10px;
+}
+
+#permanent_address {
+    background-color: rgb(224, 224, 224);
+    padding: 0 10px 10px 10px;
+    margin-top: 4%;
+}
+
+#permanent_address .head {
+    background-color: rgb(24, 209, 255);
+    padding: 10px;
+}
+
+
+/* DataTable */
+.btn-soft-secondary {
+    --vz-btn-color: #3577f1;
+    --vz-btn-bg: rgba(53, 119, 241, 0.1);
+    --vz-btn-border-color: transparent;
+    --vz-btn-hover-color: #fff;
+    --vz-btn-hover-bg: #306bd9;
+    --vz-btn-hover-border-color: transparent;
+    --vz-btn-focus-shadow-rgb: 53, 119, 241;
+    --vz-btn-active-color: var(--vz-btn-hover-color);
+    --vz-btn-active-bg: #2a5fc1;
+    --vz-btn-active-border-color: transparent;
+}
+
+.btn {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/* DataTable */

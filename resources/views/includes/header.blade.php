@@ -4,7 +4,7 @@
      <div class="row">
          <div class="col-12">
              <nav class="navbar navbar-expand-xl nav-shadow" id="#navbar">
-                 <a class="navbar-brand" href="index.html"><img src="{{ asset('assets/images/company/logo.png') }}"
+                 <a class="navbar-brand" href="{{ route('/') }}"><img src="{{ asset('assets/images/company/logo.png') }}"
                          class="logo" alt="logo"></a>
                  <a class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                      aria-controls="offcanvasRight">
@@ -34,11 +34,19 @@
                              </li>
                          </ul>
                          <div class="nav-right d-none d-xl-block">
-                             <div class="nav-right__search">
+                             @if (!Auth::check())
+                                 <div class="nav-right__search">
 
-                                 <a href="{{ route('signin') }}" class="btn_theme btn_theme_active">Sign In <i
-                                         class="bi bi-arrow-up-right"></i><span></span></a>
-                             </div>
+                                     <a href="{{ route('signin') }}" class="btn_theme btn_theme_active">Sign In <i
+                                             class="bi bi-arrow-up-right"></i><span></span></a>
+                                 </div>
+                               @else
+                                 <div class="nav-right__search">
+
+                                     <a href="{{ route('user_dashboard') }}" class="btn_theme btn_theme_active">Dashboard <i
+                                             class="bi bi-arrow-up-right"></i><span></span></a>
+                                 </div>
+                             @endif
                              <div class="nav-right__search-inner">
                                  <div class="nav-search-inner__form">
                                      <form method="POST" id="search" class="inner__form">
