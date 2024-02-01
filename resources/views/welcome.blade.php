@@ -255,11 +255,12 @@
                                     <i class="bi bi-star-fill star-active"></i>
                                     <i class="bi bi-star-half star-active"></i>
                                 </div>
-                                <p class="text-start testomonial_text">I had approved a loan from incred finance with the
-                                    help of simran mam, when I contacted mam I don't know anything about it, mam had clearly
-                                    explained about the process and all the things. The whole process was completed in 3
-                                    working days. Thank u mam for taking the responsibilities of me in loan sanction
-                                    process. Thank u mam for your support. </p>
+                                <p class="text-start testomonial_text">
+                                    I had approved a loan from incred finance with the help of simran mam, when I contacted mam I don't know anything about it, mam had clearly explained about the process and all the things.
+                                    <span class="more-text"> The whole process was completed in 3 working days. Thank u mam for taking the responsibilities of me in loan sanction process. Thank u mam for your support.</span>
+                                    <button class="read-more-button" onclick="toggleReadMore(this)">Read More</button>
+                                </p>
+                            
                             </div>
                             <div class="testimonials__author">
                                 <div class="author__thumg">
@@ -379,7 +380,7 @@
     </section>
     <!-- Client Testimonials end -->
 
-    <section class="feature feature_top">
+    <section class="feature pt-5">
         <div class="animation">
             <img src="assets/images/hero_vector_dollar.png" alt="Image">
             <img src="assets/images/hero_vector_message.png" alt="Image">
@@ -737,5 +738,13 @@
             </div>
         </div>
     </section>
+
+    <script>
+function toggleReadMore(button) {
+    const paragraph = button.previousElementSibling;
+    paragraph.classList.toggle('expanded');
+    button.innerHTML = paragraph.classList.contains('expanded') ? 'Read Less' : 'Read More';
+}
+        </script>
     <!-- faq end -->
 @endsection

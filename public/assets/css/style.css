@@ -3822,6 +3822,7 @@ label.error {
   background-position: bottom 36px right 36px;
   background-color: #fff;
   align-items: start;
+  height: 290px;
 }
 .testimonials .card--custom::after {
   left: 10px;
@@ -5514,3 +5515,24 @@ label.error {
   .feature_top {
     padding-top: 60px;
   }
+
+
+
+  .text-start.testomonial_text {
+    overflow: hidden;
+    position: relative;
+    max-height: 85px; /* Two lines of text */
+    margin-bottom: 10px; /* Adjust as needed */
+    transition: max-height 0.5s ease; /* Smooth transition effect */
+}
+
+.text-start.testomonial_text.expanded {
+    max-height: none; /* Allow full expansion */
+}
+
+.read-more-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: blue; /* Customize the color as needed */
+}
