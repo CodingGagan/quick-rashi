@@ -5477,3 +5477,40 @@ label.error {
 /* ==== 
   --------- (6.0) responsive styles end ---------
   ==== *//*# sourceMappingURL=style.css.map */
+
+
+  .btn_name {
+    overflow: hidden;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    text-transform: capitalize;
+    border: 1px solid #fff !important;
+    background-color: transparent !important;
+    font-size: 16px;
+    border-radius: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #fff;
+  }
+
+  .para_p {
+    line-height: 35px;
+  }
+
+  .sub_heading {
+    font-size: 20px;
+    color:#626262;
+  }
+
+
+  .testomonial_text { 
+    width: 250px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+
+  .feature_top {
+    padding-top: 60px;
+  }

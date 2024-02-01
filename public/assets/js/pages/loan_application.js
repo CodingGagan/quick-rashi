@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
 
-            if (moveNext) {
+            if (true) {
                 current_fs = this.parentElement;
                 next_fs = this.parentElement.nextElementSibling;
 

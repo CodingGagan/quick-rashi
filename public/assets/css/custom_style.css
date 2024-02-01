@@ -1,7 +1,12 @@
 #current_address {
     background-color: rgb(224, 224, 224);
-    padding: 0 10px 10px 10px;
+    padding: 10px 15px 10px 15px;
 
+}
+
+.currnt_add {
+    background-color: rgb(224, 224, 224);
+    padding: 10px 15px 10px 15px;  
 }
 
 #current_address .head {

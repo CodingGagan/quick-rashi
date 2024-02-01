@@ -180,18 +180,18 @@
     display: none;
   }
   .steps_tab #msform input, .steps_tab #msform textarea {
-    padding: 8px 15px 8px 15px;
-    border: 1px solid #ccc;
-    border-radius: 0px;
+    /* padding: 9px 15px 9px 23px;
+    border: 1px solid #c0baba;
+    border-radius: 19px;
     margin-bottom: 15px;
     margin-top: 2px;
     width: 100%;
     box-sizing: border-box;
     font-family: montserrat;
     color: #2C3E50;
-    background-color: #ECEFF1;
+    background-color: #FFF;
     font-size: 16px;
-    letter-spacing: 1px;
+    letter-spacing: 1px; */
   }
   .steps_tab #msform input:focus, .steps_tab #msform textarea:focus {
     -moz-box-shadow: none !important;
@@ -346,17 +346,199 @@
 }
 
 
+/* checkbox design */
+
+.custom_width {
+  max-width: 250px;
+  width: 100%;
+}
+
+/* The container */
+.cont_checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.cont_checkbox .cont_checkbox_input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* //inputbox dssifn */
+
+.loan_input {
+  padding: 9px 15px 9px 23px;
+  border: 1px solid #c0baba;
+  border-radius: 19px;
+  margin-bottom: 15px;
+  margin-top: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  /* font-family: montserrat; */
+  color: #2C3E50;
+  background-color: #FFF;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
 
 
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 23px;
+  width: 23px;
+  background-color: #eee;
+  border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.cont_checkbox:hover .cont_checkbox_input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.cont_checkbox .cont_checkbox_input:checked ~ .checkmark {
+  background-color: #03211b;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.cont_checkbox .cont_checkbox_input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.cont_checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.permanent_add {
+  padding: 10px 15px 10px 15px !important;
+}
 
 
+/* //image upload */
+
+.fileBtnupload {
+  position: relative;
+}
+
+.fileBtnupload::file-selector-button {
+  width: 136px;
+  color: transparent;
+}
+
+/* Faked label styles and icon */
+.fileBtnupload::before {
+  position: absolute;
+  pointer-events: none;
+  top: 10px;
+  left: 16px;
+  height: 20px;
+  width: 20px;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230964B0'%3E%3Cpath d='M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM7 9l1.41 1.41L11 7.83V16h2V7.83l2.59 2.58L17 9l-5-5-5 5z'/%3E%3C/svg%3E");
+}
+
+.fileBtnupload::after {
+  position: absolute;
+  pointer-events: none;
+  top: 11px;
+  left: 40px;
+  color: #0964b0;
+  content: "Upload File";
+}
+
+/* ------- From Step 1 ------- */
+
+/* file upload button */
+.fileBtnupload::file-selector-button {
+  border-radius: 4px;
+  padding: 0 16px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  transition: background-color 200ms;
+}
+
+/* file upload button hover state */
+.fileBtnupload::file-selector-button:hover {
+  background-color: #f3f4f6;
+}
+
+/* file upload button active state */
+.fileBtnupload::file-selector-button:active {
+  background-color: #e5e7eb;
+}
+
+.custom_select {
+  border: 1px solid #c0baba;
+  background-color: #fff;
+}
+
+/* 
+.fileBtnupload {
+  position: absolute;
+  z-index: -1;
+  top: 10px;
+  left: 8px;
+  font-size: 17px;
+  color: #b8b8b8;
+}
+.button-wrap {
+  position: relative;
+}
+.imagebtn {
+  display: inline-block;
+  padding: 12px 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #8ebf42;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+} */
 
 
-
-
-
-
-
+.user_main {
+  margin-left: 0px !important;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  transition: all 0.5s;
+}
 
 
 

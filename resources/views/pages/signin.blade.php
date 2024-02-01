@@ -42,7 +42,7 @@
                                     placeholder="Enter Your Email..." required>
                             </div>
                         </div>
-                        <div class="otp_verify_section d-none">
+                        <div class="otp_verify_section mt-3 d-none">
                             <div class="input-single">
                                 <label class="label" for="email">Enter OTP</label>
                                 <input type="text" class="form-control" name="otp" id="otp"

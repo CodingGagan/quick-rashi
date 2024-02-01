@@ -32,6 +32,8 @@
     <!-- main css -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/custom_style.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/icons/fontawesome.min.css') }}"> --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 
@@ -69,7 +71,7 @@
     <!-- plugins js -->
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
 
-    {{-- <script src="{{ asset('assets/js/plugins.js') }}"></script> --}}
+    <script src="{{ asset('assets/js/plugins.js') }}"></script>
     <!-- main js -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="{{ asset('assets/vendor/slick/js/slick.min.js') }}"></script>

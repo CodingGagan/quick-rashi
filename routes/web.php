@@ -22,7 +22,10 @@ Route::get('/', function () {
 Route::get('about', function () {
     return view('pages/about');
 })->name('about');
-Route::get('business', function () {
+Route::get('/* The `business` route is defining a GET route that returns the `business` view. This
+means that when a user visits the `/business` URL, the `business` view will be rendered
+and displayed to the user. */
+business', function () {
     return view('pages/business');
 })->name('business');
 Route::get('education',  function () {

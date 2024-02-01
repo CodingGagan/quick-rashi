@@ -11,7 +11,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb wow fadeInRight" data-wow-duration="0.8s">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item">pages</li>
+                                {{-- <li class="breadcrumb-item">pages</li> --}}
                                 <li class="breadcrumb-item active" aria-current="page">about us</li>
                             </ol>
                         </nav>

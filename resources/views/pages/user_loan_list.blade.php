@@ -17,9 +17,9 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6">
-                <div class="banner__thumb text-end">
+                {{-- <div class="banner__thumb text-end">
                     <img src="assets/images/about_banner.png" alt="image">
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

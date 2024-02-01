@@ -4,8 +4,8 @@
      <div class="row">
          <div class="col-12">
              <nav class="navbar navbar-expand-xl nav-shadow" id="#navbar">
-                 <a class="navbar-brand" href="{{ route('/') }}"><img src="{{ asset('assets/images/company/logo.png') }}"
-                         class="logo" alt="logo"></a>
+                 <a class="navbar-brand" href="{{ route('/') }}"><img
+                         src="{{ asset('assets/images/company/logo.png') }}" class="logo" alt="logo"></a>
                  <a class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                      aria-controls="offcanvasRight">
                      <i class="bi bi-list"></i>
@@ -13,26 +13,41 @@
 
                  <div class="collapse navbar-collapse ms-auto " id="navbar-content">
                      <div class="main-menu">
-                         <ul class="navbar-nav mb-lg-0 mx-auto">
-                             <li class="nav-item dropdown">
-                                 <a class="nav-link" href="{{ route('/') }}" role="button"> Home </a>
+                         @if (!Auth::check())
+                             <ul class="navbar-nav mb-lg-0 mx-auto">
+                                 <li class="nav-item dropdown">
+                                     <a class="nav-link" href="{{ route('/') }}" role="button"> Home </a>
 
-                             </li>
-                             <li class="nav-item dropdown">
-                                 <a class="nav-link" href="{{ route('about') }}" role="button"> About </a>
+                                 </li>
+                                 <li class="nav-item dropdown">
+                                     <a class="nav-link" href="{{ route('about') }}" role="button"> About </a>
 
-                             </li>
-                             <li class="nav-item">
-                                 <a class="nav-link" href="loan-comparison.html">Services</a>
-                             </li>
-                             <li class="nav-item dropdown">
-                                 <a class="nav-link" href="#" role="button"> Testimonials </a>
+                                 </li>
+                       
+                                     <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Services </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="{{ route('personal') }}">Personal Loan</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('business') }}">Business Loan</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('education') }}">Abroad Education Loan</a></li>
+                                        </ul>
+                                    </li>
+                            
+                                 <li class="nav-item dropdown">
+                                     <a class="nav-link" href="#" role="button"> Testimonials </a>
 
-                             </li>
-                             <li class="nav-item">
-                                 <a class="nav-link" href="{{ route('contact') }}">Contact us</a>
-                             </li>
-                         </ul>
+                                 </li>
+                                 <li class="nav-item">
+                                     <a class="nav-link" href="{{ route('contact') }}">Contact us</a>
+                                 </li>
+                             </ul>
+                             @else
+                               <ul class="navbar-nav mb-lg-0 mx-auto">
+                                <li>
+                                  <button class="btn_theme btn_name"> {{ Auth::user()->firstname }} </button>
+                                </li>
+                             </ul>  
+                         @endif
                          <div class="nav-right d-none d-xl-block">
                              @if (!Auth::check())
                                  <div class="nav-right__search">
@@ -40,10 +55,16 @@
                                      <a href="{{ route('signin') }}" class="btn_theme btn_theme_active">Sign In <i
                                              class="bi bi-arrow-up-right"></i><span></span></a>
                                  </div>
-                               @else
+                             @else
                                  <div class="nav-right__search">
+                                    {{-- <button class="btn_theme_name"> {{ Auth::user()->firstname }} </button> --}}
+                           
 
-                                     <a href="{{ route('user_dashboard') }}" class="btn_theme btn_theme_active">Dashboard <i
+                                     <a href="{{ route('user_dashboard') }}"
+                                         class="btn_theme btn_theme_active">Dashboard <i
+                                             class="bi bi-arrow-up-right"></i><span></span></a>
+                                     <a href="{{ route('user_dashboard') }}"
+                                         class="btn_theme btn_theme_active">Logout <i
                                              class="bi bi-arrow-up-right"></i><span></span></a>
                                  </div>
                              @endif
