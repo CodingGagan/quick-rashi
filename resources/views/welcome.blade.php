@@ -23,7 +23,7 @@
                         <div class="btn-group mt_40 wow fadeInUp" data-wow-duration="0.8s">
                             {{-- <a href="#calculator" class="btn_theme btn_theme_active">Loan Calculator<i
                                     class="bi bi-arrow-up-right"></i><span></span></a> --}}
-                            <a href="about.html" class="btn_theme">About us<i
+                            <a href="{{ route('about') }}" class="btn_theme">About us<i
                                     class="bi bi-arrow-up-right"></i><span></span></a>
                         </div>
                     </div>

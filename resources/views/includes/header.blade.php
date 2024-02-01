@@ -33,10 +33,10 @@
                                         </ul>
                                     </li>
                             
-                                 <li class="nav-item dropdown">
+                                 {{-- <li class="nav-item dropdown">
                                      <a class="nav-link" href="#" role="button"> Testimonials </a>
 
-                                 </li>
+                                 </li> --}}
                                  <li class="nav-item">
                                      <a class="nav-link" href="{{ route('contact') }}">Contact us</a>
                                  </li>
