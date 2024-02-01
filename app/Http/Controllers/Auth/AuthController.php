@@ -85,7 +85,7 @@ class AuthController extends Controller
 
             Auth::loginUsingId($idd);
 
-            return redirect()->route('user_dashboard');
+            return redirect()->route('user_loan_list');
         }
     }
 

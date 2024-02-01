@@ -1,10 +1,59 @@
 @extends('layout.default')
 
 @section('content')
+    @php
+        $testimonials = [
+            [
+                'image' => 'assets/Testimonial/Vikasraj.webp',
+                'content' => "I had approved a loan from incred finance with the help of simran mam, when I
+                                            contacted mam I don't know
+                                            anything about it, mam had clearly explained about the process and all the
+                                            things.The whole process was completed in 3 working days.
+                                            Thank u mam for taking the
+                                            responsibilities of me in loan sanction process. Thank u mam for your
+                                            support.
+                                        ",
+                'name' => 'Lavudiya Vikas raj chowhan',
+                'from' => 'University of new heaven - Hyderabad',
+            ],
+            [
+                'image' => 'assets/Testimonial/JagadeeshRavilla.webp',
+                'content' => "I started my education loan process in the month of
+            January. After trying out multiple banks, none of them were able to give me a loan
+            because of the income of my family. Some banks directly refused to sanction my loan.
+            Before this I never thought that taking an education loan can ever be such a big
+            problem. But I am thankful to QuickkLoans.com and team for getting my loan sanction in
+            multiple banks.I am extremely grateful to QuickkLoans.com for keeping the whole
+            education loan process transparent and with fewer constraints on documentation. All my
+            queries and doubts were handled very well by the customer support in quickloans.com.
+            They are very respective to the customers.They will explain each and every point if you
+            have doubts regarding about loan process.With in 3 days they will complete the loan
+            process and they will provide the sention letter. That's very helpful for the
+            students.Again thanks, to quickloans.com for making life easier for all the aspiring
+            students. You guys are doing some really great work in this space !!. ",
+                'name' => 'Jagadeesh Ravilla',
+                'from' => 'University of central Missouri - Chittoor',
+            ],
+            [
+                'image' => 'assets/Testimonial/MuralidharanVasudevan.webp',
+                'content' => "I got my loan sanctioned in auxilo with the help of
+            QuickkLoans and with the guidance of simran ma'am. I got my sanction details and
+            documents within a week after submitting the documents.",
+                'name' => 'Muralidharan Vasudevan',
+                'from' => 'Admitted to University of Wisconsin Madison - Chennai',
+            ],
+            [
+                'image' => 'assets/Testimonial/GayathriKeenala.webp',
+                'content' => "QuickkLoans team has been a pathway in achieving my goals to pursue my masters. The team has undoubtedly, unconditionally has helped me in each and every aspect right from clearing even the smallest hint of doubt. The service offered by quickloans.com has helped in making the process of applying for loan smoothly. I owe a lot to simran who has been a key role in helping me. She has helped me in giving constant motivation at times when I gave up and even promised me to get the best ever deal and negotiation for me. What I like about quickloans.com is the diligence it carries forward in helping students achieve their goal. The constant follow up keeps us moving and progress instead of procrastinating. Special thanks to quickloans.com for taking my work very much easier and simple. I dont see any negative feedback to be given. I am in touch with the team regularly and I didn't find any difficulty from their end. I hope this feedback helps u in a better way to carry on and create a legacy.",
+                'name' => 'Gayathri Keenala',
+                'from' => 'University of New haven - Chirala',
+            ],
+        ];
+    @endphp
     <!--  Preloader  -->
     <!-- <div class="preloader">
-                        <span class="loader"></span>
-                    </div> -->
+                                                <span class="loader"></span>
+                                            </div> -->
 
     <!-- Hero Section Start -->
     <section class="hero hero--secondary">
@@ -40,34 +89,34 @@
 
     <!-- sponsor start -->
     <!-- <div class="section sponsor-slider wow fadeInDown" data-wow-duration="0.8s">
-                        <div class="container">
-                            <div class="row">
-                                <div class="sponsor__company" id="sponsor__company">
-                                    <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                        <img src="assets/images/sponsor_logo.png" alt="Image">
-                                    </div>
-                                    <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                        <img src="assets/images/sponsor_logo2.png" alt="Image">
-                                    </div>
-                                    <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                        <img src="assets/images/sponsor_logo3.png" alt="Image">
-                                    </div>
-                                    <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                        <img src="assets/images/sponsor_logo4.png" alt="Image">
-                                    </div>
-                                    <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                        <img src="assets/images/sponsor_logo2.png" alt="Image">
-                                    </div>
-                                    <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                        <img src="assets/images/sponsor_logo4.png" alt="Image">
-                                    </div>
-                                    <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                        <img src="assets/images/sponsor_logo3.png" alt="Image">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="sponsor__company" id="sponsor__company">
+                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                <img src="assets/images/sponsor_logo.png" alt="Image">
+                                                            </div>
+                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                <img src="assets/images/sponsor_logo2.png" alt="Image">
+                                                            </div>
+                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                <img src="assets/images/sponsor_logo3.png" alt="Image">
+                                                            </div>
+                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                <img src="assets/images/sponsor_logo4.png" alt="Image">
+                                                            </div>
+                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                <img src="assets/images/sponsor_logo2.png" alt="Image">
+                                                            </div>
+                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                <img src="assets/images/sponsor_logo4.png" alt="Image">
+                                                            </div>
+                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                <img src="assets/images/sponsor_logo3.png" alt="Image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
     <!-- sponsor end -->
 
     <!-- why-choose start -->
@@ -246,122 +295,36 @@
             <div class="row">
                 <div class="col-12">
                     <div class="testimonials-secondary_slider wow fadeInDown" data-wow-duration="0.8s">
-                        <div class="card card--custom">
-                            <div class="testimonials__author-review">
-                                <div class="star_review mb-3">
-                                    <i class="bi bi-star-fill star-active"></i>
-                                    <i class="bi bi-star-fill star-active"></i>
-                                    <i class="bi bi-star-fill star-active"></i>
-                                    <i class="bi bi-star-fill star-active"></i>
-                                    <i class="bi bi-star-half star-active"></i>
+                        @if ($testimonials)
+                            @foreach ($testimonials as $testi)
+                                <div class="card card--custom">
+                                    <div class="testimonials__author-review">
+                                        <div class="star_review mb-3">
+                                            <i class="bi bi-star-fill star-active"></i>
+                                            <i class="bi bi-star-fill star-active"></i>
+                                            <i class="bi bi-star-fill star-active"></i>
+                                            <i class="bi bi-star-fill star-active"></i>
+                                            <i class="bi bi-star-half star-active"></i>
+                                        </div>
+                                        <p class="text-start testomonial_text">
+                                            <?php echo $testi['content'] ? (strlen($testi['content']) > 30 ? substr($testi['content'], 0, 90) . ' <button class="read-more-button">read more</button>' : $testi_content) : ""; ?>
+                                        </p>
+
+                                    </div>
+                                    <div class="testimonials__author">
+                                        <div class="author__thumg">
+                                            <img src="{{ asset($testi['image']) }}" alt="">
+                                        </div>
+                                        <div class="author__content">
+                                            <h5 class="author__title">{{$testi['name']}}
+                                            </h5>
+                                            <p class="author__desi">{{$testi['from']}}
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="text-start testomonial_text">
-                                    I had approved a loan from incred finance with the help of simran mam, when I contacted mam I don't know anything about it, mam had clearly explained about the process and all the things.
-                                    <span class="more-text"> The whole process was completed in 3 working days. Thank u mam for taking the responsibilities of me in loan sanction process. Thank u mam for your support.</span>
-                                    <button class="read-more-button" onclick="toggleReadMore(this)">Read More</button>
-                                </p>
-                            
-                            </div>
-                            <div class="testimonials__author">
-                                <div class="author__thumg">
-                                    <img src="assets/Testimonial/Vikasraj.webp" alt="">
-                                </div>
-                                <div class="author__content">
-                                    <h5 class="author__title">Lavudiya Vikas raj chowhan
-                                    </h5>
-                                    <p class="author__desi">University of new heaven - Hyderabad
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card card--custom">
-                            <div class="testimonials__author-review">
-                                <div class="star_review mb-3">
-                                    <i class="bi bi-star-fill star-active"></i>
-                                    <i class="bi bi-star-fill star-active"></i>
-                                    <i class="bi bi-star-fill star-active"></i>
-                                    <i class="bi bi-star-fill star-active"></i>
-                                    <i class="bi bi-star-half star-active"></i>
-                                </div>
-                                <p class="text-start testomonial_text">I started my education loan process in the month of
-                                    January. After trying out multiple banks, none of them were able to give me a loan
-                                    because of the income of my family. Some banks directly refused to sanction my loan.
-                                    Before this I never thought that taking an education loan can ever be such a big
-                                    problem. But I am thankful to QuickkLoans.com and team for getting my loan sanction in
-                                    multiple banks.I am extremely grateful to QuickkLoans.com for keeping the whole
-                                    education loan process transparent and with fewer constraints on documentation. All my
-                                    queries and doubts were handled very well by the customer support in quickloans.com.
-                                    They are very respective to the customers.They will explain each and every point if you
-                                    have doubts regarding about loan process.With in 3 days they will complete the loan
-                                    process and they will provide the sention letter. That's very helpful for the
-                                    students.Again thanks, to quickloans.com for making life easier for all the aspiring
-                                    students. You guys are doing some really great work in this space !!. </p>
-                            </div>
-                            <div class="testimonials__author">
-                                <div class="author__thumg">
-                                    <img src="assets/Testimonial/JagadeeshRavilla.webp" alt="">
-                                </div>
-                                <div class="author__content">
-                                    <h5 class="author__title">Jagadeesh Ravilla</h5>
-                                    <p class="author__desi">University of central Missouri - Chittoor</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card card--custom">
-                            <div class="testimonials__author-review">
-                                <div class="star_review mb-3">
-                                    <i class="bi bi-star-fill star-active"></i>
-                                    <i class="bi bi-star-fill star-active"></i>
-                                    <i class="bi bi-star-fill star-active"></i>
-                                    <i class="bi bi-star-fill star-active"></i>
-                                    <i class="bi bi-star-half star-active"></i>
-                                </div>
-                                <p class="text-start testomonial_text">I got my loan sanctioned in auxilo with the help of
-                                    QuickkLoans and with the guidance of simran ma'am. I got my sanction details and
-                                    documents within a week after submitting the documents. </p>
-                            </div>
-                            <div class="testimonials__author">
-                                <div class="author__thumg">
-                                    <img src="assets/Testimonial/MuralidharanVasudevan.webp" alt="">
-                                </div>
-                                <div class="author__content">
-                                    <h5 class="author__title">Muralidharan Vasudevan</h5>
-                                    <p class="author__desi">Admitted to University of Wisconsin Madison - Chennai</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card card--custom">
-                            <div class="testimonials__author-review">
-                                <div class="star_review mb-3">
-                                    <i class="bi bi-star-fill star-active"></i>
-                                    <i class="bi bi-star-fill star-active"></i>
-                                    <i class="bi bi-star-fill star-active"></i>
-                                    <i class="bi bi-star-fill star-active"></i>
-                                    <i class="bi bi-star-half star-active"></i>
-                                </div>
-                                <p class="text-start testomonial_text">QuickkLoans team has been a pathway in achieving my
-                                    goals to pursue my masters. The team has undoubtedly, unconditionally has helped me in
-                                    each and every aspect right from clearing even the smallest hint of doubt. The service
-                                    offered by quickloans.com has helped in making the process of applying for loan
-                                    smoothly. I owe a lot to simran who has been a key role in helping me. She has helped me
-                                    in giving constant motivation at times when I gave up and even promised me to get the
-                                    best ever deal and negotiation for me. What I like about quickloans.com is the diligence
-                                    it carries forward in helping students achieve their goal. The constant follow up keeps
-                                    us moving and progress instead of procrastinating. Special thanks to quickloans.com for
-                                    taking my work very much easier and simple. I dont see any negative feedback to be
-                                    given. I am in touch with the team regularly and I didn't find any difficulty from their
-                                    end. I hope this feedback helps u in a better way to carry on and create a legacy. </p>
-                            </div>
-                            <div class="testimonials__author">
-                                <div class="author__thumg">
-                                    <img src="assets/Testimonial/GayathriKeenala.webp" alt="">
-                                </div>
-                                <div class="author__content">
-                                    <h5 class="author__title">Gayathri Keenala</h5>
-                                    <p class="author__desi">University of New haven - Chirala</p>
-                                </div>
-                            </div>
-                        </div>
+                            @endforeach
+                        @endif
                     </div>
                 </div>
                 <div class="col-12">
@@ -427,8 +390,8 @@
                                 <h4 class="card__title"><a href="{{ route('personal') }}" tabindex="-1">Personal
                                         Loan</a></h4>
                                 <p class="fs-small"> A personal loan, often synonymous with the term ...</p>
-                                <a href="{{ route('personal') }}" class="btn_theme social_box btn_bg_white" tabindex="-1"><i
-                                        class="bi bi-arrow-up-right"></i><span></span></a>
+                                <a href="{{ route('personal') }}" class="btn_theme social_box btn_bg_white"
+                                    tabindex="-1"><i class="bi bi-arrow-up-right"></i><span></span></a>
                             </div>
                         </div>
                     </a>
@@ -456,11 +419,11 @@
                                         Educational Loan</a></h4>
                                 <p class="fs-small">Quick Loans for studying or become ...
                                 </p>
-                                <a href="{{ route('education') }}" class="btn_theme social_box btn_bg_white" tabindex="-1"><i
-                                        class="bi bi-arrow-up-right"></i><span></span></a>
+                                <a href="{{ route('education') }}" class="btn_theme social_box btn_bg_white"
+                                    tabindex="-1"><i class="bi bi-arrow-up-right"></i><span></span></a>
                             </div>
                         </div>
-                     </a>
+                    </a>
                 </div>
                 <div class="col-lg-4">
                     <a href="{{ route('business') }}">
@@ -494,8 +457,8 @@
                                 <h4 class="card__title"><a href="{{ route('business') }}" tabindex="-1">Business
                                         Loan</a></h4>
                                 <p class="fs-small">A businessloan is a financial tool that provides ...</p>
-                                <a href="{{ route('business') }}" class="btn_theme social_box btn_bg_white" tabindex="-1"><i
-                                        class="bi bi-arrow-up-right"></i><span></span></a>
+                                <a href="{{ route('business') }}" class="btn_theme social_box btn_bg_white"
+                                    tabindex="-1"><i class="bi bi-arrow-up-right"></i><span></span></a>
                             </div>
                         </div>
                     </a>
@@ -740,11 +703,11 @@
     </section>
 
     <script>
-function toggleReadMore(button) {
-    const paragraph = button.previousElementSibling;
-    paragraph.classList.toggle('expanded');
-    button.innerHTML = paragraph.classList.contains('expanded') ? 'Read Less' : 'Read More';
-}
-        </script>
+        function toggleReadMore(button) {
+            const paragraph = button.previousElementSibling;
+            paragraph.classList.toggle('expanded');
+            button.innerHTML = paragraph.classList.contains('expanded') ? 'Read Less' : 'Read More';
+        }
+    </script>
     <!-- faq end -->
 @endsection

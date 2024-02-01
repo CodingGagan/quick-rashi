@@ -122,17 +122,36 @@ class UserController extends Controller
 
         return response()->json([true, $request->loan_id], 200);
     }
+    public function getCategory($file)
+    {
+
+        $pdfExtensions = ['pdf'];
+        $imageExtensions = ['png', 'jpg', 'jpeg', 'gif'];
+
+        if (in_array($file->getClientOriginalExtension(), $pdfExtensions)) {
+            return 'pdf';
+        } elseif (in_array($file->getClientOriginalExtension(), $imageExtensions)) {
+            return 'image';
+        } else {
+            // Handle other file types if needed
+            abort(400, 'Invalid file type. Please upload PDF or image files.');
+        }
+    }
 
     public function uploadImage(Request $request)
     {
+        $file = $request->file('image');
+        $category = $this->getCategory($file);
         // if ($request->is('api/*')) {
         if ($request->has('image')) {
-            $file = $request->image;
+            // $file = $request->image;
             $image_type = $request->image_type;
-            $fileType = $file->getClientOriginalExtension();
+            $fileType = strtolower($file->getClientOriginalExtension());
 
             if ($image_type == 'pan_card' || $image_type == 'adhar_card_front' || $image_type == 'adhar_card_back' || $image_type == 'salary' || $image_type == 'passport') {
-                if ($fileType !== 'jpg' || $fileType !== 'jpeg' || $fileType !== 'png') {
+                // echo '<pre>'; print_r($file->getClientOriginalExtension()); echo '<pre>'; die();
+                // echo '<pre>'; print_r($fileType); echo '<pre>'; die();
+                if ($fileType !== 'jpg' && $fileType !== 'jpeg' && $fileType !== 'png') {
                     return response()->json([false, 'Allow file type allowed [ JPG, JPEG, PNG ].'], 200);
                 }
                 $resolution = getimagesize($request->image);
@@ -144,12 +163,24 @@ class UserController extends Controller
                 $OriginalImage->save(public_path() . '/uploads/loans/' . $uniqueName);
             } else {
                 if ($fileType !== 'pdf') {
-                    return response()->json([false, 'File type should be Pdf.'], 200);
+                    return response()->json([false, 'Allow file type allowed [ PDF ].'], 200);
                 }
-                $uniqueName = uniqid() . '_' . time() . '.' . $request->image->getClientOriginalExtension();
-                $OriginalImagePath = 'uploads/loans/pdf';
-                $product_image_source = $OriginalImagePath . $uniqueName;
-                $file->move(public_path() . '/uploads/loans/pdf' . $uniqueName);
+                $request->file('image')->move(
+                    base_path() . '/public/uploads/pdf/',
+                    $request->file('image')->getClientOriginalName()
+                );
+
+                // $file->storeAs($path, 'public');
+
+                // $file = $request->file;
+
+                // if ($fileType !== 'pdf') {
+                //     return response()->json([false, 'File type should be Pdf.'], 200);
+                // }
+                // $uniqueName = uniqid() . '_' . time() . '.' . $request->image->getClientOriginalExtension();
+                $OriginalImagePath = 'uploads/pdf';
+                $product_image_source = $OriginalImagePath . '/' . $file->getClientOriginalName();
+                // $file->move(public_path() . '/uploads/loans/pdf/' . $uniqueName);
             }
             // $height = $resolution[1];
             // $width = $resolution[0];
@@ -192,7 +223,7 @@ class UserController extends Controller
                 $imageId = DB::table('documents')->insert($imagesArray);
             }
 
-            return response()->json([true, $request->loan_id, $uniqueName], 200);
+            return response()->json([true, $request->loan_id, $image_type, $category, '/' . $product_image_source], 200);
         }
         return response()->json([false, 'Resolution Issue'], 200);
         // }

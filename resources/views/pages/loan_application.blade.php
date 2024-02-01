@@ -10,7 +10,7 @@
                         <h1 class="banner__title display-4 wow fadeInLeft" data-wow-duration="0.8s">Apply Loan</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb wow fadeInRight" data-wow-duration="0.8s">
-                                
+
                                 <li class="breadcrumb-item">user</li>
                                 <li class="breadcrumb-item active" aria-current="page">Apply Loan</li>
                             </ol>
@@ -60,11 +60,11 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label class="fieldlabels">Loan Amount: *</label> 
-                                                        <input type="number" class="loan_input"
-                                                        name="loan_amount" placeholder="Enter Loan Amount"
-                                                        value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->amount : '') : '' }}"
-                                                        required />
+                                                        <label class="fieldlabels">Loan Amount: *</label>
+                                                        <input type="number" class="loan_input" name="loan_amount"
+                                                            placeholder="Enter Loan Amount"
+                                                            value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->amount : '') : '' }}"
+                                                            required />
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -74,22 +74,28 @@
                                                         @php
                                                             $loan_type = isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->loan_type : 0) : 0;
                                                         @endphp
-                                                        <select class="form-control custom_select" name="loan_type" id="loan_type" required>
-                                                            <option {{ $loan_type == 0 ? 'selected' : '' }} value="0" disabled>
+                                                        <select class="form-control custom_select" name="loan_type"
+                                                            id="loan_type" required>
+                                                            <option {{ $loan_type == 0 ? 'selected' : '' }} value="0"
+                                                                disabled>
                                                                 Select Loan Type</option>
-                                                            <option {{ $loan_type == 1 ? 'selected' : '' }} value="1">Abroad
+                                                            <option {{ $loan_type == 1 ? 'selected' : '' }} value="1">
+                                                                Abroad
                                                                 Education Loan</option>
-                                                            <option {{ $loan_type == 2 ? 'selected' : '' }} value="2">Business Loan
+                                                            <option {{ $loan_type == 2 ? 'selected' : '' }} value="2">
+                                                                Business Loan
                                                             </option>
-                                                            <option {{ $loan_type == 3 ? 'selected' : '' }} value="3">Personal Loan
+                                                            <option {{ $loan_type == 3 ? 'selected' : '' }} value="3">
+                                                                Personal Loan
                                                             </option>
-                                                            <option {{ $loan_type == 4 ? 'selected' : '' }} value="4">Domestic
+                                                            <option {{ $loan_type == 4 ? 'selected' : '' }} value="4">
+                                                                Domestic
                                                                 Education Loan</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                             </div>
-                                           
+
 
 
                                             <div id="current_address" class="currnt_add">
@@ -97,30 +103,33 @@
                                                     <label class="fieldlabels">Current Address: *</label>
                                                     <input
                                                         value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->current_add : '') : '' }}"
-                                                        type="text" name="current_address" class="loan_input" placeholder="" required />
+                                                        type="text" name="current_address" class="loan_input"
+                                                        placeholder="" required />
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="fieldlabels">Current Address Line 2: *</label>
                                                     <input
                                                         value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->current_add_extra : '') : '' }}"
-                                                        type="text" name="current_address_2" class="loan_input" placeholder="" required />
+                                                        type="text" name="current_address_2" class="loan_input"
+                                                        placeholder="" required />
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="fieldlabels">Current Landmark: *</label>
                                                     <input
                                                         value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->current_landmark : '') : '' }}"
-                                                        type="text" name="current_landmark" class="loan_input" placeholder="" required />
+                                                        type="text" name="current_landmark" class="loan_input"
+                                                        placeholder="" required />
                                                 </div>
                                                 <div class="form-group">
-                                                <label class="fieldlabels">Current Country: *</label>
-                                                <select name="current_country" id="current_country" class="form-control custom_select"
-                                                    required>
-                                                    <option value="0" disabled>Select Country</option>
-                                                    <option value="105" selected>India</option>
-                                                </select>
+                                                    <label class="fieldlabels">Current Country: *</label>
+                                                    <select name="current_country" id="current_country"
+                                                        class="form-control custom_select" required>
+                                                        <option value="0" disabled>Select Country</option>
+                                                        <option value="105" selected>India</option>
+                                                    </select>
                                                 </div>
-                                                    
-                                                
+
+
                                                 <br />
                                                 <div class="form-group mt-3">
                                                     <label class="fieldlabels">Current State: *</label>
@@ -142,22 +151,23 @@
                                                 </div>
                                                 <div class="form-group mt-3">
                                                     @php
-                                                    $current_city_selected = isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->current_city : '') : '';
-                                                @endphp
-                                                <label class="fieldlabels">Current City: *</label>
-                                                <select name="current_city" class="form-control custom_select" required id="current_city">
-                                                    @if (isset($data['loan_app']) && !empty($data['loan_app'][0]))
-                                                        @foreach ($data['cities'] as $city)
-                                                            <option
-                                                                {{ $current_city_selected == $city->id ? 'selected' : '' }}
-                                                                value='{{ $city->id }}'>{{ $city->city }}
-                                                            </option>
-                                                        @endforeach
-                                                    @endif
+                                                        $current_city_selected = isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->current_city : '') : '';
+                                                    @endphp
+                                                    <label class="fieldlabels">Current City: *</label>
+                                                    <select name="current_city" class="form-control custom_select"
+                                                        required id="current_city">
+                                                        @if (isset($data['loan_app']) && !empty($data['loan_app'][0]))
+                                                            @foreach ($data['cities'] as $city)
+                                                                <option
+                                                                    {{ $current_city_selected == $city->id ? 'selected' : '' }}
+                                                                    value='{{ $city->id }}'>{{ $city->city }}
+                                                                </option>
+                                                            @endforeach
+                                                        @endif
 
-                                                </select>
+                                                    </select>
                                                 </div>
-                                                
+
                                                 <br />
                                                 <div class="form-group mt-3">
                                                     <label class="fieldlabels">Current Pincode: *</label>
@@ -170,32 +180,35 @@
                                                     <label class="fieldlabels">Current Residence: *</label>
                                                     <input
                                                         value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->current_residence : '') : '' }}"
-                                                        type="text" name="current_residence" class="loan_input" placeholder="" required />
+                                                        type="text" name="current_residence" class="loan_input"
+                                                        placeholder="" required />
                                                 </div>
 
                                             </div>
 
                                             <div class="form-group custom_width mt-4">
-                                                    <label class="cont_checkbox">Check if same address
-                                                        <input type="checkbox" name="same_address_as_current"
+                                                <label class="cont_checkbox">Check if same address
+                                                    <input type="checkbox" name="same_address_as_current"
                                                         id="same_address_as_current" class="cont_checkbox_input">
-                                                        <span class="checkmark"></span>
-                                                    </label>
+                                                    <span class="checkmark"></span>
+                                                </label>
                                             </div>
 
                                             <div id="permanent_address" class="permanent_add currnt_add">
                                                 {{-- <div class="head">Permanent Address</div> --}}
                                                 <div class="form-group">
-                                                    
-                                                <label class="fieldlabels">Permanent Address: *</label>
-                                                <input type="text" name="permanent_address" class="loan_input" placeholder=""
-                                                    value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_add : '') : '' }}"
-                                                    required />
+
+                                                    <label class="fieldlabels">Permanent Address: *</label>
+                                                    <input type="text" name="permanent_address" class="loan_input"
+                                                        placeholder=""
+                                                        value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_add : '') : '' }}"
+                                                        required />
                                                 </div>
                                                 <div class="form-group">
 
                                                     <label class="fieldlabels">Permanent Address Line 2: *</label>
-                                                    <input type="text" name="permanent_address_2" class="loan_input" placeholder=""
+                                                    <input type="text" name="permanent_address_2" class="loan_input"
+                                                        placeholder=""
                                                         value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_add_extra : '') : '' }}"
                                                         required />
                                                 </div>
@@ -208,52 +221,52 @@
                                                 <div class="from-group">
 
                                                     <label class="fieldlabels">Permanent Country: *</label>
-                                                    <select name="permanent_country" class="custom_select form-control" id="permanent_country"
-                                                         required>
+                                                    <select name="permanent_country" class="custom_select form-control"
+                                                        id="permanent_country" required>
                                                         <option value="0" disabled>Select Country</option>
                                                         <option value="105" selected>India</option>
                                                     </select>
                                                 </div>
-                                                
+
                                                 <br />
                                                 <div class="form-group mt-3">
                                                     @php
-                                                    $permanent_state_selected = isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_state : '') : '';
-                                                @endphp
-                                                <label class="fieldlabels">Permanent State: *</label>
-                                                <select name="permanent_state" id="permanent_state" class="form-control custom_select"
-                                                    required>
-                                                    <option value="0" selected disabled>Select State</option>
+                                                        $permanent_state_selected = isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_state : '') : '';
+                                                    @endphp
+                                                    <label class="fieldlabels">Permanent State: *</label>
+                                                    <select name="permanent_state" id="permanent_state"
+                                                        class="form-control custom_select" required>
+                                                        <option value="0" selected disabled>Select State</option>
 
-                                                    @if (isset($states))
-                                                        @foreach ($states as $state)
-                                                            <option
-                                                                {{ $permanent_state_selected ? ($permanent_state_selected == $state->id ? 'selected' : '') : '' }}
-                                                                value="{{ $state->id }}">{{ $state->name }}
-                                                            </option>
-                                                        @endforeach
-                                                    @endif
-                                                </select>
+                                                        @if (isset($states))
+                                                            @foreach ($states as $state)
+                                                                <option
+                                                                    {{ $permanent_state_selected ? ($permanent_state_selected == $state->id ? 'selected' : '') : '' }}
+                                                                    value="{{ $state->id }}">{{ $state->name }}
+                                                                </option>
+                                                            @endforeach
+                                                        @endif
+                                                    </select>
                                                 </div>
                                                 <div class="from-group mt-3">
                                                     @php
-                                                    $permanent_city_selected = isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_city : '') : '';
-                                                @endphp
-                                                <label class="fieldlabels">Permanent City: *</label>
-                                                <select name="permanent_city" id="permanent_city" class="form-control custom_select"
-                                                    required>
-                                                    @if (isset($data['loan_app']) && !empty($data['loan_app'][0]))
-                                                        @foreach ($data['cities'] as $city)
-                                                            <option
-                                                                {{ $permanent_city_selected == $city->id ? 'selected' : '' }}
-                                                                value='{{ $city->id }}'>{{ $city->city }}
-                                                            </option>
-                                                        @endforeach
-                                                    @endif
+                                                        $permanent_city_selected = isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_city : '') : '';
+                                                    @endphp
+                                                    <label class="fieldlabels">Permanent City: *</label>
+                                                    <select name="permanent_city" id="permanent_city"
+                                                        class="form-control custom_select" required>
+                                                        @if (isset($data['loan_app']) && !empty($data['loan_app'][0]))
+                                                            @foreach ($data['cities'] as $city)
+                                                                <option
+                                                                    {{ $permanent_city_selected == $city->id ? 'selected' : '' }}
+                                                                    value='{{ $city->id }}'>{{ $city->city }}
+                                                                </option>
+                                                            @endforeach
+                                                        @endif
 
-                                                        </select>
+                                                    </select>
                                                 </div>
-                                                
+
                                                 <br />
                                                 <div class="form-group mt-3">
                                                     <label class="fieldlabels">Permanent Pincode: *</label>
@@ -261,7 +274,7 @@
                                                         value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_pincode : '') : '' }}"
                                                         placeholder="" required />
                                                 </div>
-                                                
+
                                                 <br />
                                                 <div class="from-group">
                                                     <label class="fieldlabels">Permanent Residence: *</label>
@@ -291,7 +304,8 @@
                                             @endphp
                                             <div class="form-group">
                                                 <label class="fieldlabels">Work Status: *</label>
-                                                <select name="work_status" id="work_status" class="form-control custom_select" required>
+                                                <select name="work_status" id="work_status"
+                                                    class="form-control custom_select" required>
                                                     <option
                                                         {{ $work_type_selected ? ($work_type_selected == 0 ? 'selected' : '') : '' }}
                                                         value="0" disabled selected>Select Work Status</option>
@@ -326,15 +340,15 @@
                                                         {{ $work_type_selected ? ($work_type_selected == 10 ? 'selected' : '') : '' }}
                                                         value="10">Other</option>
                                                 </select>
-                                               
+
                                             </div>
                                             <div class="row mt-3">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label class="fieldlabels">Contact No.:
                                                             *</label>
-                                                        <input type="text" id="contact" name="contact" class="loan_input"
-                                                            placeholder="Contact No."
+                                                        <input type="text" id="contact" name="contact"
+                                                            class="loan_input" placeholder="Contact No."
                                                             value="{{ isset($data['second_form']) ? (!empty($data['second_form'][0]) ? $data['second_form'][0]->contact : '') : '' }}"
                                                             required />
                                                     </div>
@@ -342,8 +356,8 @@
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label class="fieldlabels">Alternate Contact No.: *</label>
-                                                        <input type="text" id="alt_contact" name="contact_2" class="loan_input"
-                                                            placeholder="Alternate Contact No."
+                                                        <input type="text" id="alt_contact" name="contact_2"
+                                                            class="loan_input" placeholder="Alternate Contact No."
                                                             value="{{ isset($data['second_form']) ? (!empty($data['second_form'][0]) ? $data['second_form'][0]->alt_contact : '') : '' }}"
                                                             required />
                                                     </div>
@@ -367,17 +381,19 @@
                                             <div class="button-wrap mt-2">
                                                 <label class="fieldlabels imagebtn">Latest 3 month bank statement upto till
                                                     date:</label>
-                                                <input type="file" required id="bank_pdf" name="bank_pdf" class="fileBtnupload"
-                                                    accept="pdf">
+                                                <input type="file" required id="bank_pdf" name="bank_pdf"
+                                                    class="fileBtnupload" accept="pdf">
 
-                                                <img src="{{ asset('assets/images/pdfIcon.png') }}" alt="bank_pdf"
-                                                    class="view_pdf">
+                                                <a href="" target="_blank" id="show_pdf" class="d-none">
+                                                    <img src="{{ asset('assets/images/pdfIcon.png') }}" alt="bank_pdf"
+                                                        class="view_pdf">
+                                                </a>
                                             </div>
                                             <div class="form-group mt-2">
 
                                                 <label class="fieldlabels">Pan card:</label>
-                                                <input type="file" required id="pan_card" name="pan_card" class="fileBtnupload"
-                                                    accept="image/*">
+                                                <input type="file" required id="pan_card" name="pan_card"
+                                                    class="fileBtnupload" accept="image/*">
                                                 <img src="" alt="pan_card" class="d-none view_img"
                                                     title="Click to view uploaded image">
                                             </div>
@@ -385,20 +401,17 @@
                                             <div class="form-group mt-2">
 
                                                 <label class="fieldlabels">Aadhaar card front:</label>
-                                                <input type="file" required id="adhar_card_front" name="adhar_card_front"
-                                                 class="fileBtnupload"
-                                                    accept="image/*">
+                                                <input type="file" required id="adhar_card_front"
+                                                    name="adhar_card_front" class="fileBtnupload" accept="image/*">
                                                 <img src="" alt="adhar_card_front" class="d-none view_img"
                                                     title="Click to view uploaded image">
                                             </div>
-                                           
+
                                             <div class="form-group mt-2">
 
                                                 <label class="fieldlabels">Aadhaar card back:</label>
-                                                <input type="file" required id="adhar_card_back"
-                                                class="fileBtnupload"
-                                                name="adhar_card_back"
-                                                    accept="image/*">
+                                                <input type="file" required id="adhar_card_back" class="fileBtnupload"
+                                                    name="adhar_card_back" accept="image/*">
                                                 <img src="" alt="adhar_card_back" class="d-none view_img"
                                                     title="Click to view uploaded image">
                                             </div>
@@ -406,35 +419,39 @@
                                             <div class="form-group mt-2">
 
                                                 <label class="fieldlabels">Passport size photograph:</label>
-                                                <input type="file" required id="passport" name="passport" class="fileBtnupload"
-                                                    accept="image/*">
+                                                <input type="file" required id="passport" name="passport"
+                                                    class="fileBtnupload" accept="image/*">
                                                 <img src="" alt="passport" class="d-none view_img"
                                                     title="Click to view uploaded image">
                                             </div>
                                             <div class="form-group mt-2">
 
                                                 <label class="fieldlabels">Other financial documents, if required:</label>
-                                                <input type="file" required name="financial" id="financial" class="fileBtnupload"
-                                                    accept="pdf">
-                                                <img src="" alt="financial" class="d-none view_img"
-                                                    title="Click to view uploaded image">
+                                                <input type="file" required name="financial" id="financial"
+                                                    class="fileBtnupload" accept="pdf">
+                                                    <a href="" target="_blank" id="show_bank_pdf" class="d-none">
+                                                        <img src="{{ asset('assets/images/pdfIcon.png') }}" alt="show_bank_pdf"
+                                                            class="show_bank_pdf">
+                                                    </a>
                                             </div>
 
                                             <div class="form-group mt-2">
 
                                                 <label class="fieldlabels">Salary slip as per occupation:</label>
-                                                <input type="file" required id="salary" name="salary" class="fileBtnupload"
-                                                    accept="image/*">
+                                                <input type="file" required id="salary" name="salary"
+                                                    class="fileBtnupload" accept="image/*">
                                                 <img src="" alt="salary" class="d-none view_img"
                                                     title="Click to view uploaded image">
                                             </div>
                                             <div class="form-group mt-2">
 
                                                 <label class="fieldlabels">Work experience documents:</label>
-                                                <input type="file" required id="work_exp" name="work_exp" class="fileBtnupload"
-                                                    accept="pdf">
-                                                <img src="" alt="work_exp" class="d-none view_img"
-                                                    title="Click to view uploaded image">
+                                                <input type="file" required id="work_exp" name="work_exp"
+                                                    class="fileBtnupload" accept="pdf">
+                                                    <a href="" target="_blank" id="show_Work" class="d-none">
+                                                        <img src="{{ asset('assets/images/pdfIcon.png') }}" alt="show_Work"
+                                                            class="show_Work">
+                                                    </a>
                                             </div>
 
                                         </div>
@@ -457,9 +474,7 @@
 
                                             <div class="row justify-content-center">
                                                 <div class="col-7 text-center">
-                                                    <h5 class="purple-text text-center">You Have Successfully
-                                                        Signed
-                                                        Up</h5>
+                                                    <h5 class="purple-text text-center">Your loan file submitted successfully</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -484,18 +499,18 @@
         }
     </script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Check if the current URL matches the desired route
-      if (window.location.pathname === '/user/dashboard') {
-        // Get the element you want to add the class to
-        var dashboardElement = document.getElementById('mainCont');
-        
-        // Add the desired class to the element
-        dashboardElement.classList.add('user_main');
-      }
-    });
-  </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if the current URL matches the desired route
+            if (window.location.pathname === '/user/dashboard') {
+                // Get the element you want to add the class to
+                var dashboardElement = document.getElementById('mainCont');
+
+                // Add the desired class to the element
+                dashboardElement.classList.add('user_main');
+            }
+        });
+    </script>
 
     @php
         // echo '<pre>'; print_r(isset($data['loan_app']) ? (!empty($data['loan_app'][0]->id) ? $data['loan_app'][0]->id : 0) : 0); echo '<pre>'; die();

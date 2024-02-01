@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
 
-            if (true) {
+            if (moveNext) {
                 current_fs = this.parentElement;
                 next_fs = this.parentElement.nextElementSibling;
 
@@ -335,18 +335,17 @@ const work_exp = document.querySelector('#work_exp');
 
 if (bank_pdf) {
     bank_pdf.addEventListener('change', () => {
-        preview = document.querySelector('img[alt="bank_pdf"]')
-        preview.classList.remove('d-none')
+        // preview = document.querySelector('img[alt="bank_pdf"]')
+        // preview.classList.remove('d-none')
 
         var file = bank_pdf.files[0];
         var reader = new FileReader();
 
         reader.onloadend = function () {
-            preview.src = reader.result;
+            // preview.src = reader.result;
         }
 
         if (file) {
-            reader.readAsDataURL(file);
             uploadImage(file, 'bank_pdf')
 
         } else {
@@ -456,14 +455,14 @@ if (salary) {
 }
 if (financial) {
     financial.addEventListener('change', () => {
-        preview = document.querySelector('img[alt="financial"]')
-        preview.classList.remove('d-none')
+        // preview = document.querySelector('img[alt="financial"]')
+        // preview.classList.remove('d-none')
 
         var file = financial.files[0];
         var reader = new FileReader();
 
         reader.onloadend = function () {
-            preview.src = reader.result;
+            // preview.src = reader.result;
         }
 
         if (file) {
@@ -476,14 +475,14 @@ if (financial) {
 }
 if (work_exp) {
     work_exp.addEventListener('change', () => {
-        preview = document.querySelector('img[alt="work_exp"]')
-        preview.classList.remove('d-none')
+        // preview = document.querySelector('img[alt="work_exp"]')
+        // preview.classList.remove('d-none')
 
         var file = work_exp.files[0];
         var reader = new FileReader();
 
         reader.onloadend = function () {
-            preview.src = reader.result;
+            // preview.src = reader.result;
         }
 
         if (file) {
@@ -520,6 +519,25 @@ const uploadImage = async (image, image_type) => {
     if (imageResponse) {
         let response = await imageResponse.json();
         if (response[0]) {
+            console.log(response[4]);
+            if (response[3] == "pdf") {
+                if (response[2] == 'bank_pdf') {
+                    document.querySelector('#show_pdf').classList.remove('d-none');
+                    document.querySelector('#show_pdf').setAttribute('href', response[4]);
+                    return true;
+                }
+                if (response[2] == 'financial') {
+                    document.querySelector('#show_bank_pdf').classList.remove('d-none');
+                    document.querySelector('#show_bank_pdf').setAttribute('href', response[4]);
+                    return true;
+                }
+                if (response[2] == 'work_exp') {
+                    document.querySelector('#show_Work').classList.remove('d-none');
+                    document.querySelector('#show_Work').setAttribute('href', response[4]);
+                    return true;
+                }
+            }
+            // document.querySelector('.view_pdf').setAttribute('href', response);
             return response;
         } else {
             Swal.fire({

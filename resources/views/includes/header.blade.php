@@ -43,8 +43,11 @@
                              </ul>
                              @else
                                <ul class="navbar-nav mb-lg-0 mx-auto">
-                                <li>
-                                  <button class="btn_theme btn_name"> {{ Auth::user()->firstname }} </button>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('user_dashboard') }}">Request new loan</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('user_loan_list') }}">See loan history</a>
                                 </li>
                              </ul>  
                          @endif
