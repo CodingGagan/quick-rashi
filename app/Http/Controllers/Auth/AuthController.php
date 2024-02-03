@@ -36,7 +36,53 @@ class AuthController extends Controller
 
                 /* Generate and Send OTP */
                 $generateOtp = random_int(1000, 9999);
-                $response = Mail::to($email)->send(new SendOtpMail($generateOtp, $email));
+                // $response = Mail::to($email)->send(new SendOtpMail($generateOtp, $email));
+                try {
+
+                    $message = "<html><head></head><body><p>Hello,</p>This is my quickrashi.com login otp '" . $generateOtp . "'</p></body></html>";
+                    $curl = curl_init();
+
+                    curl_setopt_array($curl, array(
+                        CURLOPT_URL => 'https://api.brevo.com/v3/smtp/email',
+                        CURLOPT_RETURNTRANSFER => true,
+                        CURLOPT_ENCODING => '',
+                        CURLOPT_MAXREDIRS => 10,
+                        CURLOPT_TIMEOUT => 0,
+                        CURLOPT_FOLLOWLOCATION => true,
+                        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                        CURLOPT_CUSTOMREQUEST => 'POST',
+                        CURLOPT_POSTFIELDS => '{  
+                       "sender":{  
+                          "name":"Quick Rashi",
+                          "email":"anuradha.quickrashi@gmail.com"
+                       },
+                       "to":[  
+                          {  
+                             "email":"' . $email . '",
+                             "name":"' . $email . '"
+                          }
+                       ],
+                       "subject":"Hello Quick Rashi User",
+                       "htmlContent":"' . $message . '"
+                    }',
+                        CURLOPT_HTTPHEADER => array(
+                            'accept: application/json',
+                            'api-key: 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',
+                            'content-type: application/json',
+                            'Cookie: __cf_bm=ecRZLNiEPDL8rRTjtNHYLmmsVAkYs54AXNJJ9L9WUi8-1706961627-1-Af7oJmbGtoj7nqd2XbZm3npH3tku6T3+LXQbaSBgGR/Jce5oFQg0a44eYdxiDRfaBmkZMueU5VXnx2I8FalDToE='
+                        ),
+                    ));
+
+                    $response = curl_exec($curl);
+
+                    curl_close($curl);
+                    echo $response;
+                } catch (\Throwable $th) {
+                    echo '<pre>';
+                    print_r($th);
+                    echo '<pre>';
+                    die();
+                }
                 /* Generate and Send OTP */
                 // $data = [
                 //     'user_id' => $userExist[0]->id,
