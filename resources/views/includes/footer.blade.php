@@ -12,28 +12,28 @@
                    <p>Welcome to Quick Rashi, your trusted resource for financial loan reviews and comparisons. Our
                        dedicated team of experts analyzes</p>
                    <div class="social mt_32">
-                       <a href="#" class="btn_theme social_box"><i class="bi bi-facebook"></i><span></span></a>
+                       {{-- <a href="#" class="btn_theme social_box"><i class="bi bi-facebook"></i><span></span></a>
                        <a href="#" class="btn_theme social_box"><i class="bi bi-twitter"></i><span></span></a>
                        <a href="#" class="btn_theme social_box"><i class="bi bi-pinterest"></i><span></span></a>
                        <a href="#" class="btn_theme social_box"><i class="bi bi-twitch"></i><span></span></a>
-                       <a href="#" class="btn_theme social_box"><i class="bi bi-skype"></i><span></span></a>
+                       <a href="#" class="btn_theme social_box"><i class="bi bi-skype"></i><span></span></a> --}}
                    </div>
                </div>
            </div>
            <div class="col-12 col-sm-6 col-xl-3">
                <div class="footer__contact ms-sm-4 ms-xl-0 wow fadeInUp" data-wow-duration="0.8s">
                    <h4 class="footer__title mb-4">Contact</h4>
-                   {{-- <div class="footer__content">
+                   <div class="footer__content">
                        <a href="tel:+1-234-567-891"> <span class="btn_theme social_box"> <i
-                                   class="bi bi-telephone-plus"></i> </span> +1 234 567 891 <span></span> </a>
+                                   class="bi bi-telephone-plus"></i> </span> +91 9871 773 053 </br> +91 8448 043 856  <span></span> </a>
                        <a href="https://pixner.net/cdn-cgi/l/email-protection#ec85828a83ac89948d819c8089c28f8381">
                            <span class="btn_theme social_box"> <i class="bi bi-envelope-open"></i> </span> <span
                                class="__cf_email__"
-                               data-cfemail="c2abaca4ad82a7baa3afb2aea7eca1adaf">[email&#160;protected]</span>
+                               data-cfemail="c2abaca4ad82a7baa3afb2aea7eca1adaf">care@quickrashi.com</span>
                            <span></span> </a>
                        <a href="#"> <span class="btn_theme social_box"> <i class="bi bi-geo-alt"></i>
-                           </span> 31 Brandy Way, Sutton, SM2 6SE <span></span> </a>
-                   </div> --}}
+                           </span> UG-60, Somdutt chamber-2, Bhikaji cama place, New Delhi - 110066 <span></span> </a>
+                   </div>
                </div>
            </div>
            <div class="col-12 col-sm-6 col-xl-3">
@@ -56,11 +56,12 @@
                <div class="quick-link ms-sm-4 ms-xl-0 wow fadeInRight" data-wow-duration="0.8s">
                    <h4 class="footer__title mb-4">Quick Link</h4>
                    <ul>
-                       <li><a href="about.html">About us</a></li>
-                       <li><a href="loan-reviews.html">Loan Reviews</a></li>
-                       <li><a href="loan-comparison.html">Loan Comparison</a></li>
-                       <li><a href="faq.html">FAQs</a></li>
-                       <li><a href="blog.html">Blog</a></li>
+                       <li><a href="{{ route('about') }}">About us</a></li>
+                       <li><a href="{{ route('personal') }}">Personal Loan</a></li>
+                       <li><a href="{{ route('education') }}">Abroad Education Loan</a></li>
+                       <li><a href="{{ route('business') }}">Business Loan</a></li>
+                       {{-- <li><a href="faq.html"></a></li> --}}
+                       {{-- <li><a href="blog.html">Blog</a></li> --}}
                    </ul>
                </div>
            </div>
@@ -72,9 +73,9 @@
                            class="secondary_color">Quick Rashi</a>. Designed By <a href="#"
                            class="secondary_color">Straw Hat</a></p>
                    <ul class="footer__copyright-conditions">
-                       <li><a href="contact.html">Help & Support</a></li>
+                       {{-- <li><a href="contact.html">Help & Support</a></li>
                        <li><a href="#">Privacy policy</a></li>
-                       <li><a href="#">Terms & Conditions</a></li>
+                       <li><a href="#">Terms & Conditions</a></li> --}}
                    </ul>
                </div>
            </div>
