@@ -76,12 +76,12 @@ class AuthController extends Controller
                     $response = curl_exec($curl);
 
                     curl_close($curl);
-                    echo $response;
+                    // echo $response;
                 } catch (\Throwable $th) {
-                    echo '<pre>';
-                    print_r($th);
-                    echo '<pre>';
-                    die();
+                    // echo '<pre>';
+                    // print_r($th);
+                    // echo '<pre>';
+                    // die();
                 }
                 /* Generate and Send OTP */
                 // $data = [
