@@ -119,8 +119,7 @@
                              <ul class="dropdown-menu">
                                  <li><a class="dropdown-item" href="{{route('personal')}}">Personal Loan</a></li>
                                  <li><a class="dropdown-item" href="{{route('business')}}">Business Loan</a></li>
-                                 <li><a class="dropdown-item" href="{{route('education
-                                 ')}}">Abroad Education Loan</a></li>
+                                 <li><a class="dropdown-item" href="{{route('education')}}">Abroad Education Loan</a></li>
                              </ul>
                          </li>
                          <li class="menu_item">
