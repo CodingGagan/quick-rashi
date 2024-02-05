@@ -102,41 +102,32 @@
                              <a class="menu_link dropdown-toggle" href="{{ route('/') }}" role="button"
                                  data-bs-toggle="dropdown" aria-expanded="false"> Home </a>
                              <ul class="dropdown-menu">
-                                 <li><a class="dropdown-item" href="index.html">Home One</a></li>
-                                 <li><a class="dropdown-item" href="index-2.html">Home Two</a></li>
+                                 {{-- <li><a class="dropdown-item" href="index.html">Home One</a></li>
+                                 <li><a class="dropdown-item" href="index-2.html">Home Two</a></li> --}}
                              </ul>
                          </li>
                          <li class="menu_item dropdown">
-                             <a class="menu_link dropdown-toggle" href="#" role="button"
-                                 data-bs-toggle="dropdown" aria-expanded="false"> Loan Reviews </a>
-                             <ul class="dropdown-menu">
-                                 <li><a class="dropdown-item" href="loan-reviews.html">Loan Reviews</a></li>
-                                 <li><a class="dropdown-item" href="loan-reviews-details.html">Loan Reviews
-                                         Details</a></li>
-                             </ul>
+                             <a class="menu_link" href="{{ route('about') }}" role="button"
+                                 aria-expanded="false"> About </a>
                          </li>
                          <li class="menu_item">
-                             <a class="menu_link" href="loan-comparison.html">Loan Comparison</a>
+                             <a class="menu_link" href="{{ route('contact') }}">Contact us</a>
                          </li>
                          <li class="menu_item dropdown">
                              <a class="menu_link dropdown-toggle" href="#" role="button"
-                                 data-bs-toggle="dropdown" aria-expanded="false"> Pages </a>
+                                 data-bs-toggle="dropdown" aria-expanded="false"> Services </a>
                              <ul class="dropdown-menu">
-                                 <li><a class="dropdown-item" href="about.html">about us</a></li>
-                                 <li><a class="dropdown-item" href="service.html">service</a></li>
-                                 <li><a class="dropdown-item" href="service-details.html">service details</a></li>
-                                 <li><a class="dropdown-item" href="blog.html">blog</a></li>
-                                 <li><a class="dropdown-item" href="blog-details.html">blog Details</a></li>
-                                 <li><a class="dropdown-item" href="faq.html">FAQs</a></li>
-                                 <li><a class="dropdown-item" href="sign-up.html">sign up</a></li>
-                                 <li><a class="dropdown-item" href="error.html">404 Error Page</a></li>
+                                 <li><a class="dropdown-item" href="{{route('personal')}}">Personal Loan</a></li>
+                                 <li><a class="dropdown-item" href="{{route('business')}}">Business Loan</a></li>
+                                 <li><a class="dropdown-item" href="{{route('education
+                                 ')}}">Abroad Education Loan</a></li>
                              </ul>
                          </li>
                          <li class="menu_item">
                              <a class="menu_link" href="{{ route('contact') }}">contact us</a>
                          </li>
                          <li class="menu_item">
-                             <a class="menu_link" href="sign-in.html">sign in</a>
+                             <a class="menu_link" href="{{ route('signin') }}">sign in</a>
                          </li>
                      </ul>
                  </div>
