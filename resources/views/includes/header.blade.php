@@ -143,17 +143,17 @@
                      <ul class="custom-nevbar__right-location">
                          <li>
                              <p class="mb-2">Phone: </p>
-                             <a href="tel:+123456789" class="fs-4 contact">+123 456 789</a>
+                             <a href="#" class="fs-4 contact"> +91 9871 773 053 </br> +91 8448 043 856</a>
                          </li>
                          <li class="location">
                              <p class="mb-2">Email: </p>
                              <a href="https://pixner.net/cdn-cgi/l/email-protection#e5ac8b838aa58288848c89cb868a88"
                                  class="fs-4 contact"><span class="__cf_email__"
-                                     data-cfemail="efa6818980af88828e8683c18c8082">[email&#160;protected]</span></a>
+                                     data-cfemail="efa6818980af88828e8683c18c8082">care@quickrashi.com</span></a>
                          </li>
                          <li class="location">
                              <p class="mb-2">Location: </p>
-                             <p class="fs-4 contact">6391 Celina, Delaware 10299</p>
+                             <p class="fs-4 contact">UG-60, Somdutt chamber-2, Bhikaji cama place, New Delhi - 110066</p>
                          </li>
                      </ul>
                  </div>
