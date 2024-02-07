@@ -11,8 +11,8 @@
                         <h1 class="banner__title display-4 wow fadeInLeft" data-wow-duration="0.8s">Sign Up</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb wow fadeInRight" data-wow-duration="0.8s">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item">pages</li>
+                                <li class="breadcrumb-item"><a href="{{ route('/') }}">Home</a></li>
+                             
                                 <li class="breadcrumb-item active" aria-current="page">Sign Up</li>
                             </ol>
                         </nav>
@@ -70,7 +70,7 @@
                                     placeholder="Enter Your Phone Number..." required>
                             </div>
                         </div>
-                        <p class="have_account mt_24">Do you have an account? <a href="signin.html"
+                        <p class="have_account mt_24">Do you have an account? <a href="{{ route('signin') }}"
                                 class="signin">Signin</a></p>
                         <span id="msg"></span>
                         <button type="submit" class="btn_theme mt_32" name="submit" id="submit">Sign Up<i

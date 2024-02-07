@@ -97,38 +97,29 @@
                  <div class="custom-nevbar__left">
                      <button type="button" class="close-icon d-md-none ms-auto" data-bs-dismiss="offcanvas"
                          aria-label="Close"><i class="bi bi-x"></i></button>
-                     <ul class="custom-nevbar__nav mb-lg-0">
-                         <li class="menu_item dropdown">
-                             <a class="menu_link dropdown-toggle" href="{{ route('/') }}" role="button"
-                                 data-bs-toggle="dropdown" aria-expanded="false"> Home </a>
-                             <ul class="dropdown-menu">
-                                 {{-- <li><a class="dropdown-item" href="index.html">Home One</a></li>
-                                 <li><a class="dropdown-item" href="index-2.html">Home Two</a></li> --}}
-                             </ul>
-                         </li>
-                         <li class="menu_item dropdown">
-                             <a class="menu_link" href="{{ route('about') }}" role="button"
-                                 aria-expanded="false"> About </a>
-                         </li>
-                         <li class="menu_item">
-                             <a class="menu_link" href="{{ route('contact') }}">Contact us</a>
-                         </li>
-                         <li class="menu_item dropdown">
-                             <a class="menu_link dropdown-toggle" href="#" role="button"
-                                 data-bs-toggle="dropdown" aria-expanded="false"> Services </a>
-                             <ul class="dropdown-menu">
-                                 <li><a class="dropdown-item" href="{{route('personal')}}">Personal Loan</a></li>
-                                 <li><a class="dropdown-item" href="{{route('business')}}">Business Loan</a></li>
-                                 <li><a class="dropdown-item" href="{{route('education')}}">Abroad Education Loan</a></li>
-                             </ul>
-                         </li>
-                         <li class="menu_item">
-                             <a class="menu_link" href="{{ route('contact') }}">contact us</a>
-                         </li>
-                         <li class="menu_item">
-                             <a class="menu_link" href="{{ route('signin') }}">sign in</a>
-                         </li>
-                     </ul>
+                         <ul class="custom-nevbar__nav mb-lg-0">
+                            <li class="menu_item">
+                                <a class="menu_link" href="{{ route('/') }}"> Home </a>
+                            </li>
+                            <li class="menu_item">
+                               <a class="menu_link" href="{{ route('about') }}">About</a>
+                           </li>
+                            <li class="menu_item dropdown">
+                                <a class="menu_link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{{ route('personal') }}">Personal Loan</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('business') }}">Business Loan</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('education') }}">Abroad Education Loan</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu_item">
+                                <a class="menu_link" href="{{ route('contact') }}">Contact us</a>
+                            </li>
+                            <li class="menu_item">
+                               <a class="menu_link"  href="{{ route('signin') }}">Sign-in</a>
+                           </li>
+                        </ul>
                  </div>
              </div>
              <div class="col-md-5 col-xl-4">
