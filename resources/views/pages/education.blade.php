@@ -43,16 +43,16 @@
                     <p class="section__content-text wow fadeInDown" data-wow-duration="0.8s"
                         style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInDown;">
                     
-                        <a href="https://quickkloans.com/">Quick Loans</a>
+                        <a href="https://quickkloans.com/">Quick Rashi</a>
                         for studying or investing abroad have become increasingly popular among
                         incividuals. seeking financial support for their aspirations. Abroad Icans, often
                         facilitated by financial institutions or specialized lenders, offer a convenient
                         sclution for those Icoking to pursue education, business opportunities orpersonal
-                        development in foreign countries The appeal of QuickkLoans lies in their swift approval
+                        development in foreign countries The appeal of Quick Rashi lies in their swift approval
                         processes, enabling applicants to access funds promptly, minimizing the bureaucratic
                         hurdles associated with traditional loan applications. These Icans cater to the urgency
                         and immediacy that individuals often encounter when planning to study or invest
-                        overseas. As a result, QuickkLoans have emerged as a practical and efficient means to
+                        overseas. As a result, Quick Rashi have emerged as a practical and efficient means to
                         bridge the financial gap and turn dreams of international education or business ventures
                         into reality. However, it is essential for borrowers to carefully consider terms,
                         interest rates, and repayment plans to ensure a well-informed financ al decision that

@@ -44,6 +44,7 @@ class UserController extends Controller
                 ->join('form_second',  'form_second.loan_app_id', '=', 'loan_app.id')
                 ->join('documents', 'documents.loan_app_id', '=', 'loan_app.id')
                 ->select('users.firstname', 'loan_app.id', 'loan_app.loan_type', 'loan_app.amount', 'loan_app.status', 'loan_app.created_at')
+                ->where(['user_id' => Auth::user()->id])
                 ->get();
 
             return response()->json($loanList, 200);

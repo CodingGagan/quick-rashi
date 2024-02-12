@@ -37,14 +37,14 @@
             [
                 'image' => 'assets/Testimonial/MuralidharanVasudevan.webp',
                 'content' => "I got my loan sanctioned in auxilo with the help of
-            QuickkLoans and with the guidance of simran ma'am. I got my sanction details and
+            Quick Rashi and with the guidance of simran ma'am. I got my sanction details and
             documents within a week after submitting the documents.",
                 'name' => 'Muralidharan Vasudevan',
                 'from' => 'Admitted to University of Wisconsin Madison - Chennai',
             ],
             [
                 'image' => 'assets/Testimonial/GayathriKeenala.webp',
-                'content' => "QuickkLoans team has been a pathway in achieving my goals to pursue my masters. The team has undoubtedly, unconditionally has helped me in each and every aspect right from clearing even the smallest hint of doubt. The service offered by quickloans.com has helped in making the process of applying for loan smoothly. I owe a lot to simran who has been a key role in helping me. She has helped me in giving constant motivation at times when I gave up and even promised me to get the best ever deal and negotiation for me. What I like about quickloans.com is the diligence it carries forward in helping students achieve their goal. The constant follow up keeps us moving and progress instead of procrastinating. Special thanks to quickloans.com for taking my work very much easier and simple. I dont see any negative feedback to be given. I am in touch with the team regularly and I didn't find any difficulty from their end. I hope this feedback helps u in a better way to carry on and create a legacy.",
+                'content' => "Quick Rashi team has been a pathway in achieving my goals to pursue my masters. The team has undoubtedly, unconditionally has helped me in each and every aspect right from clearing even the smallest hint of doubt. The service offered by quickloans.com has helped in making the process of applying for loan smoothly. I owe a lot to simran who has been a key role in helping me. She has helped me in giving constant motivation at times when I gave up and even promised me to get the best ever deal and negotiation for me. What I like about quickloans.com is the diligence it carries forward in helping students achieve their goal. The constant follow up keeps us moving and progress instead of procrastinating. Special thanks to quickloans.com for taking my work very much easier and simple. I dont see any negative feedback to be given. I am in touch with the team regularly and I didn't find any difficulty from their end. I hope this feedback helps u in a better way to carry on and create a legacy.",
                 'name' => 'Gayathri Keenala',
                 'from' => 'University of New haven - Chirala',
             ],
@@ -417,7 +417,7 @@
                             <div class="card__content">
                                 <h4 class="card__title"><a href="{{ route('education') }}" tabindex="-1">Abroad
                                         Educational Loan</a></h4>
-                                <p class="fs-small">Quick Loans for studying or become ...
+                                <p class="fs-small">Quick Rashi for studying or become ...
                                 </p>
                                 <a href="{{ route('education') }}" class="btn_theme social_box btn_bg_white"
                                     tabindex="-1"><i class="bi bi-arrow-up-right"></i><span></span></a>

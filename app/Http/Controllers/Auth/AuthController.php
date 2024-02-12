@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
-
+use Session;
 class AuthController extends Controller
 {
     public function sendOtpMail(Request $request)
@@ -119,19 +119,26 @@ class AuthController extends Controller
     public function submit_register(Request $request)
     {
         if ($request->all()) {
-            $users = DB::table('users');
-            $user = [
-                "salu" => $request->salu,
-                "firstname" => $request->fname,
-                "lastname" => $request->lname,
-                "contact" => $request->phone,
-                "email" => $request->email
-            ];
-            $idd = $users->insertGetId($user);
+            $users = DB::table('users')->where(['email' => $request->email])->get();
 
-            Auth::loginUsingId($idd);
+            if ($users->isEmpty()) {
+                $users = DB::table('users');
+                $user = [
+                    "salu" => $request->salu,
+                    "firstname" => $request->fname,
+                    "lastname" => $request->lname,
+                    "contact" => $request->phone,
+                    "email" => $request->email
+                ];
+                $idd = $users->insertGetId($user);
 
-            return redirect()->route('user_loan_list');
+                Auth::loginUsingId($idd);
+
+                return redirect()->route('user_loan_list');
+            }
+
+            Session::flash('danger', 'User is already register. Please login!');
+            return redirect()->route('signin');
         }
     }
 

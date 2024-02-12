@@ -119,7 +119,8 @@
                                         (row.loan_type == 3 ?
                                             `<span class="badge bg-success">Personal Loan</span>` :
                                             (row.loan_type == 4) ?
-                                            `<span class="badge bg-success">Domestic Education Loan</span>` : "")
+                                            `<span class="badge bg-success">Domestic Education Loan</span>` :
+                                            "")
                                     )
                             }
                         },
@@ -152,6 +153,80 @@
         <ul class="dropdown-menu dropdown-menu-end" style="">
             <li><a href="/user/dashboard/${row.id}" class="dropdown-item edit-item-btn"><i
                         class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
+        </ul>
+    </div>`
+                            }
+                        }
+                    ]
+                });
+            });
+        }
+
+
+        if (document.querySelector('#admin_list')) {
+
+            document.addEventListener("DOMContentLoaded", function() {
+                new DataTable("#admin_list", {
+                    ajax: {
+                        url: '/admin/loans/history',
+                        dataSrc: ""
+                    },
+                    "fnCreatedRow": function(row, data, index) {
+                        $('td', row).eq(0).html(index + 1);
+                    },
+                    columns: [{
+                            data: "id",
+                            name: ""
+                        },
+                        {
+                            data: 'firstname',
+                            name: 'name'
+                        },
+                        {
+                            data: 'loan_type',
+                            name: 'loan_type',
+                            render: function(data, type, row) {
+                                return row.loan_type == 1 ?
+                                    `<span class="badge bg-success">Abroad Edu. Loan</span>` :
+                                    (row.loan_type == 2 ?
+                                        `<span class="badge bg-success">Business Loan</span>` :
+                                        (row.loan_type == 3 ?
+                                            `<span class="badge bg-success">Personal Loan</span>` :
+                                            (row.loan_type == 4) ?
+                                            `<span class="badge bg-success">Domestic Education Loan</span>` :
+                                            "")
+                                    )
+                            }
+                        },
+                        {
+                            data: 'amount',
+                            name: 'name'
+                        },
+                        {
+                            data: 'status',
+                            name: 'status',
+                            render: function(data, type, row) {
+                                return row.status == 1 ?
+                                    `<span class="badge bg-success">Approved</span>` :
+                                    `<span class="badge bg-danger">Pending</span>`
+                            }
+                        },
+                        {
+                            data: 'created_at',
+                            name: 'applied',
+                        },
+                        {
+                            data: 'action',
+                            name: 'action',
+                            "render": function(data, type, row) {
+                                return `<div class="dropdown d-inline-block">
+        <button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="ri-more-fill align-middle"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" style="">
+            <li><a href="/admin/loan/details/${row.id}" class="dropdown-item edit-item-btn"><i
+                        class="ri-pencil-fill align-bottom me-2 text-muted"></i> View</a></li>
         </ul>
     </div>`
                             }

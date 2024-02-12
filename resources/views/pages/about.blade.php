@@ -44,7 +44,7 @@
                         Excellence in Loan Review and Comparison</h2>
                     <p class="section__content-text wow fadeInDown" data-wow-duration="0.8s"
                         style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInDown;">
-                        <a href="https://quickkloans.com/">Quick Loans</a> is a reputable loan
+                        <a href="https://quickkloans.com/">Quick Rashi</a> is a reputable loan
                         service company committed to delivering hassle-free and efficient financial
                         solutions to its customers. With a strong focus on customer satisfaction, we aim to
                         provide personalized services and negotiate favorable rates for our clients. Whether

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
@@ -37,6 +38,11 @@ Route::get('personal',  function () {
 Route::get('contact',  function () {
     return view('pages/contact');
 })->name('contact');
+Route::get('admin/signin',  function () {
+    return view('admin.signin');
+})->name('admin_sign_in_page');
+Route::post('admin/login', [AdminController::class, 'login'])->name('admin_login');
+Route::get('admin/dashboard', [AdminController::class, 'admin_dashboard'])->name('admin_dashboard');
 Route::get('signin',  function () {
     return view('pages/signin');
 })->name('signin');
@@ -72,6 +78,8 @@ Route::post('generateOtp', [AuthController::class, 'sendOtpMail'])->name('otp');
 Route::get('user/dashboard/{id?}', [UserController::class, 'dashboard'])->name('user_dashboard');
 Route::post('product/image/upload', [UserController::class, 'uploadImage'])->name('user_product_image_upload');
 Route::get('/user/loans/history', [UserController::class, 'user_loan_list'])->name('user_loan_list');
+Route::get('/admin/loans/history', [AdminController::class, 'admin_dashboard'])->name('admin_loan_list');
+Route::get('/admin/loan/details/{id}', [AdminController::class, 'loan_details'])->name('admin_loan_details');
 
 
 /* Fetch JS API => Fetch City By State ID */
