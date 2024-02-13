@@ -1,548 +1,546 @@
 .sidebar {
-    position: fixed;
-    background: #fff;
-    height: 100vh;
-    padding: 20px 0px 20px 30px;
-    width: 230px;
-    z-index: 99;
-    top: 0;
-    left: 0;
-    border-right: 1px solid #e7e1e1;
-    /* transition: all 0.5s; */
+  position: fixed;
+  background: #fff;
+  height: 100vh;
+  padding: 20px 0px 20px 30px;
+  width: 230px;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #e7e1e1;
+  /* transition: all 0.5s; */
 }
 
 .sidebar ul {
-    padding: 0;
-    margin: 50px 0 0;
+  padding: 0;
+  margin: 50px 0 0;
 }
 
 .sidebar ul li {
-    list-style: none;
+  list-style: none;
 }
 
 .sidebar ul li a,
 .sidebar ul li .logout {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 10px;
-    background: transparent;
-    border-bottom: 1px solid #E9EBEE;
-    margin: 0 0 10px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 22px;
-    color: #444444;
-    transition: all 0.5s;
-    /* font-family: 'Avenir Next LT Pro'; */
-    width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+  background: transparent;
+  border-bottom: 1px solid #E9EBEE;
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  color: #444444;
+  transition: all 0.5s;
+  /* font-family: 'Avenir Next LT Pro'; */
+  width: 100%;
 }
 
 .sidebar ul li a img,
 .sidebar ul li .logout img {
-    margin: 0 10px 0 0;
-    transition: all 0.5s;
+  margin: 0 10px 0 0;
+  transition: all 0.5s;
 }
 
 .sidebar ul li a.active,
 .sidebar ul li .logout.active {
-    background: #1F9514;
-    /* border: 1px solid #E9EBEE; */
-    color: #fff;
+  background: #1F9514;
+  /* border: 1px solid #E9EBEE; */
+  color: #fff;
 }
 
 .sidebar ul li a.active img,
 .sidebar ul li .logout.active img {
-    filter: invert(1);
-    margin: 0 10px 0 0;
-    transition: all 0.5s;
+  filter: invert(1);
+  margin: 0 10px 0 0;
+  transition: all 0.5s;
 }
 
 .sidebar ul li a:hover,
 .sidebar ul li .logout:hover {
-    background: #1F9514;
-    /* border: 1px solid #E9EBEE; */
-    color: #fff;
+  background: #1F9514;
+  /* border: 1px solid #E9EBEE; */
+  color: #fff;
 }
 .sidebar ul li a:hover img,
 .sidebar ul li .logout:hover img {
-    background: #1F9514;
-    filter: invert(1);
-    /* border: 1px solid #E9EBEE; */
-    color: #fff;
+  background: #1F9514;
+  filter: invert(1);
+  /* border: 1px solid #E9EBEE; */
+  color: #fff;
 }
 
 
 /* .sidebar ul li a:hover img,
 .sidebar ul li .logout:hover img {
-    filter: none;
+  filter: none;
 } */
 
 
 .dashboard-logo {
-    padding: 15px 0px 15px 10px;
-    
+  padding: 15px 0px 15px 10px;
+  
 }
 .dashboard-logo img {
-    height: 100px;
+  height: 40px;
 }
 /* //header */
 
 .topbar {
-    background: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 9;
-    width: 100%;
-    padding: 30px 35px;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  padding: 30px 35px;
 }
 
 .topbar_toggleBtn {
-    margin-left: 210px;
-    background-color: transparent;
-    border:0px;
-    transition: all 0.5s;
+  margin-left: 210px;
+  background-color: transparent;
+  border:0px;
+  transition: all 0.5s;
 }
 
 /* // main layout */
 
 
 .main-content {
-    background: #efefef;
-    height: 100%;
-    min-height: 100vh;
+  background: #f1f1f1;
+  height: 100%;
+  min-height: 100vh;
 }
 .main-content-inner {
-    padding-top: 140px;
-    margin-left: 260px;
-    transition: all 0.5s;
+  padding-top: 140px;
+  margin-left: 260px;
+  transition: all 0.5s;
 }
 .staticPadding {
-    padding-right: 0px !important;
-    padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
 }
 
 
 .sidebar.shrink-sidebar {
-    width: 0px;
-    padding: 0px;
-    transition: all 0.5s;
- }
-
- .sidebar.shrink-sidebar ul {
-    display: none;
-    transition: all 0.5s;
- }
-
- .sidebar.shrink-sidebar .dashboard-logo {
-    display: none;
-    transition: all 0.5s;
- }
-
- .marginToggleBtn {
-    margin-left: 0px !important;
-    transition: all 0.5s;
- }
- .mainContClass {
-    margin-left: 40px;
-    transition: all 0.5s;
- }
-
- .steps_tab p {
-    color: grey;
-  }
-  .steps_tab #heading {
-    text-transform: uppercase;
-    color:  #1F9514;
-    font-weight: normal;
-  }
-  .steps_tab #msform {
-    text-align: center;
-    position: relative;
-    margin-top: 20px;
-  }
-  .steps_tab #msform fieldset {
-    background: transparent;
-    border: 0 none;
-    border-radius: 0.5rem;
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0;
-    padding-bottom: 20px;
-    position: relative;
-  }
-  .steps_tab .form-card {
-    text-align: left;
-  }
-  .steps_tab #msform fieldset:not(:first-of-type) {
-    display: none;
-  }
-  .steps_tab #msform input, .steps_tab #msform textarea {
-    /* padding: 9px 15px 9px 23px;
-    border: 1px solid #c0baba;
-    border-radius: 19px;
-    margin-bottom: 15px;
-    margin-top: 2px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: montserrat;
-    color: #2C3E50;
-    background-color: #FFF;
-    font-size: 16px;
-    letter-spacing: 1px; */
-  }
-  .steps_tab #msform input:focus, .steps_tab #msform textarea:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    border: 1px solid  #1F9514;;
-    outline-width: 0;
-  }
-  .steps_tab #msform .action-button {
-    width: 100px;
-    background:  #1F9514;;
-    font-weight: bold;
-    color: white;
-    border: 0 none;
-    border-radius: 0px;
-    cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 0px 10px 5px;
-    float: right;
-  }
-  .steps_tab #msform .action-button:hover, .steps_tab #msform .action-button:focus {
-    background-color: #1F9514;
-  }
-  .steps_tab #msform .action-button-previous {
-    width: 100px;
-    background: #616161;
-    font-weight: bold;
-    color: white;
-    border: 0 none;
-    border-radius: 0px;
-    cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 5px 10px 0px;
-    float: right;
-  }
-  .steps_tab #msform .action-button-previous:hover, .steps_tab #msform .action-button-previous:focus {
-    background-color: #000000;
-  }
-  .steps_tab .card {
-    z-index: 0;
-    border: none;
-    position: relative;
-    background-color: transparent;
-  }
-  .steps_tab .fs-title {
-    font-size: 25px;
-    color:  #1F9514;
-    margin-bottom: 15px;
-    font-weight: normal;
-    text-align: left;
-  }
-  .steps_tab .purple-text {
-    color:  #1F9514;
-    font-weight: normal;
-  }
-  .steps_tab .steps {
-    font-size: 25px;
-    color: gray;
-    margin-bottom: 10px;
-    font-weight: normal;
-    text-align: right;
-  }
-  .steps_tab .fieldlabels {
-    color: gray;
-    text-align: left;
-  }
-  .steps_tab #progressbar {
-    margin-bottom: 30px;
-    overflow: hidden;
-    color: lightgrey;
-    padding-left: 0px;
-  }
-  .steps_tab #progressbar .active {
-    color:  #1F9514;
-  }
-  .steps_tab #progressbar li {
-    list-style-type: none;
-    font-size: 15px;
-    width: 25%;
-    float: left;
-    position: relative;
-    font-weight: 400;
-  }
-  .steps_tab #progressbar #account:before {
-    font-family: FontAwesome;
-    content: "\f13e";
-  }
-  .steps_tab #progressbar #personal:before {
-    font-family: FontAwesome;
-    content: "\f007";
-  }
-  .steps_tab #progressbar #payment:before {
-    font-family: FontAwesome;
-    content: "\f030";
-  }
-  .steps_tab #progressbar #confirm:before {
-    font-family: FontAwesome;
-    content: "\f00c";
-  }
-  .steps_tab #progressbar li:before {
-    width: 50px;
-    height: 50px;
-    line-height: 45px;
-    display: block;
-    font-size: 20px;
-    color: #ffffff;
-    background: lightgray;
-    border-radius: 50%;
-    margin: 0 auto 10px auto;
-    padding: 2px;
-  }
-  .steps_tab #progressbar li:after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: lightgray;
-    position: absolute;
-    left: 0;
-    top: 25px;
-    z-index: -1;
-  }
-  .steps_tab #progressbar li.active:before, .steps_tab #progressbar li.active:after {
-    background:  #1F9514;
-  }
-  .steps_tab .progress {
-    height: 20px;
-  }
-  .steps_tab .progress-bar {
-    background-color:  #1F9514;
-  }
-  .steps_tab .fit-image {
-    width: 100%;
-    object-fit: cover;
-  }
-  
-
-
-
-
-
-
-
-.view_img {
-  height: 100px;
-  object-fit: cover;
-  width: 100px;
-}
-
-.view_pdf {
-  height: 40px;
-  width: 40px;
-}
-
-
-/* checkbox design */
-
-.custom_width {
-  max-width: 250px;
-  width: 100%;
-}
-
-/* The container */
-.cont_checkbox {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 16px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Hide the browser's default checkbox */
-.cont_checkbox .cont_checkbox_input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* //inputbox dssifn */
-
-.loan_input {
-  padding: 9px 15px 9px 23px;
-  border: 1px solid #c0baba;
-  border-radius: 19px;
-  margin-bottom: 15px;
-  margin-top: 2px;
-  width: 100%;
-  box-sizing: border-box;
-  /* font-family: montserrat; */
-  color: #2C3E50;
-  background-color: #FFF;
-  font-size: 16px;
-  letter-spacing: 1px;
-}
-
-
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 23px;
-  width: 23px;
-  background-color: #eee;
-  border: 1px solid gray;
-    border-radius: 5px;
-}
-
-/* On mouse-over, add a grey background color */
-.cont_checkbox:hover .cont_checkbox_input ~ .checkmark {
-  background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.cont_checkbox .cont_checkbox_input:checked ~ .checkmark {
-  background-color: #03211b;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.cont_checkbox .cont_checkbox_input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.cont_checkbox .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.permanent_add {
-  padding: 10px 15px 10px 15px !important;
-}
-
-
-/* //image upload */
-
-.fileBtnupload {
-  position: relative;
-}
-
-.fileBtnupload::file-selector-button {
-  width: 136px;
-  color: transparent;
-}
-
-/* Faked label styles and icon */
-.fileBtnupload::before {
-  position: absolute;
-  pointer-events: none;
-  top: 10px;
-  left: 16px;
-  height: 20px;
-  width: 20px;
-  content: "";
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230964B0'%3E%3Cpath d='M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM7 9l1.41 1.41L11 7.83V16h2V7.83l2.59 2.58L17 9l-5-5-5 5z'/%3E%3C/svg%3E");
-}
-
-.fileBtnupload::after {
-  position: absolute;
-  pointer-events: none;
-  top: 11px;
-  left: 40px;
-  color: #0964b0;
-  content: "Upload File";
-}
-
-/* ------- From Step 1 ------- */
-
-/* file upload button */
-.fileBtnupload::file-selector-button {
-  border-radius: 4px;
-  padding: 0 16px;
-  height: 40px;
-  cursor: pointer;
-  background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.16);
-  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
-  margin-right: 16px;
-  transition: background-color 200ms;
-}
-
-/* file upload button hover state */
-.fileBtnupload::file-selector-button:hover {
-  background-color: #f3f4f6;
-}
-
-/* file upload button active state */
-.fileBtnupload::file-selector-button:active {
-  background-color: #e5e7eb;
-}
-
-.custom_select {
-  border: 1px solid #c0baba;
-  background-color: #fff;
-}
-
-/* 
-.fileBtnupload {
-  position: absolute;
-  z-index: -1;
-  top: 10px;
-  left: 8px;
-  font-size: 17px;
-  color: #b8b8b8;
-}
-.button-wrap {
-  position: relative;
-}
-.imagebtn {
-  display: inline-block;
-  padding: 12px 18px;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: #8ebf42;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-} */
-
-
-.user_main {
-  margin-left: 0px !important;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 30px;
+  width: 0px;
+  padding: 0px;
   transition: all 0.5s;
 }
 
+.sidebar.shrink-sidebar ul {
+  display: none;
+  transition: all 0.5s;
+}
+
+.sidebar.shrink-sidebar .dashboard-logo {
+  display: none;
+  transition: all 0.5s;
+}
+
+.marginToggleBtn {
+  margin-left: 0px !important;
+  transition: all 0.5s;
+}
+.mainContClass {
+  margin-left: 40px;
+  transition: all 0.5s;
+}
+
+.steps_tab p {
+  color: grey;
+}
+.steps_tab #heading {
+  text-transform: uppercase;
+  color:  #1F9514;
+  font-weight: normal;
+}
+.steps_tab #msform {
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+}
+.steps_tab #msform fieldset {
+  background: transparent;
+  border: 0 none;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 20px;
+  position: relative;
+}
+.steps_tab .form-card {
+  text-align: left;
+}
+.steps_tab #msform fieldset:not(:first-of-type) {
+  display: none;
+}
+.steps_tab #msform input, .steps_tab #msform textarea {
+  padding: 8px 15px 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 25px;
+  margin-top: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  background-color: #ECEFF1;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.steps_tab #msform input:focus, .steps_tab #msform textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid  #1F9514;;
+  outline-width: 0;
+}
+.steps_tab #msform .action-button {
+  width: 100px;
+  background:  #1F9514;;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 0px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 0px 10px 5px;
+  float: right;
+}
+.steps_tab #msform .action-button:hover, .steps_tab #msform .action-button:focus {
+  background-color: #1F9514;
+}
+.steps_tab #msform .action-button-previous {
+  width: 100px;
+  background: #616161;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 0px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px 10px 0px;
+  float: right;
+}
+.steps_tab #msform .action-button-previous:hover, .steps_tab #msform .action-button-previous:focus {
+  background-color: #000000;
+}
+.steps_tab .card {
+  z-index: 0;
+  border: none;
+  position: relative;
+  background-color: transparent;
+}
+.steps_tab .fs-title {
+  font-size: 25px;
+  color:  #1F9514;
+  margin-bottom: 15px;
+  font-weight: normal;
+  text-align: left;
+}
+.steps_tab .purple-text {
+  color:  #1F9514;
+  font-weight: normal;
+}
+.steps_tab .steps {
+  font-size: 25px;
+  color: gray;
+  margin-bottom: 10px;
+  font-weight: normal;
+  text-align: right;
+}
+.steps_tab .fieldlabels {
+  color: gray;
+  text-align: left;
+}
+.steps_tab #progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  color: lightgrey;
+  padding-left: 0px;
+}
+.steps_tab #progressbar .active {
+  color:  #1F9514;
+}
+.steps_tab #progressbar li {
+  list-style-type: none;
+  font-size: 15px;
+  width: 25%;
+  float: left;
+  position: relative;
+  font-weight: 400;
+}
+.steps_tab #progressbar #account:before {
+  font-family: FontAwesome;
+  content: "\f13e";
+}
+.steps_tab #progressbar #personal:before {
+  font-family: FontAwesome;
+  content: "\f007";
+}
+.steps_tab #progressbar #payment:before {
+  font-family: FontAwesome;
+  content: "\f030";
+}
+.steps_tab #progressbar #confirm:before {
+  font-family: FontAwesome;
+  content: "\f00c";
+}
+.steps_tab #progressbar li:before {
+  width: 50px;
+  height: 50px;
+  line-height: 45px;
+  display: block;
+  font-size: 20px;
+  color: #ffffff;
+  background: lightgray;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+  padding: 2px;
+}
+.steps_tab #progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: lightgray;
+  position: absolute;
+  left: 0;
+  top: 25px;
+  z-index: -1;
+}
+.steps_tab #progressbar li.active:before, .steps_tab #progressbar li.active:after {
+  background:  #1F9514;
+}
+.steps_tab .progress {
+  height: 20px;
+}
+.steps_tab .progress-bar {
+  background-color:  #1F9514;
+}
+.steps_tab .fit-image {
+  width: 100%;
+  object-fit: cover;
+}
 
 
 
+
+/* // sidebar css */
+
+
+.css-1ontqvh {
+list-style: none;
+margin: 0px;
+padding: 8px 0px;
+position: relative;
+}
+
+.css-1tpp0wj {
+display: flex;
+-webkit-box-pack: start;
+justify-content: flex-start;
+-webkit-box-align: center;
+align-items: center;
+position: relative;
+text-decoration: none;
+width: 100%;
+box-sizing: border-box;
+text-align: left;
+}
+
+.css-1uwabd6 {
+-webkit-tap-highlight-color: transparent;
+background-color: transparent;
+outline: 0px;
+border: 0px;
+margin: 0px;
+border-radius: 0px;
+cursor: pointer;
+user-select: none;
+vertical-align: middle;
+appearance: none;
+color: inherit;
+display: flex;
+-webkit-box-flex: 1;
+flex-grow: 1;
+-webkit-box-pack: start;
+justify-content: flex-start;
+-webkit-box-align: center;
+align-items: center;
+position: relative;
+text-decoration: none;
+min-width: 0px;
+box-sizing: border-box;
+text-align: left;
+padding: 8px 16px;
+transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.css-1f8bwsm {
+min-width: 56px;
+color: rgba(0, 0, 0, 0.54);
+flex-shrink: 0;
+display: inline-flex;
+}
+
+.css-1tsvksn {
+flex: 1 1 auto;
+min-width: 0px;
+margin-top: 4px;
+margin-bottom: 4px;
+}
+
+.css-w0pj6f {
+overflow: hidden;
+pointer-events: none;
+position: absolute;
+z-index: 0;
+inset: 0px;
+border-radius: inherit;
+}
+
+.css-yb0lig {
+margin: 0px;
+font-family: Roboto, Helvetica, Arial, sans-serif;
+font-weight: 400;
+font-size: 1rem;
+line-height: 1.5;
+letter-spacing: 0.00938em;
+display: block;
+}
+
+.css-vubbuv {
+user-select: none;
+width: 1em;
+height: 1em;
+display: inline-block;
+fill: currentcolor;
+flex-shrink: 0;
+transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+font-size: 1.5rem;
+}
+
+
+
+
+/* css for view application page */
+
+.ad-left-wrap {
+background: #fff;
+padding: 30px;
+text-align: center;
+}
+.ad-left-wrap img {
+max-width: 260px;
+width: 100%;
+border-radius: 50%;
+margin-bottom: 30px;
+border: 1px solid #f1f1f1;
+height: 260px;
+object-fit: cover;
+}
+
+.add-name {
+margin-top: 0;
+margin-bottom: 10px;
+font-weight: 500;
+font-size: 32px;
+}
+.add-prof {
+  color: #555;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.ad-right-wrap {
+background: #fff;
+padding: 20px 30px 20px 30px;
+}
+
+.ad-right-wrap p.agent-location {
+display: flex;
+align-items: center;
+color: #666;
+margin-bottom: 24px;
+}
+.lead_info_img {
+height: 100px;
+width: 100px;
+}
+
+
+.ad-right-wrap .agent-contact-box {
+display: flex;
+align-items: center;
+margin-top: 25px;
+}
+
+.ad-right-wrap .agent-contact-box .icon-box {
+width: 50px;
+min-width: 50px;
+height: 50px;
+margin-right: 16px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #f1f1f1;
+border-radius: 4px;
+font-size: 24px;
+color: #15549A;
+}
+
+.ad-right-wrap .agent-contact-box .contact-info p {
+margin-bottom: 0;
+font-weight: 500;
+}
+
+
+/* // bootstarp  css add */
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+border:none !important;
+outline: none !important;
+}
+
+.nav-tabs .nav-link:focus-visible {
+border-color: transparent !important;
+outline: none !important;
+}
+
+.nav-tabs .nav-item:focus-visible {
+border-color: transparent !important;
+outline: none !important;
+}
+
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+border-color: transparent !important;
+outline: none !important;
+}
+
+.nav-tabs {
+border:1px solid transparent !important;
+}
+
+.w-60 {
+width: 60%;
+}
+
+.custom_mrgpanCard {
+  margin-right: 68px;
+}
+
+.btn-soft-secondary {
+  background-image: url("../../assets/icons/arrowDrop.png");
+  background-position: calc(100% - 20px);
+  background-repeat: no-repeat;
+}
 
 
 

@@ -41,7 +41,7 @@ class AdminController extends Controller
             return response()->json($loanList, 200);
         }
 
-        return view('admin.admin_loan_list');
+        return view('admin.loan_list');
     }
 
     public function loan_details(Request $request)
@@ -49,12 +49,15 @@ class AdminController extends Controller
         if ($request->id) {
             $loan_id = $request->id;
             $loan = DB::table('loan_app')->where(['id' => $loan_id])->get();
+            $loan_type = DB::table('loan_type')->where(['type' => $loan[0]->loan_type])->get();
+            $current_country = DB::table('cities')->select('cities.city as city_name', 'states.name as state_name')->where(['cities.id' => $loan[0]->current_city])->join('states', 'states.id', '=', 'cities.state_id')->get();
+            $user = DB::table('users')->where(['id' => $loan[0]->user_id])->get();
             $documents = DB::table('documents')->where(['loan_app_id' => $loan_id])->get();
             $second_form = DB::table('form_second')->where(['loan_app_id' => $loan_id])->get();
 
             // echo '<pre>'; print_r($loan); echo '<pre>'; die();
         }
 
-        return view('deta');
+        return view('admin.loan_detail', ['data' => ['loan_type' => $loan_type,'current_country' => $current_country, 'user' => $user, 'loan' => $loan, 'document' => $documents, 'second_form' => $second_form]]);
     }
 }

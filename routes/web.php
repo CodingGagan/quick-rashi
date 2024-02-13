@@ -43,6 +43,7 @@ Route::get('admin/signin',  function () {
 })->name('admin_sign_in_page');
 Route::post('admin/login', [AdminController::class, 'login'])->name('admin_login');
 Route::get('admin/dashboard', [AdminController::class, 'admin_dashboard'])->name('admin_dashboard');
+// Route::get('admin/loan/view/{id}', [AdminController::class, 'loan_details'])->name('admin_dashboard');
 Route::get('signin',  function () {
     return view('pages/signin');
 })->name('signin');
@@ -87,3 +88,5 @@ Route::get('fetchCitiesByStateId/{id}', [UserController::class, 'fetchCitiesBySt
 Route::post('save_form_first', [UserController::class, 'save_form_first'])->name('save_form_first');
 Route::post('save_form_second', [UserController::class, 'save_form_second'])->name('save_form_second');
 Route::post('save_form_third', [UserController::class, 'save_form_third'])->name('save_form_third');
+
+Route::get('logout', [UserController::class, 'logout'])->name('logout');

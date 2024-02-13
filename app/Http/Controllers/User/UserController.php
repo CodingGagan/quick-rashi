@@ -11,8 +11,16 @@ use Image;
 class UserController extends Controller
 {
     protected $data = [];
+
+    public function __construct()
+    {
+    }
+    
     public function dashboard($id = "")
     {
+        if (!Auth::check()) {
+            return redirect()->route('signin');
+        }
         if ($id) {
             $getLoan = DB::table('loan_app')->where(['id' => $id])->get();
             $secondFormData = DB::table('form_second')->where(['loan_app_id' => $id])->get();
@@ -38,6 +46,9 @@ class UserController extends Controller
 
     public function user_loan_list(Request $request)
     {
+        if (!Auth::check()) {
+            return redirect()->route('signin');
+        }
         if ($request->ajax()) {
             $loanList = DB::table('users')
                 ->join('loan_app', 'loan_app.user_id', '=', 'users.id')
@@ -247,5 +258,12 @@ class UserController extends Controller
 
             return redirect()->route('contact');
         }
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        
+        return redirect()->route('signin');
     }
 }

@@ -66,7 +66,7 @@
                                      <a href="{{ route('user_dashboard') }}"
                                          class="btn_theme btn_theme_active">Dashboard <i
                                              class="bi bi-arrow-up-right"></i><span></span></a>
-                                     <a href="{{ route('user_dashboard') }}"
+                                     <a href="{{ route('logout') }}"
                                          class="btn_theme btn_theme_active">Logout <i
                                              class="bi bi-arrow-up-right"></i><span></span></a>
                                  </div>
