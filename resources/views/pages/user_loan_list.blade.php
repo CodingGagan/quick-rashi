@@ -34,6 +34,7 @@
                     <th>Loan Type</th>
                     <th>Amount</th>
                     <th>Status</th>
+                    <th>File Replied</th>
                     <th>Applied</th>
                     <th>Action</th>
                 </tr>
@@ -48,6 +49,7 @@
                     <th>Loan Type</th>
                     <th>Amount</th>
                     <th>Status</th>
+                    <th>File Replied</th>
                     <th>Applied</th>
                     <th>Action</th>
                 </tr>

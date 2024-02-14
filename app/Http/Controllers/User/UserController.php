@@ -15,12 +15,13 @@ class UserController extends Controller
     public function __construct()
     {
     }
-    
+
     public function dashboard($id = "")
     {
         if (!Auth::check()) {
             return redirect()->route('signin');
         }
+        $this->data['user_pending_loan'] = DB::table('loan_app')->where(['user_id' => Auth::user()->id])->whereIn('status', ['0', '2'])->exists();
         if ($id) {
             $getLoan = DB::table('loan_app')->where(['id' => $id])->get();
             $secondFormData = DB::table('form_second')->where(['loan_app_id' => $id])->get();
@@ -34,7 +35,7 @@ class UserController extends Controller
             return view('pages.loan_application', ['states' => $states, 'data' => $this->data['edited_data']]);
         }
         $states = DB::table('states')->where(['country_id' => 105])->get();
-        return view('pages.loan_application', ['states' => $states]);
+        return view('pages.loan_application', ['states' => $states, 'data' => $this->data]);
     }
 
     public function fetchCitiesByStateId($id)
@@ -54,14 +55,14 @@ class UserController extends Controller
                 ->join('loan_app', 'loan_app.user_id', '=', 'users.id')
                 ->join('form_second',  'form_second.loan_app_id', '=', 'loan_app.id')
                 ->join('documents', 'documents.loan_app_id', '=', 'loan_app.id')
-                ->select('users.firstname', 'loan_app.id', 'loan_app.loan_type', 'loan_app.amount', 'loan_app.status', 'loan_app.created_at')
+                ->select('users.firstname', 'loan_app.id', 'loan_app.loan_type','loan_app.reason' ,'loan_app.amount', 'loan_app.status', 'loan_app.created_at')
                 ->where(['user_id' => Auth::user()->id])
                 ->get();
 
             return response()->json($loanList, 200);
         }
-
-        return view('pages.user_loan_list');
+        $this->data['user_pending_loan'] = DB::table('loan_app')->where(['user_id' => Auth::user()->id])->whereIn('status', ['0', '2'])->exists();
+        return view('pages.user_loan_list', ['data' => $this->data]);
     }
 
     public function save_form_first(Request $request)
@@ -263,7 +264,7 @@ class UserController extends Controller
     public function logout()
     {
         Auth::logout();
-        
+
         return redirect()->route('signin');
     }
 }

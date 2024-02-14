@@ -74,6 +74,7 @@ Route::post('submit_register', [AuthController::class, 'submit_register'])->name
 /* OTP Verification and send */
 Route::post('/emailOtpVerification', [AuthController::class, "emailOtpVerification"]);
 Route::post('generateOtp', [AuthController::class, 'sendOtpMail'])->name('otp');
+Route::post('/update_loan_status', [AdminController::class, "update_loan_status"]);
 
 /* User Side */
 Route::get('user/dashboard/{id?}', [UserController::class, 'dashboard'])->name('user_dashboard');

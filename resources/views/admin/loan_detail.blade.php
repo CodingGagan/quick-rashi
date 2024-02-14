@@ -27,6 +27,11 @@
                                 type="button" role="tab" aria-controls="documents" aria-selected="false">User
                                 Documents</button>
                         </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="fileReportTab" data-bs-toggle="tab"
+                                data-bs-target="#file-report-tab" type="button" role="tab" aria-controls="filereport"
+                                aria-selected="false">File Report</button>
+                        </li>
                     </ul>
                     <div class="tab-content mt-2" id="myTabContent">
                         <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -173,11 +178,11 @@
                                                 </svg>
                                             </div> --}}
                                             <div class="contact-info">
-                                             
+
                                                 <p class="mb-5"><span class="custom_mrgpanCard">Pan card:-</span> <img
-                                                    src="{{ asset($data['document'][0]->pan_card) }}" alt=""
-                                                    class="lead_info_img" /></p>
-                                                <p><span class="mr-5">User Image:-</span>  
+                                                        src="{{ asset($data['document'][0]->pan_card) }}" alt=""
+                                                        class="lead_info_img" /></p>
+                                                <p><span class="mr-5">User Image:-</span>
                                                     <a target="_blank" href="/{{ $data['document'][0]->photo }}">
                                                         <img src="{{ asset($data['document'][0]->photo) }}"
                                                             alt="" class="lead_info_img" />
@@ -187,6 +192,25 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="file-report-tab" role="tabpanel" aria-labelledby="fileReportTab">
+                            <div class="ad-right-wrap">
+                                <h2 class="add-name mb-4">File Summary</h2>
+                                <br>
+                                <select {{$data['loan'][0]->status == 3 || $data['loan'][0]->status == 1 ? "disabled" : ""}} name="loan_approval_status" class="form-control loan_approval_status"
+                                    data-id="" id="">
+                                    <option {{ $data['loan'][0]->status == 0 ? 'selected' : '' }} value="0">Pending
+                                    </option>
+                                    <option {{ $data['loan'][0]->status == 2 ? 'selected' : '' }} value="2">In-Review
+                                    </option>
+                                    <option {{ $data['loan'][0]->status == 1 ? 'selected' : '' }} value="1">Approve
+                                    </option>
+                                    <option {{ $data['loan'][0]->status == 3 ? 'selected' : '' }} value="3">Reject
+                                    </option>
+                                </select>
+                                <br>
+                                Reason: {{ $data['loan'][0]->reason == null ? 'No Reason Yet' : $data['loan'][0]->reason }}
                             </div>
                         </div>
                     </div>

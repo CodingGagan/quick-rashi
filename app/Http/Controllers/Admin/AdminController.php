@@ -58,6 +58,25 @@ class AdminController extends Controller
             // echo '<pre>'; print_r($loan); echo '<pre>'; die();
         }
 
-        return view('admin.loan_detail', ['data' => ['loan_type' => $loan_type,'current_country' => $current_country, 'user' => $user, 'loan' => $loan, 'document' => $documents, 'second_form' => $second_form]]);
+        return view('admin.loan_detail', ['data' => ['loan_type' => $loan_type, 'current_country' => $current_country, 'user' => $user, 'loan' => $loan, 'document' => $documents, 'second_form' => $second_form]]);
+    }
+
+    public function update_loan_status(Request $request)
+    {
+        if ($request->ajax()) {
+            $loanid = $request->loan_id;
+            $loanstatus = $request->loan_status;
+
+            if ($loanstatus == 3) {
+
+                DB::table('loan_app')->where(['id' => $loanid])->update(['status' => $loanstatus, 'reason' => $request->reason]);
+            } else {
+
+                DB::table('loan_app')->where(['id' => $loanid])->update(['status' => $loanstatus]);
+            }
+
+
+            return response()->json([true, 'Updated'], 200);
+        }
     }
 }

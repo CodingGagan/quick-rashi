@@ -38,10 +38,15 @@ if (sign_in_btn) {
         email = document.querySelector('input[type="email"]').value;
         if (email) {
             if (otp_verify_section) {
-                otp_verify_section.classList.remove('d-none');
                 currentTime = await fetchOtp(email);
-                sign_in_btn.classList.add('d-none')
-                timer(currentTime)
+                console.log(currentTime);
+                if (currentTime == 'User Email Does not Exist') {
+                    alert("User Email Does not Exist")
+                } else {
+                    otp_verify_section.classList.remove('d-none');
+                    sign_in_btn.classList.add('d-none')
+                    timer(currentTime)
+                }
 
             }
         } else {
@@ -55,7 +60,6 @@ let reverseTime = document.querySelector('reverseTime');
 let timerOn = true;
 
 function timer(remaining) {
-    console.log("g")
     minute = Math.floor(remaining / 60);
     second = remaining % 60;
 

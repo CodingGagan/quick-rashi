@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/animate/animate.css') }}">
     <!--  / css dependencies end  -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- main css -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
@@ -138,6 +139,15 @@
                             }
                         },
                         {
+                            data: 'reason',
+                            name: 'reason',
+                            render: function(data, type, row) {
+                                return row.reason == null ?
+                                    `<span class="badge bg-success">...</span>` :
+                                    `<span class="badge bg-danger">${row.reason}</span>`
+                            }
+                        },
+                        {
                             data: 'created_at',
                             name: 'applied',
                         },
@@ -162,8 +172,13 @@
             });
         }
 
-
-       
+        const newLoanSwal = () => {
+            Swal.fire({
+                title: "Already loan?",
+                text: "You have pending loan?",
+                icon: "question"
+            });
+        }
     </script>
 </body>
 

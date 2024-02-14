@@ -18,11 +18,12 @@ class AuthController extends Controller
     {
         $email = $request->email;
 
+        $userExistOrNot = User::where(['email' => $email])->exists();
         $userExist = User::where(['email' => $email])->get();
-        if ($userExist) {
-        } else {
-            return response()->json([false, 'Email Id not exist'], 200);
-        }
+        // echo '<pre>'; print_r($userExist); echo '<pre>'; die();
+        if (!$userExistOrNot) {
+            return response()->json([false, 'User Email Does not Exist'], 200);
+        } 
         if ($request->ajax()) {
             // try {
             $fetchLastOtp = OtpLogs::select('e_created_at')->where(['user_id' => $userExist[0]->id])
