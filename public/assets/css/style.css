@@ -5553,3 +5553,8 @@ label.error {
   fill:#fff;
   stroke: #fff;
 }
+
+.logo_bt {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 15px;
+}

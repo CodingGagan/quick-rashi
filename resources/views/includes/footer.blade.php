@@ -5,8 +5,10 @@
            <div class="col-12 col-sm-6 col-xl-3">
                <div class="about-company wow fadeInLeft" data-wow-duration="0.8s">
                    <div class="footer__logo mb-4">
-                       <a href="{{ route('/') }}">
-                           <img src="{{ asset('assets/images/company/logo.png') }}" alt="Logo">
+                       <a href="{{ route('/') }}" >
+                        <div class="logo_bt">
+                              <img src="{{ asset('assets/images/company/logo.png') }}" alt="Logo">
+                        </div>
                        </a>
                    </div>
                    <p>Welcome to Quick Rashi, your trusted resource for financial loan reviews and comparisons. Our
