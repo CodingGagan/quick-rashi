@@ -49,11 +49,11 @@
     jQuery(document).ready(function () {
 
         // pre_loader
-        $(".preloader").delay(300).animate({
-            "opacity": "0"
-        }, 800, function () {
-            $(".preloader").css("display", "none");
-        });
+        // $(".preloader").delay(300).animate({
+        //     "opacity": "0"
+        // }, 800, function () {
+        //     $(".preloader").css("display", "none");
+        // });
 
         // on scroll actions
         var scroll_offset = 120;
@@ -91,12 +91,12 @@
 
 
         // magnificPopup
-        $('.popup_img').magnificPopup({
-            type: 'image',
-            gallery: {
-                enabled: true
-            }
-        });
+        // $('.popup_img').magnificPopup({
+        //     type: 'image',
+        //     gallery: {
+        //         enabled: true
+        //     }
+        // });
 
         // data background
         $("[data-background]").each(function () {

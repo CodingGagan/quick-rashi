@@ -48,7 +48,7 @@
                          @else
                              <ul class="navbar-nav mb-lg-0 mx-auto">
                                  <li class="nav-item">
-                                     @if (!$data['user_pending_loan'])
+                                     @if (isset($data['user_pending_loan']) && !$data['user_pending_loan'])
                                          <a class="nav-link" href="{{ route('user_dashboard') }}">Request new loan</a>
                                      @else
                                          <a class="nav-link" href="#" onclick="newLoanSwal()">Request new loan</a>

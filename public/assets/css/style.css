@@ -5536,3 +5536,20 @@ label.error {
   cursor: pointer;
   color: blue; /* Customize the color as needed */
 }
+
+
+/* modal css */
+
+.avatar_img {
+  height: 200px;
+  width: 200px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.what-app {
+  height: 18px;
+  width: 18px;
+  fill:#fff;
+  stroke: #fff;
+}

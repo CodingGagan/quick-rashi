@@ -44,7 +44,8 @@
             ],
             [
                 'image' => 'assets/Testimonial/GayathriKeenala.webp',
-                'content' => "Quick Rashi team has been a pathway in achieving my goals to pursue my masters. The team has undoubtedly, unconditionally has helped me in each and every aspect right from clearing even the smallest hint of doubt. The service offered by quickloans.com has helped in making the process of applying for loan smoothly. I owe a lot to simran who has been a key role in helping me. She has helped me in giving constant motivation at times when I gave up and even promised me to get the best ever deal and negotiation for me. What I like about quickloans.com is the diligence it carries forward in helping students achieve their goal. The constant follow up keeps us moving and progress instead of procrastinating. Special thanks to quickloans.com for taking my work very much easier and simple. I dont see any negative feedback to be given. I am in touch with the team regularly and I didn't find any difficulty from their end. I hope this feedback helps u in a better way to carry on and create a legacy.",
+                'content' =>
+                    "Quick Rashi team has been a pathway in achieving my goals to pursue my masters. The team has undoubtedly, unconditionally has helped me in each and every aspect right from clearing even the smallest hint of doubt. The service offered by quickloans.com has helped in making the process of applying for loan smoothly. I owe a lot to simran who has been a key role in helping me. She has helped me in giving constant motivation at times when I gave up and even promised me to get the best ever deal and negotiation for me. What I like about quickloans.com is the diligence it carries forward in helping students achieve their goal. The constant follow up keeps us moving and progress instead of procrastinating. Special thanks to quickloans.com for taking my work very much easier and simple. I dont see any negative feedback to be given. I am in touch with the team regularly and I didn't find any difficulty from their end. I hope this feedback helps u in a better way to carry on and create a legacy.",
                 'name' => 'Gayathri Keenala',
                 'from' => 'University of New haven - Chirala',
             ],
@@ -52,8 +53,8 @@
     @endphp
     <!--  Preloader  -->
     <!-- <div class="preloader">
-                                                <span class="loader"></span>
-                                            </div> -->
+                                                    <span class="loader"></span>
+                                                </div> -->
 
     <!-- Hero Section Start -->
     <section class="hero hero--secondary">
@@ -89,34 +90,34 @@
 
     <!-- sponsor start -->
     <!-- <div class="section sponsor-slider wow fadeInDown" data-wow-duration="0.8s">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="sponsor__company" id="sponsor__company">
-                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                <img src="assets/images/sponsor_logo.png" alt="Image">
-                                                            </div>
-                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                <img src="assets/images/sponsor_logo2.png" alt="Image">
-                                                            </div>
-                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                <img src="assets/images/sponsor_logo3.png" alt="Image">
-                                                            </div>
-                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                <img src="assets/images/sponsor_logo4.png" alt="Image">
-                                                            </div>
-                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                <img src="assets/images/sponsor_logo2.png" alt="Image">
-                                                            </div>
-                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                <img src="assets/images/sponsor_logo4.png" alt="Image">
-                                                            </div>
-                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                <img src="assets/images/sponsor_logo3.png" alt="Image">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="sponsor__company" id="sponsor__company">
+                                                                <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                    <img src="assets/images/sponsor_logo.png" alt="Image">
+                                                                </div>
+                                                                <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                    <img src="assets/images/sponsor_logo2.png" alt="Image">
+                                                                </div>
+                                                                <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                    <img src="assets/images/sponsor_logo3.png" alt="Image">
+                                                                </div>
+                                                                <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                    <img src="assets/images/sponsor_logo4.png" alt="Image">
+                                                                </div>
+                                                                <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                    <img src="assets/images/sponsor_logo2.png" alt="Image">
+                                                                </div>
+                                                                <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                    <img src="assets/images/sponsor_logo4.png" alt="Image">
+                                                                </div>
+                                                                <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                    <img src="assets/images/sponsor_logo3.png" alt="Image">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div> -->
+                                                </div> -->
     <!-- sponsor end -->
 
     <!-- why-choose start -->
@@ -307,7 +308,7 @@
                                             <i class="bi bi-star-half star-active"></i>
                                         </div>
                                         <p class="text-start testomonial_text">
-                                            <?php echo $testi['content'] ? (strlen($testi['content']) > 30 ? substr($testi['content'], 0, 90) . ' <button class="read-more-button">read more</button>' : $testi_content) : ""; ?>
+                                            <?php echo $testi['content'] ? (strlen($testi['content']) > 30 ? substr($testi['content'], 0, 70) . ' <button class="read-more-button" type="button" class="btn btn-primary" data-toggle="modal" data-unique="' . $testi['name'] . '">read more</button>' : $testi_content) : ''; ?>
                                         </p>
 
                                     </div>
@@ -316,9 +317,9 @@
                                             <img src="{{ asset($testi['image']) }}" alt="">
                                         </div>
                                         <div class="author__content">
-                                            <h5 class="author__title">{{$testi['name']}}
+                                            <h5 class="author__title">{{ $testi['name'] }}
                                             </h5>
-                                            <p class="author__desi">{{$testi['from']}}
+                                            <p class="author__desi">{{ $testi['from'] }}
                                             </p>
                                         </div>
                                     </div>
@@ -702,12 +703,55 @@
         </div>
     </section>
 
+
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Testimonial</h5>
+                    <button type="button" class="close bg-transparent" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-4 pb-5">
+                    <div class="text-center">
+                        <span id="candidate_image">
+                           
+                        </span>
+                            
+                        <h4 class="mt-3" id="candidate_name"></h4>
+                        <p class="mt-2" id="candidate_from">University of central Missouri - Chittoor</p>
+                    </div>
+
+
+                    <p class="mt-5" id="candidate_desc">I started my education loan process in the month of January. After trying out
+                        multiple banks, none of them were able to give me a loan because of the income of my family. Some
+                        banks directly refused to sanction my loan. Before this I never thought that taking an education
+                        loan can ever be such a big problem. But I am thankful to QuickkLoans.com and team for getting my
+                        loan sanction in multiple banks.I am extremely grateful to QuickkLoans.com for keeping the whole
+                        education loan process transparent and with fewer constraints on documentation. All my queries and
+                        doubts were handled very well by the customer support in quickloans.com. They are very respective to
+                        the customers.They will explain each and every point if you have doubts regarding about loan
+                        process.With in 3 days they will complete the loan process and they will provide the sention letter.
+                        That's very helpful for the students.Again thanks, to quickloans.com for making life easier for all
+                        the aspiring students. You guys are doing some really great work in this space !!</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <script>
         function toggleReadMore(button) {
             const paragraph = button.previousElementSibling;
             paragraph.classList.toggle('expanded');
             button.innerHTML = paragraph.classList.contains('expanded') ? 'Read Less' : 'Read More';
         }
+
+        let CurrentTestimonial =  {{ Js::from($testimonials) }}     
     </script>
     <!-- faq end -->
 @endsection
