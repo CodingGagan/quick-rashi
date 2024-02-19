@@ -30,8 +30,8 @@
         <div class="container">
             <div class="row gy-5 gy-xl-0 justify-content-center justify-content-lg-between">
                 <div class="col-12 col-lg-12 col-xxl-12">
-                    <form method="POST" autocomplete="off" action="{{ route('submit_contact') }}" id="formContactus" class="sign-up__form wow fadeInDown"
-                        data-wow-duration="0.8s">
+                    <form method="POST" autocomplete="off" action="{{ route('submit_contact') }}" id="formContactus"
+                        class="sign-up__form wow fadeInDown" data-wow-duration="0.8s">
                         @csrf
                         <h3 class="contact__title wow fadeInDown" data-wow-duration="0.8s">Get in touch with us.</h3>
                         <div class="sign-up__form-part">
@@ -64,8 +64,12 @@
         </div>
     </section>
     <!-- contact end -->
-
+    <div class="mt-2 mb-2" >
+        <iframe width="100%" height="250" id="gmap_canvas" rel="preconnect"
+            src="https://maps.google.com/maps?q=UG+60%2C+Somdutt+chamber%2C+Bhikaji+Cama+place%2C+new+delhi+-+110066&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+            frameborder="0" scrolling="no" title="Quickk Loans, Fast Loans, Education Loan, Education Loan in India, Abroad"
+            loading="lazy"></iframe>
+    </div>
     <!-- scroll to top -->
     <a href="#" class="scrollToTop"><i class="bi bi-chevron-double-up"></i></a>
-
 @endsection
