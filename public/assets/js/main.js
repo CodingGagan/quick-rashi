@@ -98,6 +98,14 @@
         //     }
         // });
 
+        $(document).scroll((e) => {
+            if($(this).scrollTop() > 120) {
+                $('.main-menu .navbar-nav .nav-item .nav-link').css('color', 'white');
+            } else {
+                $('.main-menu .navbar-nav .nav-item .nav-link').css('color', '#074C3E');
+            }
+        })
+
         // data background
         $("[data-background]").each(function () {
             $(this).css(
