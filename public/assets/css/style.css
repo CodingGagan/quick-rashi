@@ -2306,6 +2306,7 @@ label.error {
   top: 0;
   left: 0;
   width: 100%;
+  background-color: white;
   z-index: 299;
 }
 
@@ -2330,9 +2331,9 @@ label.error {
 }
 .header-section .navbar .navbar-toggler {
   font-size: x-large;
-  border: none;
-  color: #ffffff;
-  border: none !important;
+  /* border: none; */
+  color: #03211b;
+  /* border: none !important; */
 }
 .header-section .navbar .navbar-toggler:focus {
   outline: 0;

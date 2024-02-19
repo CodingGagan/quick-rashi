@@ -105,28 +105,49 @@
                      <button type="button" class="close-icon d-md-none ms-auto" data-bs-dismiss="offcanvas"
                          aria-label="Close"><i class="bi bi-x"></i></button>
                      <ul class="custom-nevbar__nav mb-lg-0">
-                         <li class="menu_item">
-                             <a class="menu_link" href="{{ route('/') }}"> Home </a>
-                         </li>
-                         <li class="menu_item">
-                             <a class="menu_link" href="{{ route('about') }}">About</a>
-                         </li>
-                         <li class="menu_item dropdown">
-                             <a class="menu_link dropdown-toggle" href="#" role="button"
-                                 data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-                             <ul class="dropdown-menu">
-                                 <li><a class="dropdown-item" href="{{ route('personal') }}">Personal Loan</a></li>
-                                 <li><a class="dropdown-item" href="{{ route('business') }}">Business Loan</a></li>
-                                 <li><a class="dropdown-item" href="{{ route('education') }}">Abroad Education
-                                         Loan</a></li>
-                             </ul>
-                         </li>
-                         <li class="menu_item">
-                             <a class="menu_link" href="{{ route('contact') }}">Contact us</a>
-                         </li>
-                         <li class="menu_item">
-                             <a class="menu_link" href="{{ route('signin') }}">Sign-in</a>
-                         </li>
+                         @if (Auth::check())
+                             <li class="menu_item">
+                                 <a class="menu_link" href="{{ route('user_dashboard') }}">Dashboard</a>
+                             </li>
+                             <li class="menu_item">
+                                 @if (isset($data['user_pending_loan']) && !$data['user_pending_loan'])
+                                     <a class="menu-link" href="{{ route('user_dashboard') }}">Request new loan</a>
+                                 @else
+                                     <a class="menu-link" href="#" onclick="newLoanSwal()">Request new loan</a>
+                                 @endif
+                             </li>
+                             <li class="menu_item">
+                                 <a class="menu_link" href="{{ route('user_loan_list') }}">Loan List</a>
+                             </li>
+                             <li class="menu_item">
+                                 <a class="menu_link" href="{{ route('logout') }}">Logout</a>
+                             </li>
+                         @else
+                             <li class="menu_item">
+                                 <a class="menu_link" href="{{ route('/') }}"> Home </a>
+                             </li>
+                             <li class="menu_item">
+                                 <a class="menu_link" href="{{ route('about') }}">About</a>
+                             </li>
+                             <li class="menu_item dropdown">
+                                 <a class="menu_link dropdown-toggle" href="#" role="button"
+                                     data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                                 <ul class="dropdown-menu">
+                                     <li><a class="dropdown-item" href="{{ route('personal') }}">Personal Loan</a>
+                                     </li>
+                                     <li><a class="dropdown-item" href="{{ route('business') }}">Business Loan</a>
+                                     </li>
+                                     <li><a class="dropdown-item" href="{{ route('education') }}">Abroad Education
+                                             Loan</a></li>
+                                 </ul>
+                             </li>
+                             <li class="menu_item">
+                                 <a class="menu_link" href="{{ route('contact') }}">Contact us</a>
+                             </li>
+                             <li class="menu_item">
+                                 <a class="menu_link" href="{{ route('signin') }}">Sign-in</a>
+                             </li>
+                         @endif
                      </ul>
                  </div>
              </div>
