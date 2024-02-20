@@ -26,7 +26,7 @@
         </div>
     </section>
     <div class="main-content">
-        <div class="" id="mainCont">
+        <div class="pt-5" id="mainCont">
             <h2 class="text-center">Apply Now.</h2>
             <div class="steps_tab">
                 <div class="container-fluid">
@@ -189,7 +189,7 @@
                                             <div class="form-group custom_width mt-4">
                                                 <label class="cont_checkbox">Check if same address
                                                     <input type="checkbox" name="same_address_as_current"
-                                                        id="same_address_as_current" class="cont_checkbox_input">
+                                                        id="same_address_as_current"  class="cont_checkbox_input">
                                                     <span class="checkmark"></span>
                                                 </label>
                                             </div>

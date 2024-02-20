@@ -189,7 +189,7 @@
   box-sizing: border-box;
   font-family: montserrat;
   color: #2C3E50;
-  background-color: #ECEFF1;
+  background-color:#fff;
   font-size: 16px;
   letter-spacing: 1px;
 }
@@ -540,6 +540,13 @@ width: 60%;
   background-image: url("../../assets/icons/arrowDrop.png");
   background-position: calc(100% - 20px);
   background-repeat: no-repeat;
+}
+
+.cont_checkbox_input {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 5px !important;
+  margin-left: 10px;
 }
 
 

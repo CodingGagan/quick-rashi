@@ -1,12 +1,12 @@
 #current_address {
     background-color: rgb(224, 224, 224);
-    padding: 10px 15px 10px 15px;
+    padding: 20px 20px 10px 20px;
 
 }
 
 .currnt_add {
     background-color: rgb(224, 224, 224);
-    padding: 10px 15px 10px 15px;  
+    padding: 20px 20px 10px 20px;  
 }
 
 #current_address .head {
@@ -16,8 +16,8 @@
 
 #permanent_address {
     background-color: rgb(224, 224, 224);
-    padding: 0 10px 10px 10px;
-    margin-top: 4%;
+    padding: 20px 20px 10px 20px;
+    margin-top: 1%;
 }
 
 #permanent_address .head {

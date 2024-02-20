@@ -72,6 +72,4 @@
 
 
 
-    <!-- scroll to top -->
-    <a href="#" class="scrollToTop"><i class="bi bi-chevron-double-up"></i></a>
 @endsection

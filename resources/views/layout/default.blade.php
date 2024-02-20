@@ -48,7 +48,10 @@
         @includeIf('includes.foot')
         @includeIf('includes.footer')
     </footer>
+    
+                           >
     {{-- @includeIf('includes.mobile-foot-nav') --}}
+    <a href="https://api.whatsapp.com/send/?phone=9871773053&text=Hi+there%21+Need+a+loan.+Let%27s+talk+on+WhatsApp+and+make+it+easy.&type=phone_number&app_absent=0" class="what_app"><i class="fa-brands fa-whatsapp"></i></a> 
     <!-- scroll to top -->
     <a href="#" class="scrollToTop"><i class="bi bi-chevron-double-up"></i></a> 
 

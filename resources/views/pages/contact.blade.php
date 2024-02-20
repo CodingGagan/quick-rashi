@@ -70,6 +70,4 @@
             frameborder="0" scrolling="no" title="Quickk Loans, Fast Loans, Education Loan, Education Loan in India, Abroad"
             loading="lazy"></iframe>
     </div>
-    <!-- scroll to top -->
-    <a href="#" class="scrollToTop"><i class="bi bi-chevron-double-up"></i></a>
 @endsection
