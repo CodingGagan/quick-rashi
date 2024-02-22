@@ -27,7 +27,7 @@
                    <h4 class="footer__title mb-4">Contact</h4>
                    <div class="footer__content">
                        <a href="tel:+1-234-567-891"> <span class="btn_theme social_box"> <i
-                                   class="bi bi-telephone-plus"></i> </span> +91 9871 773 053 </br> +91 8448 043 856
+                                   class="bi bi-telephone-plus"></i> </span> +91 9871 773 053 </br> +91 8448 237 699
                            <span></span> </a>
                        <a href="https://pixner.net/cdn-cgi/l/email-protection#ec85828a83ac89948d819c8089c28f8381">
                            <span class="btn_theme social_box"> <i class="bi bi-envelope-open"></i> </span> <span
