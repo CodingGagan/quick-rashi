@@ -28,12 +28,15 @@
                                      <a class="nav-link dropdown-toggle active" href="#" role="button"
                                          data-bs-toggle="dropdown" aria-expanded="false"> Services </a>
                                      <ul class="dropdown-menu">
+                                         <li><a class="dropdown-item" href="{{ route('education') }}">Abroad Education
+                                                 Loan</a></li>
                                          <li><a class="dropdown-item" href="{{ route('personal') }}">Personal Loan</a>
                                          </li>
                                          <li><a class="dropdown-item" href="{{ route('business') }}">Business Loan</a>
                                          </li>
-                                         <li><a class="dropdown-item" href="{{ route('education') }}">Abroad Education
+                                         <li><a class="dropdown-item" href="{{ route('home_loan') }}">Home
                                                  Loan</a></li>
+                                         <li><a class="dropdown-item" href="{{ route('loan_property') }}">Loan Against Property</a></li>
                                      </ul>
                                  </li>
 
@@ -133,12 +136,16 @@
                                  <a class="menu_link dropdown-toggle" href="#" role="button"
                                      data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                                  <ul class="dropdown-menu">
+                                     <li><a class="dropdown-item" href="{{ route('education') }}">Abroad Education
+                                             Loan</a></li>
                                      <li><a class="dropdown-item" href="{{ route('personal') }}">Personal Loan</a>
                                      </li>
                                      <li><a class="dropdown-item" href="{{ route('business') }}">Business Loan</a>
                                      </li>
-                                     <li><a class="dropdown-item" href="{{ route('education') }}">Abroad Education
-                                             Loan</a></li>
+                                     <li><a class="dropdown-item" href="{{ route('home_loan') }}">Home Loan</a>
+                                     </li>
+                                     <li><a class="dropdown-item" href="{{ route('loan_property') }}">Loan Against Property</a>
+                                     </li>
                                  </ul>
                              </li>
                              <li class="menu_item">

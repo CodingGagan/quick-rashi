@@ -29,6 +29,12 @@ Route::get('/business', function () {
 Route::get('education',  function () {
     return view('pages/education');
 })->name('education');
+Route::get('loan_property',  function () {
+    return view('pages.loan_against_property');
+})->name('loan_property');
+Route::get('home_loan',  function () {
+    return view('pages.home');
+})->name('home_loan');
 Route::get('personal',  function () {
     return view('pages/personal');
 })->name('personal');
