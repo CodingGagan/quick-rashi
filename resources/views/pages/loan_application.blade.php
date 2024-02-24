@@ -1,6 +1,13 @@
 @extends('layout.default')
 
 @section('content')
+    <style>
+        .form-control,
+        input,
+        select {
+            border-radius: 5px !important;
+        }
+    </style>
     <link rel="stylesheet" href="{{ asset('admin_assets/css/main.css') }}">
     <section class="banner">
         <div class="container">
@@ -98,7 +105,7 @@
 
 
 
-                                            <div id="current_address" class="currnt_add">
+                                            <div id="current_address" class="currnt_add row">
                                                 <div class="form-group">
                                                     <label class="fieldlabels">Current Address: *</label>
                                                     <input
@@ -113,75 +120,88 @@
                                                         type="text" name="current_address_2" class="loan_input"
                                                         placeholder="" required />
                                                 </div>
-                                                <div class="form-group">
-                                                    <label class="fieldlabels">Current Landmark: *</label>
-                                                    <input
-                                                        value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->current_landmark : '') : '' }}"
-                                                        type="text" name="current_landmark" class="loan_input"
-                                                        placeholder="" required />
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="fieldlabels">Current Landmark: *</label>
+                                                        <input
+                                                            value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->current_landmark : '') : '' }}"
+                                                            type="text" name="current_landmark" class="loan_input"
+                                                            placeholder="" required />
+                                                    </div>
+
                                                 </div>
-                                                <div class="form-group">
-                                                    <label class="fieldlabels">Current Country: *</label>
-                                                    <select name="current_country" id="current_country"
-                                                        class="form-control custom_select" required>
-                                                        <option value="0" disabled>Select Country</option>
-                                                        <option value="105" selected>India</option>
-                                                    </select>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="fieldlabels">Current Country: *</label>
+                                                        <select name="current_country" id="current_country"
+                                                            class="form-control custom_select" required>
+                                                            <option value="0" disabled>Select Country</option>
+                                                            <option value="105" selected>India</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
 
 
                                                 <br />
-                                                <div class="form-group mt-3">
-                                                    <label class="fieldlabels">Current State: *</label>
-                                                    @php
-                                                        $current_state_selected = isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->current_state : '') : '';
-                                                    @endphp
-                                                    <select name="current_state" id="current_state" class="form-control"
-                                                        required>
-                                                        <option value="0" selected disabled>Select State</option>
-                                                        @if (isset($states))
-                                                            @foreach ($states as $state)
-                                                                <option
-                                                                    {{ $current_state_selected ? ($current_state_selected == $state->id ? 'selected' : '') : '' }}
-                                                                    value="{{ $state->id }}">{{ $state->name }}
-                                                                </option>
-                                                            @endforeach
-                                                        @endif
-                                                    </select>
+                                                <div class="col-md-6">
+                                                    <div class="form-group mt-3">
+                                                        <label class="fieldlabels">Current State: *</label>
+                                                        @php
+                                                            $current_state_selected = isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->current_state : '') : '';
+                                                        @endphp
+                                                        <select name="current_state" id="current_state"
+                                                            class="form-control" required>
+                                                            <option value="0" selected disabled>Select State</option>
+                                                            @if (isset($states))
+                                                                @foreach ($states as $state)
+                                                                    <option
+                                                                        {{ $current_state_selected ? ($current_state_selected == $state->id ? 'selected' : '') : '' }}
+                                                                        value="{{ $state->id }}">{{ $state->name }}
+                                                                    </option>
+                                                                @endforeach
+                                                            @endif
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                                <div class="form-group mt-3">
-                                                    @php
-                                                        $current_city_selected = isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->current_city : '') : '';
-                                                    @endphp
-                                                    <label class="fieldlabels">Current City: *</label>
-                                                    <select name="current_city" class="form-control custom_select"
-                                                        required id="current_city">
-                                                        @if (isset($data['loan_app']) && !empty($data['loan_app'][0]))
-                                                            @foreach ($data['cities'] as $city)
-                                                                <option
-                                                                    {{ $current_city_selected == $city->id ? 'selected' : '' }}
-                                                                    value='{{ $city->id }}'>{{ $city->city }}
-                                                                </option>
-                                                            @endforeach
-                                                        @endif
+                                                <div class="col-md-6">
+                                                    <div class="form-group mt-3">
+                                                        @php
+                                                            $current_city_selected = isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->current_city : '') : '';
+                                                        @endphp
+                                                        <label class="fieldlabels">Current City: *</label>
+                                                        <select name="current_city" class="form-control custom_select"
+                                                            required id="current_city">
+                                                            @if (isset($data['loan_app']) && !empty($data['loan_app'][0]))
+                                                                @foreach ($data['cities'] as $city)
+                                                                    <option
+                                                                        {{ $current_city_selected == $city->id ? 'selected' : '' }}
+                                                                        value='{{ $city->id }}'>{{ $city->city }}
+                                                                    </option>
+                                                                @endforeach
+                                                            @endif
 
-                                                    </select>
+                                                        </select>
+                                                    </div>
                                                 </div>
 
                                                 <br />
-                                                <div class="form-group mt-3">
-                                                    <label class="fieldlabels">Current Pincode: *</label>
-                                                    <input
-                                                        value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->current_pincode : '') : '' }}"
-                                                        type="text" name="current_pincode" placeholder=""
-                                                        class="loan_input" required />
+                                                <div class="col-md-6">
+                                                    <div class="form-group mt-3">
+                                                        <label class="fieldlabels">Current Pincode: *</label>
+                                                        <input
+                                                            value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->current_pincode : '') : '' }}"
+                                                            type="text" name="current_pincode" placeholder=""
+                                                            class="loan_input" required />
+                                                    </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label class="fieldlabels">Current Residence: *</label>
-                                                    <input
-                                                        value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->current_residence : '') : '' }}"
-                                                        type="text" name="current_residence" class="loan_input"
-                                                        placeholder="" required />
+                                                <div class="col-md-6">
+                                                    <div class="form-group mt-3">
+                                                        <label class="fieldlabels">Current Residence: *</label>
+                                                        <input
+                                                            value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->current_residence : '') : '' }}"
+                                                            type="text" name="current_residence" class="loan_input"
+                                                            placeholder="" required />
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -189,12 +209,12 @@
                                             <div class="form-group custom_width mt-4">
                                                 <label class="cont_checkbox">Check if same address
                                                     <input type="checkbox" name="same_address_as_current"
-                                                        id="same_address_as_current"  class="cont_checkbox_input">
+                                                        id="same_address_as_current" class="cont_checkbox_input">
                                                     <span class="checkmark"></span>
                                                 </label>
                                             </div>
 
-                                            <div id="permanent_address" class="permanent_add currnt_add">
+                                            <div id="permanent_address" class="permanent_add currnt_add row">
                                                 {{-- <div class="head">Permanent Address</div> --}}
                                                 <div class="form-group">
 
@@ -212,75 +232,90 @@
                                                         value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_add_extra : '') : '' }}"
                                                         required />
                                                 </div>
-                                                <div class="form-group">
-                                                    <label class="fieldlabels">Permanent Landmark: *</label>
-                                                    <input type="text" name="permanent_landmark" class="loan_input"
-                                                        value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_landmark : '') : '' }}"
-                                                        placeholder="" required />
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="fieldlabels">Permanent Landmark: *</label>
+                                                        <input type="text" name="permanent_landmark"
+                                                            class="loan_input"
+                                                            value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_landmark : '') : '' }}"
+                                                            placeholder="" required />
+                                                    </div>
                                                 </div>
-                                                <div class="from-group">
+                                                <div class="col-md-6">
+                                                    <div class="from-group">
 
-                                                    <label class="fieldlabels">Permanent Country: *</label>
-                                                    <select name="permanent_country" class="custom_select form-control"
-                                                        id="permanent_country" required>
-                                                        <option value="0" disabled>Select Country</option>
-                                                        <option value="105" selected>India</option>
-                                                    </select>
+                                                        <label class="fieldlabels">Permanent Country: *</label>
+                                                        <select name="permanent_country"
+                                                            class="custom_select form-control" id="permanent_country"
+                                                            required>
+                                                            <option value="0" disabled>Select Country</option>
+                                                            <option value="105" selected>India</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                                <br />
+                                                <div class="col-md-6">
+                                                    <div class="form-group mt-3">
+                                                        @php
+                                                            $permanent_state_selected = isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_state : '') : '';
+                                                        @endphp
+                                                        <label class="fieldlabels">Permanent State: *</label>
+                                                        <select name="permanent_state" id="permanent_state"
+                                                            class="form-control custom_select" required>
+                                                            <option value="0" selected disabled>Select State</option>
+
+                                                            @if (isset($states))
+                                                                @foreach ($states as $state)
+                                                                    <option
+                                                                        {{ $permanent_state_selected ? ($permanent_state_selected == $state->id ? 'selected' : '') : '' }}
+                                                                        value="{{ $state->id }}">{{ $state->name }}
+                                                                    </option>
+                                                                @endforeach
+                                                            @endif
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="from-group mt-3">
+                                                        @php
+                                                            $permanent_city_selected = isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_city : '') : '';
+                                                        @endphp
+                                                        <label class="fieldlabels">Permanent City: *</label>
+                                                        <select name="permanent_city" id="permanent_city"
+                                                            class="form-control custom_select" required>
+                                                            @if (isset($data['loan_app']) && !empty($data['loan_app'][0]))
+                                                                @foreach ($data['cities'] as $city)
+                                                                    <option
+                                                                        {{ $permanent_city_selected == $city->id ? 'selected' : '' }}
+                                                                        value='{{ $city->id }}'>{{ $city->city }}
+                                                                    </option>
+                                                                @endforeach
+                                                            @endif
+
+                                                        </select>
+                                                    </div>
                                                 </div>
 
                                                 <br />
-                                                <div class="form-group mt-3">
-                                                    @php
-                                                        $permanent_state_selected = isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_state : '') : '';
-                                                    @endphp
-                                                    <label class="fieldlabels">Permanent State: *</label>
-                                                    <select name="permanent_state" id="permanent_state"
-                                                        class="form-control custom_select" required>
-                                                        <option value="0" selected disabled>Select State</option>
+                                                <div class="col-md-6">
+                                                    <div class="form-group mt-3">
+                                                        <label class="fieldlabels">Permanent Pincode: *</label>
+                                                        <input type="text" name="permament_pincode" class="loan_input"
+                                                            value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_pincode : '') : '' }}"
+                                                            placeholder="" required />
+                                                    </div>
 
-                                                        @if (isset($states))
-                                                            @foreach ($states as $state)
-                                                                <option
-                                                                    {{ $permanent_state_selected ? ($permanent_state_selected == $state->id ? 'selected' : '') : '' }}
-                                                                    value="{{ $state->id }}">{{ $state->name }}
-                                                                </option>
-                                                            @endforeach
-                                                        @endif
-                                                    </select>
                                                 </div>
-                                                <div class="from-group mt-3">
-                                                    @php
-                                                        $permanent_city_selected = isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_city : '') : '';
-                                                    @endphp
-                                                    <label class="fieldlabels">Permanent City: *</label>
-                                                    <select name="permanent_city" id="permanent_city"
-                                                        class="form-control custom_select" required>
-                                                        @if (isset($data['loan_app']) && !empty($data['loan_app'][0]))
-                                                            @foreach ($data['cities'] as $city)
-                                                                <option
-                                                                    {{ $permanent_city_selected == $city->id ? 'selected' : '' }}
-                                                                    value='{{ $city->id }}'>{{ $city->city }}
-                                                                </option>
-                                                            @endforeach
-                                                        @endif
-
-                                                    </select>
-                                                </div>
-
                                                 <br />
-                                                <div class="form-group mt-3">
-                                                    <label class="fieldlabels">Permanent Pincode: *</label>
-                                                    <input type="text" name="permament_pincode" class="loan_input"
-                                                        value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_pincode : '') : '' }}"
-                                                        placeholder="" required />
-                                                </div>
-
-                                                <br />
-                                                <div class="from-group">
-                                                    <label class="fieldlabels">Permanent Residence: *</label>
-                                                    <input type="text" name="permanent_residence" class="loan_input"
-                                                        value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_residence : '') : '' }}"
-                                                        placeholder="" required />
+                                                <div class="col-md-6">
+                                                    <div class="from-group mt-3">
+                                                        <label class="fieldlabels">Permanent Residence: *</label>
+                                                        <input type="text" name="permanent_residence"
+                                                            class="loan_input"
+                                                            value="{{ isset($data['loan_app']) ? (!empty($data['loan_app'][0]) ? $data['loan_app'][0]->per_residence : '') : '' }}"
+                                                            placeholder="" required />
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -429,10 +464,10 @@
                                                 <label class="fieldlabels">Other financial documents, if required:</label>
                                                 <input type="file" required name="financial" id="financial"
                                                     class="fileBtnupload" accept="pdf">
-                                                    <a href="" target="_blank" id="show_bank_pdf" class="d-none">
-                                                        <img src="{{ asset('assets/images/pdfIcon.png') }}" alt="show_bank_pdf"
-                                                            class="show_bank_pdf">
-                                                    </a>
+                                                <a href="" target="_blank" id="show_bank_pdf" class="d-none">
+                                                    <img src="{{ asset('assets/images/pdfIcon.png') }}"
+                                                        alt="show_bank_pdf" class="show_bank_pdf">
+                                                </a>
                                             </div>
 
                                             <div class="form-group mt-2">
@@ -448,10 +483,10 @@
                                                 <label class="fieldlabels">Work experience documents:</label>
                                                 <input type="file" required id="work_exp" name="work_exp"
                                                     class="fileBtnupload" accept="pdf">
-                                                    <a href="" target="_blank" id="show_Work" class="d-none">
-                                                        <img src="{{ asset('assets/images/pdfIcon.png') }}" alt="show_Work"
-                                                            class="show_Work">
-                                                    </a>
+                                                <a href="" target="_blank" id="show_Work" class="d-none">
+                                                    <img src="{{ asset('assets/images/pdfIcon.png') }}" alt="show_Work"
+                                                        class="show_Work">
+                                                </a>
                                             </div>
 
                                         </div>
@@ -474,7 +509,8 @@
 
                                             <div class="row justify-content-center">
                                                 <div class="col-7 text-center">
-                                                    <h5 class="purple-text text-center">Your loan file submitted successfully</h5>
+                                                    <h5 class="purple-text text-center">Your loan file submitted
+                                                        successfully</h5>
                                                 </div>
                                             </div>
                                         </div>
