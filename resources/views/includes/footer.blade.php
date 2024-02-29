@@ -46,17 +46,14 @@
                            <span></span> </a>
                        <a href="#"> <span class="btn_theme social_box"> <i class="bi bi-geo-alt"></i>
                            </span> UG-60, Somdutt chamber-2, Bhikaji cama place, New Delhi - 110066 <span></span> </a>
-                           <div style="mt-2">
+                       <div style="mt-2">
 
-                            <iframe width="100%" height="250" id="gmap_canvas" rel="preconnect"
-                                src="https://maps.google.com/maps?q=UG+60%2C+Somdutt+chamber%2C+Bhikaji+Cama+place%2C+new+delhi+-+110066&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-                                frameborder="0" scrolling="no"
-                                title="Quickk Loans, Fast Loans, Education Loan, Education Loan in India, Abroad"
-                                loading="lazy"></iframe>
-                        </div>
+
+                       </div>
                    </div>
                </div>
            </div>
+          
            <div class="col-12 col-sm-6 col-xl-3">
                {{-- <div class="newsletter wow fadeInDown" data-wow-duration="0.8s">
                    <h4 class="footer__title mb-4">Newsletter</h4>
@@ -88,6 +85,12 @@
 
 
            </div>
+           <div class="col-12">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.057663640252!2d77.18365668095191!3d28.56803111304417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1d841c0ced9d%3A0x61a76100ef86a428!2sSomdutt%20Chamber-2%2C%20Bhikaji%20Cama%20Place%2C%20Rama%20Krishna%20Puram%2C%20New%20Delhi%2C%20Delhi%20110066!5e0!3m2!1sen!2sin!4v1709210719936!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
        </div>
        <div class="row">
            <div class="col-12">
