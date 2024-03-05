@@ -75,9 +75,11 @@
                    <h4 class="footer__title mb-4">Quick Link</h4>
                    <ul>
                        <li><a href="{{ route('about') }}">About us</a></li>
-                       <li><a href="{{ route('personal') }}">Personal Loan</a></li>
                        <li><a href="{{ route('education') }}">Abroad Education Loan</a></li>
+                       <li><a href="{{ route('personal') }}">Personal Loan</a></li>
                        <li><a href="{{ route('business') }}">Business Loan</a></li>
+                       <li><a href="{{ route('home_loan') }}">Home Loan</a></li>
+                       <li><a href="{{ route('loan_property') }}">Loan Against Property</a></li>
                        {{-- <li><a href="faq.html"></a></li> --}}
                        {{-- <li><a href="blog.html">Blog</a></li> --}}
                    </ul>

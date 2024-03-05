@@ -38,8 +38,8 @@
                     <p class="section__content-sub-title headingFour wow fadeInDown" data-wow-duration="0.8s"
                         style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInDown;"><img
                             src="assets/images/title_vector.png" alt="vector">Home Loan</p>
-                    {{-- <h2 class="section__content-title wow fadeInUp" data-wow-duration="0.8s"
-                        style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInUp;">Interest rates between 11% - 15% (T & C applied)</h2> --}}
+                    <h2 class="section__content-title wow fadeInUp" data-wow-duration="0.8s"
+                        style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInUp;">Interest rates between 8.4% - 13% (T & C applied)</h2>
                     <p class="section__content-text wow fadeInDown" data-wow-duration="0.8s"
                         style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInDown;">
                     
