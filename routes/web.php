@@ -84,6 +84,7 @@ Route::get('user/dashboard/{id?}', [UserController::class, 'dashboard'])->name('
 Route::post('product/image/upload', [UserController::class, 'uploadImage'])->name('user_product_image_upload');
 Route::get('/user/loans/history', [UserController::class, 'user_loan_list'])->name('user_loan_list');
 Route::get('/admin/loans/history', [AdminController::class, 'admin_dashboard'])->name('admin_loan_list');
+Route::get('/admin/users/list', [AdminController::class, 'user_list'])->name('admin_user_list');
 Route::get('/admin/loan/details/{id}', [AdminController::class, 'loan_details'])->name('admin_loan_details');
 
 

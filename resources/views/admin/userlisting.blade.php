@@ -1,96 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('includes.admin.default')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('admin_assets/css/main.css') }}">
-</head>
+@section('content')
+    <div class="main-content">
+        <div class="main-content-inner" id="mainCont">
+            <section class="agent-details">
+                <section class="banner">
+                    <div class="container">
+                        <div class="row gy-4 gy-sm-0 align-items-center">
+                            <div class="col-12 col-sm-6">
+                                <div class="banner__content">
+                                    <h1 class="banner__title display-4 wow fadeInLeft" data-wow-duration="0.8s">User List
+                                    </h1>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb wow fadeInRight" data-wow-duration="0.8s">
+                                            <li class="breadcrumb-item"><a href="{{ route('/') }}">Home</a></li>
+                                            <li class="breadcrumb-item">user</li>
+                                            <li class="breadcrumb-item active" aria-current="page">loan list</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                {{-- <div class="banner__thumb text-end">
+                <img src="assets/images/about_banner.png" alt="image">
+            </div> --}}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="section">
+                    <div class="main-content container">
+                        <table id="user_list" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Contact</th>
+                                    <th>Join Date</th>
+                                    {{-- <th>Action</th> --}}
+                                </tr>
+                            </thead>
+                            <tbody>
 
-<body>
-    <header class="topbar">
-        <button type="button" class="topbar_toggleBtn" id="togglBtn" onclick="toggleSidebar()">
-            <img src="../assets/Images/toggleBtn.png" alt="" />
-        </button>
-    </header>
-    <div class="container-fluid staticPadding">
-        <section class="sidebar" id="sidebar">
-            <div class="dashboard-logo">
-                <img src="../assets/Images/logo.jpg" alt="" />
-            </div>
-            <ul>
-                <li>
-                    <a href="/admin/user">
-                        <!-- <img src="../assets/Images/user.png" alt="" />  -->
-                        Users</a>
-                </li>
-                <li>
-                    <a href="/admin/vehicles">
-                        <!-- <img src="../assets/Images/logout.png" alt="" /> -->
-                        Logout</a>
-                </li>
-
-            </ul>
-        </section>
-
-        <div class="main-content">
-            <div class="main-content-inner" id="mainCont">
-                <h2 class="mb-3">Query Listing</h2>
-                <div class="table-reponsive mr-5">
-                    <table class="table">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>id</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Contact</th>
+                                    <th>Join Date</th>
+                                    {{-- <th>Action</th> --}}
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
                 </div>
-
-
-            </div>
-
         </div>
     </div>
-
     <script>
-        function toggleSidebar() {
-            var sidebar = document.getElementById('sidebar');
-            var togleBtn = document.getElementById('togglBtn');
-            var mainContt = document.getElementById('mainCont')
-            sidebar.classList.toggle("shrink-sidebar");
-            togleBtn.classList.toggle("marginToggleBtn");
-            mainContt.classList.toggle("mainContClass")
+        if (document.querySelector('#user_list')) {
+
+            document.addEventListener("DOMContentLoaded", function() {
+                new DataTable("#user_list", {
+                    ajax: {
+                        url: '/admin/users/list',
+                        dataSrc: ""
+                    },
+                    "fnCreatedRow": function(row, data, index) {
+                        $('td', row).eq(0).html(index + 1);
+                    },
+                    columns: [{
+                            data: "id",
+                            name: "id"
+                        },
+                        {
+                            data: 'firstname',
+                            name: 'name'
+                        },
+                     
+                        {
+                            data: 'email',
+                            name: 'email'
+                        },
+                     
+                        {
+                            data: 'contact',
+                            name: 'contact'
+                        },
+                        {
+                            data: 'created_at',
+                            name: 'applied',
+                        },
+                //         {
+                //             data: 'action',
+                //             name: 'action',
+                //             "render": function(data, type, row) {
+                //                 return `<div class="dropdown d-inline-block">
+                // <button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown"
+                // aria-expanded="false">
+                // <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 10c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m14 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-7 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg>
+                // </button>
+                // <ul class="dropdown-menu dropdown-menu-end" style="">
+                // <li><a href="/admin/loan/details/${row.id}" class="dropdown-item edit-item-btn"><i
+                //             class="ri-pencil-fill align-bottom me-2 text-muted"></i> View</a></li>
+                // </ul>
+                // </div>`
+                //             }
+                //         }
+                    ]
+                });
+            });
         }
     </script>
-
-
-
-</body>
-
-</html>
+@endsection

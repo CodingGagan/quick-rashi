@@ -43,6 +43,23 @@ class AdminController extends Controller
 
         return view('admin.loan_list');
     }
+   
+    public function user_list(Request $request)
+    {
+        if ($request->ajax()) {
+            $userList = DB::table('users')
+                // ->join('loan_app', 'loan_app.user_id', '=', 'users.id')
+                // ->join('form_second',  'form_second.loan_app_id', '=', 'loan_app.id')
+                // ->join('documents', 'documents.loan_app_id', '=', 'loan_app.id')
+                ->select('id','firstname', 'email', 'contact', 'created_at')
+                ->where([['id','>', 1]])
+                ->get();
+
+            return response()->json($userList, 200);
+        }
+
+        return view('admin.userlisting');
+    }
 
     public function loan_details(Request $request)
     {
