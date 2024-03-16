@@ -39,22 +39,40 @@
                         style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInDown;"><img
                             src="assets/images/title_vector.png" alt="vector">Abroad Education Loan</p>
                     <h2 class="section__content-title wow fadeInUp" data-wow-duration="0.8s"
-                        style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInUp;">Interest rates between 9.5% - 13% (T & C applied)</h2>
+                        style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInUp;">Empower Your Global Education Journey: Abroad Education Loan with Interest Rates 9.5% - 13% (T&C Apply)</h2>
                     <p class="section__content-text wow fadeInDown" data-wow-duration="0.8s"
                         style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInDown;">
-                    
-                     
-                        Studying abroad can be a transformative experience, opening doors to new cultures,
-                        perspectives, and opportunities. However, financing such an endeavor can often be a significant
-                        hurdle for many students. This is where abroad study loans come into play, providing financial
-                        assistance to students who aspire to pursue education in foreign countries. These loans
-                        typically cover tuition fees, living expenses, and other related costs, offering students the means
-                        to fulfill their academic ambitions without the burden of immediate financial constraints. Abroad
-                        study loans enable students to access quality education internationally, broadening their
-                        horizons and enhancing their future prospects. Moreover, they serve as investments in human
-                        capital, fostering global connections and contributing to the development of a more diverse and
-                        skilled workforce. Through abroad study loans, students can embark on a journey of academic
-                        and personal growth, enriching their lives and shaping their futures in meaningful ways.
+
+                        <strong> Embark on a Global Academic Adventure with Abroad Study Loans!</strong>
+                        <br />
+                        Imagine immersing yourself in vibrant cultures, gaining new perspectives, and seizing exciting
+                        opportunities—all while pursuing your academic dreams abroad. Sounds incredible, right? Well, it is!
+                        However, the road to studying abroad isn't always smooth, especially when it comes to financing.
+                        <br />
+
+                        Enter abroad study loans—a lifeline for students yearning to explore the world of international
+                        education. These loans aren't just about covering tuition fees; they're about empowering students to
+                        embrace life-changing experiences without financial worries holding them back.
+                        <br />
+
+                        Picture this: With an abroad study loan, you can fund not only your tuition but also your living
+                        expenses and other essential costs. It's more than just financial assistance; it's the key to
+                        unlocking a world of possibilities and turning your academic dreams into reality.
+                        <br />
+
+                        But it doesn't stop there. Abroad study loans aren't just about individual success; they're
+                        investments in global talent. By supporting students in their quest for international education,
+                        these loans contribute to building a diverse and skilled workforce, enriching communities worldwide.
+                        <br />
+
+                        Think of abroad study loans as more than just financial aid; they're catalysts for personal and
+                        academic growth. They enable students to broaden their horizons, expand their skill sets, and forge
+                        lifelong connections across borders.
+                        <br />
+
+                        So, if you're ready to embark on a transformative journey of discovery and self-improvement,
+                        consider the power of abroad study loans. With them, you're not just investing in your education;
+                        you're investing in a brighter, more globally connected future for yourself and generations to come.
                     </p>
                     {{-- 
                     <a href="service-details.html" class="btn_theme btn_theme_active mt_40 wow fadeInDown"
@@ -65,6 +83,4 @@
             </div>
         </div>
     </div>
-
-
 @endsection

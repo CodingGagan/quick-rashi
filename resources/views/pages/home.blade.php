@@ -6,7 +6,7 @@
             <div class="row gy-4 gy-sm-0 align-items-center">
                 <div class="col-12 col-sm-6">
                     <div class="banner__content">
-                        <h1 class="banner__title display-4 wow fadeInLeft" data-wow-duration="0.8s">Education</h1>
+                        <h1 class="banner__title display-4 wow fadeInLeft" data-wow-duration="0.8s">Home Loan</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb wow fadeInRight" data-wow-duration="0.8s">
                                 <li class="breadcrumb-item"><a href="{{ route('/') }}">Home</a></li>
@@ -39,21 +39,14 @@
                         style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInDown;"><img
                             src="assets/images/title_vector.png" alt="vector">Home Loan</p>
                     <h2 class="section__content-title wow fadeInUp" data-wow-duration="0.8s"
-                        style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInUp;">Interest rates between 8.4% - 13% (T & C applied)</h2>
+                        style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInUp;">Unlock Your Dream Home: Home Loans with Competitive Interest Rates (8.4% - 13%) - Terms Apply</h2>
                     <p class="section__content-text wow fadeInDown" data-wow-duration="0.8s"
                         style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInDown;">
-                    
-                    
-                        A home loan, also known as a mortgage, is a financial product that enables individuals
-                        or families to purchase a house or property by borrowing money from a financial
-                        institution such as a bank or a mortgage lender. These loans typically come with a
-                        specified interest rate and repayment period, which can range from several years to
-                        several decades. Home loans are often secured by the property being purchased,
-                        meaning that if the borrower fails to make their payments as agreed, the lender may
-                        have the right to foreclose on the property. Home loans can be a significant financial
-                        commitment, but they provide many people with the opportunity to achieve their dream
-                        of homeownership, allowing them to build equity and stability for themselves and their
-                        families.
+                        <p>Unlock Your Dream Home with <strong>Home Loans</strong></p>
+                        <p>A <strong>home loan</strong>, also referred to as a mortgage, is a financial instrument empowering individuals or families to purchase a property by borrowing money from a bank or mortgage lender. These loans feature specified interest rates and repayment periods, spanning from several years to decades.</p>
+                        <p><strong>Home loans</strong> are typically secured by the property being purchased, granting lenders the right to foreclose if borrowers default on payments. While <strong>home loans</strong> entail significant financial commitments, they offer countless individuals the chance to realize their dream of homeownership.</p>
+                        <p>By securing a <strong>home loan</strong>, individuals can build equity and stability for themselves and their families, laying the foundation for a brighter future. Explore your homeownership journey today with our tailored <strong>home loan</strong> solutions.</p>
+                        
                     </p>
                     {{-- 
                     <a href="service-details.html" class="btn_theme btn_theme_active mt_40 wow fadeInDown"

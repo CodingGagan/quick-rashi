@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description"
+        content="Explore competitive loan options tailored to your needs. Whether it's a personal loan, home loan, or business loan, discover low-interest rates, flexible terms, and hassle-free application processes. Secure your financial future today.">
+    <meta name="keywords"
+        content="loan, personal loan, home loan, business loan, low-interest rates, flexible terms, hassle-free application">
 
     <!-- #favicon -->
 
@@ -35,19 +39,30 @@
     <link rel="stylesheet" href="{{ asset('assets/css/custom_style.css') }}">
     {{-- <link rel="stylesheet" href="{{ asset('assets/icons/fontawesome.min.css') }}"> --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K8W6QHTK');</script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K8W6QHTK');
+    </script>
     <!-- End Google Tag Manager -->
 </head>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8W6QHTK"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8W6QHTK" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="header-section">
         @includeIf('includes/header')
@@ -58,12 +73,13 @@
         @includeIf('includes.foot')
         @includeIf('includes.footer')
     </footer>
-    
-                           >
+
+    >
     {{-- @includeIf('includes.mobile-foot-nav') --}}
-    <a href="https://api.whatsapp.com/send/?phone=9871773053&text=Hi+there%21+Need+a+loan.+Let%27s+talk+on+WhatsApp+and+make+it+easy.&type=phone_number&app_absent=0" class="what_app"><i class="fa-brands fa-whatsapp"></i></a> 
+    <a href="https://api.whatsapp.com/send/?phone=9871773053&text=Hi+there%21+Need+a+loan.+Let%27s+talk+on+WhatsApp+and+make+it+easy.&type=phone_number&app_absent=0"
+        class="what_app"><i class="fa-brands fa-whatsapp"></i></a>
     <!-- scroll to top -->
-    <a href="#" class="scrollToTop"><i class="bi bi-chevron-double-up"></i></a> 
+    <a href="#" class="scrollToTop"><i class="bi bi-chevron-double-up"></i></a>
 
     <script src="{{ asset('assets/js/jquery/jquery-3.6.3.min.js') }}"></script>
     <script>
@@ -73,7 +89,9 @@
 
             //    console.log(fetchCurrentTestimonial, CurrentTestimonial);
             let currentUSer = CurrentTestimonial.find((testiMonial) => testiMonial.name === fetchCurrentTestimonial)
-            $('#candidate_image').html(` <img src="${window.location.origin + '/' + currentUSer.image}" id="candidate_image" class="avatar_img"/>`)
+            $('#candidate_image').html(
+                ` <img src="${window.location.origin + '/' + currentUSer.image}" id="candidate_image" class="avatar_img"/>`
+            )
             $('#candidate_name').html(currentUSer.from)
             $('#candidate_from').html(currentUSer.content)
         })

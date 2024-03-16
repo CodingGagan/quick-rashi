@@ -40,21 +40,16 @@
                         style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInDown;"><img
                             src="assets/images/title_vector.png" alt="vector">Personal Loan</p>
                     <h2 class="section__content-title wow fadeInUp" data-wow-duration="0.8s"
-                        style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInUp;">Interest rates
-                        between 11% - 15% (T & C applied)</h2>
+                        style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInUp;">Unlock Your Financial Freedom: Personal Loans with Competitive Interest Rates (11% - 15%) - (Terms Apply)</h2>
                     <p class="section__content-text wow fadeInDown" data-wow-duration="0.8s"
                         style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInDown;">
-                        A personal loan is a financial product designed to provide individuals with access
-                        to funds for various personal expenses, such as home renovations, medical bills,
-                        or debt consolidation. Unlike specific-purpose loans like auto or home loans,
-                        personal loans offer flexibility in how the borrowed funds are used. Typically
-                        unsecured, meaning no collateral is required, personal loans are granted based
-                        on factors like the borrower's creditworthiness, income, and repayment ability.
-                        Interest rates can vary depending on the lender, the borrower's credit score, and
-                        the loan amount. Repayment terms are often fixed, with monthly installments
-                        over a set period. Personal loans can be a useful tool for managing unexpected
-                        expenses or achieving short-term financial goals, but borrowers should carefully
-                        consider their ability to repay before taking on debt.
+                        <p>Step confidently towards your dreams with our Personal Loans, tailored to suit your unique financial needs and aspirations.</p>
+                        <p>At Quick Rashi, we understand that financial flexibility is crucial, which is why our Personal Loans offer competitive interest rates between <strong>11%</strong> and <strong>15%</strong>, with terms and conditions applied.</p>
+                        <p>Whether it's funding for a much-needed vacation, home renovations, education expenses, or any other personal endeavor, our Personal Loans provide the financial support you need to make it happen.</p>
+                        <p>Our streamlined application process minimizes paperwork and waiting times, ensuring a hassle-free experience from start to finish.</p>
+                        <p>With Quick Rashi, you can access funds quickly and easily, empowering you to move confidently towards your goals and achieve them with ease.</p>
+                        
+                        
                     </p>
                     {{-- 
                     <a href="service-details.html" class="btn_theme btn_theme_active mt_40 wow fadeInDown"

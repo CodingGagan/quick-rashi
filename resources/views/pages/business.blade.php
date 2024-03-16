@@ -39,22 +39,13 @@
                         style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInDown;"><img
                             src="assets/images/title_vector.png" alt="vector">Business Loan</p>
                     <h2 class="section__content-title wow fadeInUp" data-wow-duration="0.8s"
-                        style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInUp;">Interest rates between 10.5% - 22.5% (T & C applied)</h2>
+                        style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInUp;">Unlock Growth Opportunities: Business Loans with Competitive Interest Rates (10.5% - 22.5%) - Terms Apply</h2>
                     <p class="section__content-text wow fadeInDown" data-wow-duration="0.8s"
                         style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInDown;">
-                        A business loan is a financial tool that enables entrepreneurs and companies to
-                        obtain capital to start, operate, or expand their ventures. These loans are
-                        typically acquired from banks, credit unions, or alternative lenders and are crucial
-                        for businesses to cover various expenses such as inventory purchases,
-                        equipment upgrades, marketing campaigns, or hiring additional staff. Business
-                        loans come in various forms, including term loans, lines of credit, and SBA loans,
-                        each with its own terms, interest rates, and repayment schedules. For
-                        businesses, securing the right loan can provide the necessary funds to fuel
-                        growth and achieve long-term success, while also helping to establish
-                        creditworthiness and financial stability. However, it's essential for borrowers to
-                        carefully consider their needs, financial capabilities, and the terms of the loan to
-                        ensure it aligns with their business goals and doesn't become a burden on their
-                        operations.
+                        <p>A business loan serves as a vital financial resource for entrepreneurs and companies, facilitating the acquisition of capital necessary to start, operate, or expand their ventures. These loans, typically obtained from banks, credit unions, or alternative lenders, play a crucial role in covering various business expenses, including inventory purchases, equipment upgrades, marketing campaigns, and hiring additional staff.</p>
+                        <p>Business loans come in diverse forms, such as term loans, lines of credit, and SBA loans, each with its own terms, interest rates, and repayment schedules. Securing the right loan is paramount for businesses, providing the essential funds to fuel growth, achieve long-term success, and establish creditworthiness and financial stability.</p>
+                        <p>However, borrowers must carefully evaluate their needs, financial capabilities, and loan terms to ensure alignment with their business goals and prevent it from becoming a burden on their operations.</p>
+                        
                     </p>
                     {{-- 
                     <a href="service-details.html" class="btn_theme btn_theme_active mt_40 wow fadeInDown"

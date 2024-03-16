@@ -40,17 +40,10 @@
                         style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInDown;"><img
                             src="assets/images/title_vector.png" alt="vector"> Why Choose Us</p>
                     <h2 class="section__content-title wow fadeInUp" data-wow-duration="0.8s"
-                        style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInUp;">Experience
-                        Excellence in Loan Review and Comparison</h2>
+                        style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInUp;">Discover Quick Rashi: Your Trusted Loan Partner - Learn More About Us!</h2>
                     <p class="section__content-text wow fadeInDown" data-wow-duration="0.8s"
                         style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInDown;">
-                        <a href="https://quickkloans.com/">Quick Rashi</a> is a reputable loan
-                        service company committed to delivering hassle-free and efficient financial
-                        solutions to its customers. With a strong focus on customer satisfaction, we aim to
-                        provide personalized services and negotiate favorable rates for our clients. Whether
-                        you are in need of a Personal Loan, Abroad Loan, Domestic Loan, or Business Loan, <a
-                            href="https://quickkloans.com/">Quickk Loans</a> is here to cater to your
-                        specific requirements.
+                        Welcome to Quick Rashi, your trusted destination for seamless loan solutions! Our dedicated team is committed to delivering top-notch financial services tailored to meet your needs. We prioritize customer satisfaction and strive to secure the best rates for you. Whether it's a Personal Loan, Abroad Loan, Domestic Loan, or Business Loan you require, Quick Rashi is here to provide personalized assistance every step of the way.
                     </p>
                     {{-- 
                     <a href="service-details.html" class="btn_theme btn_theme_active mt_40 wow fadeInDown"
@@ -69,83 +62,28 @@
                     <div class="card--secondary__content">
                         <div class="card--secondary__content-part wow fadeInUp" data-wow-duration="0.8s">
                             <h2>About us</h2>
-                            <p class="mt_20"><a href="https://quickkloans.com/">Quickk Loans</a> is a reputable loan
-                                service company committed to delivering hassle-free and efficient financial
-                                solutions to its customers. With a strong focus on customer satisfaction, we aim to
-                                provide personalized services and negotiate favorable rates for our clients. Whether
-                                you are in need of a Personal Loan, Abroad Loan, Domestic Loan, or Business Loan, <a
-                                    href="https://quickkloans.com/">Quickk Loans</a> is here to cater to your
-                                specific requirements.</p>
+                            <p style="margin-bottom: 10px">Quick Rashi, a trusted loan service provider, is dedicated to offering seamless and efficient financial solutions to its valued customers. With a keen emphasis on customer satisfaction, we prioritize delivering personalized services while negotiating competitive rates tailored to your needs. Whether you're seeking a Personal Loan, Abroad Loan, Domestic Loan, or Business Loan, Quick Rashi is your go-to partner for fulfilling your specific financial requirements.</p><br/>
 
-                            <p class="mt_20">One of the key aspects that set <a href="https://quickkloans.com/">Quickk
-                                    Loans</a> apart from other loan service
-                                providers is our dedication to hassle-free experiences. We understand that the
-                                process of obtaining a loan can be daunting and time-consuming. Therefore, we have
-                                streamlined our procedures to minimize paperwork, reduce waiting times, and ensure a
-                                smooth and convenient borrowing process.</p>
-
-                            <p class="mt_20">At <a href="https://quickkloans.com/">Quickk Loans</a>, we recognize
-                                the importance of competitive interest rates. We believe that our clients should
-                                have access to loans that come with favorable terms and conditions. To achieve this,
-                                we actively negotiate rates with our lending partners to secure the best possible
-                                interest rates for our customers. Our goal is to provide loans at insight
-                                competition interest rates, allowing individuals and businesses to make financially
-                                sound decisions without undue burden.</p>
-
-                            <p class="mt_20">For those seeking to finance their education, travel, or any other
-                                overseas venture, our Abroad Loans provide the necessary financial support. <a
-                                    href="https://quickkloans.com/">Quickk Loans</a> understands the dreams and
-                                aspirations of individuals who wish to explore opportunities abroad, and we strive
-                                to make those dreams a reality. By offering Abroad Loans at competitive interest
-                                rates, we aim to remove financial barriers and enable individuals to pursue their
-                                international ambitions.</p>
-
-                            <p class="mt_20">Domestic Loans are another integral part of our services. We recognize
-                                that individuals often require financial assistance for various purposes within
-                                their home country. Whether you need funds for medical expenses, debt consolidation,
-                                wedding arrangements, or any other domestic requirement, <a
-                                    href="https://quickkloans.com/">Quickk Loans</a> is here to help. Our Domestic
-                                Loans come with flexible repayment options and competitive interest rates, ensuring
-                                that our clients can fulfill their financial obligations comfortably.</p>
-
-                            <p class="mt_20">Personal Loans are an essential part of our service offerings. Whether
-                                you need funds for a medical emergency, home renovation, education expenses, or any
-                                other personal matter, <a href="https://quickkloans.com/">Quickk Loans</a> is here
-                                to assist you. Our team of experienced professionals works closely with each client,
-                                understanding their unique needs, and tailoring loan options accordingly. With
-                                flexible repayment plans and competitive interest rates, <a
-                                    href="https://quickkloans.com/">Quickk Loans</a> ensures that personal financing
-                                is accessible and manageable.</p>
-
-                            <p class="mt_20">In addition to personal and domestic financing, <a
-                                    href="https://quickkloans.com/">Quickk Loans</a> also specializes in providing
-                                Business Loans. We understand the significance of financial support for businesses,
-                                whether it's for expansion, inventory management, equipment purchase, or any other
-                                business-related needs. <a href="https://quickkloans.com/">Quickk Loans</a> offers
-                                tailored Business Loan solutions, with attractive interest rates and repayment terms
-                                designed to support entrepreneurs and business owners in achieving their goals.</p>
-
-                            <p class="mt_20">At <a href="https://quickkloans.com/">Quickk Loans</a>, we prioritize
-                                customer satisfaction and strive to build long-term relationships with our clients.
-                                Our team of dedicated professionals provides personalized assistance throughout the
-                                loan process, guiding customers and addressing their queries and concerns. We
-                                believe in transparent communication and ensure that our clients are well-informed
-                                about their loan options, terms, and conditions.</p>
-
-                            <p class="mt_20">In conclusion, <a href="https://quickkloans.com/">Quickk Loans</a> is a
-                                trusted loan service company that focuses on delivering hassle-free experiences and
-                                negotiating favorable rates for our customers. With a comprehensive range of loan
-                                options including Personal Loans, Abroad Loans, Domestic Loans, and Business Loans,
-                                we cater to the diverse financial needs of individuals and businesses. Our
-                                commitment to providing competitive interest rates and streamlined processes sets us
-                                apart in the industry. Choose <a href="https://quickkloans.com/">Quickk Loans</a>
-                                for a convenient, reliable, and rewarding borrowing experience.</p>
-
-
+                            <p style="margin-bottom: 10px">Our commitment to hassle-free experiences distinguishes Quick Rashi from other lenders. Recognizing the challenges often associated with loan applications, we've streamlined our procedures to minimize paperwork and waiting times, ensuring a smooth and convenient borrowing journey.</p><br/>
+                            
+                            <p style="margin-bottom: 10px">Understanding the importance of competitive interest rates, we actively negotiate with our lending partners to secure the most favorable terms for you. Our goal is to provide loans at competitive interest rates, empowering individuals and businesses to make financially prudent decisions without undue burden.</p><br/>
+                            
+                            <p style="margin-bottom: 10px">For those aspiring to pursue education or ventures abroad, our Abroad Loans offer essential financial support. Quick Rashi strives to turn your international aspirations into reality by providing competitive interest rates, removing financial barriers, and facilitating your overseas endeavors.</p><br/>
+                            
+                            <p style="margin-bottom: 10px">Within our domestic market, Quick Rashi stands ready to assist individuals with various financial needs. Whether it's medical expenses, debt consolidation, or wedding arrangements, our Domestic Loans come with flexible repayment options and competitive interest rates, ensuring your financial well-being.</p><br/>
+                            
+                            <p style="margin-bottom: 10px">Personal Loans form another cornerstone of our services, catering to diverse personal needs such as medical emergencies, home renovations, or education expenses. With flexible repayment plans and competitive interest rates, Quick Rashi ensures accessibility and manageability in personal financing.</p><br/>
+                            
+                            <p style="margin-bottom: 10px">Moreover, we specialize in Business Loans, recognizing the importance of financial support for business growth and sustainability. Whether it's expansion plans or inventory management, Quick Rashi offers tailored Business Loan solutions with attractive interest rates, designed to support entrepreneurs in achieving their goals.</p><br/>
+                            
+                            <p style="margin-bottom: 10px">At Quick Rashi, we prioritize customer satisfaction and foster long-term relationships with our clients. Our dedicated team provides personalized assistance throughout the loan process, ensuring transparent communication and addressing any queries or concerns promptly.</p><br/>
+                            
+                            <p style="margin-bottom: 10px">In conclusion, Quick Rashi is your trusted partner for hassle-free borrowing experiences and competitive rates. With a wide range of loan options and a commitment to streamlined processes, we cater to the diverse financial needs of individuals and businesses alike. Choose Quick Rashi for a convenient, reliable, and rewarding financial journey.</p>
+                            
                         </div>
 
                     </div>
-               
+
                 </div>
 
             </div>
