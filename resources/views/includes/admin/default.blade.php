@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 
 </head>
 
@@ -285,6 +286,11 @@
             })
         }, 2000);
     </script>
+     <script>
+        tinymce.init({
+          selector: '#mytextarea'
+        });
+      </script>
 </body>
 
 </html>

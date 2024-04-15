@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\User\UserController;
+use App\Models\Blog;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $blog = Blog::where('status', 2)->limit(2)->get();
+    return view('welcome', ['blog' => $blog]);
 })->name('/');
 
 Route::get('about', function () {
@@ -86,7 +89,8 @@ Route::get('/user/loans/history', [UserController::class, 'user_loan_list'])->na
 Route::get('/admin/loans/history', [AdminController::class, 'admin_dashboard'])->name('admin_loan_list');
 Route::get('/admin/users/list', [AdminController::class, 'user_list'])->name('admin_user_list');
 Route::get('/admin/loan/details/{id}', [AdminController::class, 'loan_details'])->name('admin_loan_details');
-
+Route::get('/admin/blog', [AdminController::class, 'blog_details'])->name('admin_blog_details');
+Route::get('/admin/testimonial', [AdminController::class, 'testimonial_details'])->name('admin_testimonial_details');
 
 /* Fetch JS API => Fetch City By State ID */
 Route::get('fetchCitiesByStateId/{id}', [UserController::class, 'fetchCitiesByStateId'])->name('fetchCitiesByStateId');
@@ -95,3 +99,9 @@ Route::post('save_form_second', [UserController::class, 'save_form_second'])->na
 Route::post('save_form_third', [UserController::class, 'save_form_third'])->name('save_form_third');
 
 Route::get('logout', [UserController::class, 'logout'])->name('logout');
+
+Route::get('user', 'UserController@index')->name('user');
+
+Route::get('blog/detail', [BlogController::class, 'index'])->name('user_blog_detail');
+Route::get('blog/detail/{id}', [BlogController::class, 'detail'])->name('blog_details_proper');
+Route::post('blog/save', [BlogController::class, 'save'])->name('admin_blog');

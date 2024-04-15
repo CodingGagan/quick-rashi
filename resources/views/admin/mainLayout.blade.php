@@ -30,7 +30,7 @@
                 <li>
                     <a href="/admin/vehicles">
                         <!-- <img src="../assets/Images/logout.png" alt="" /> -->
-                        Logout</a>
+                        Logout </a>
                 </li>
 
             </ul>

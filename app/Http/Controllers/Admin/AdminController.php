@@ -96,4 +96,14 @@ class AdminController extends Controller
             return response()->json([true, 'Updated'], 200);
         }
     }
+
+    public function blog_details(Request $request)
+    {
+        return view('admin.blog_details');
+    }
+   
+    public function testimonial_details(Request $request)
+    {
+        return view('admin.testimonial_details');
+    }
 }

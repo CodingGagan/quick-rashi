@@ -13,7 +13,6 @@
         content="loan, personal loan, home loan, business loan, low-interest rates, flexible terms, hassle-free application">
 
     <!-- #favicon -->
-
     <title>Home</title>
     <!-- bootstrap five css -->
 
