@@ -53,8 +53,8 @@
     @endphp
     <!--  Preloader  -->
     <!-- <div class="preloader">
-                                                        <span class="loader"></span>
-                                                    </div> -->
+                                                            <span class="loader"></span>
+                                                        </div> -->
 
     <!-- Hero Section Start -->
     <section class="hero hero--secondary">
@@ -90,34 +90,34 @@
 
     <!-- sponsor start -->
     <!-- <div class="section sponsor-slider wow fadeInDown" data-wow-duration="0.8s">
-                                                        <div class="container">
-                                                            <div class="row">
-                                                                <div class="sponsor__company" id="sponsor__company">
-                                                                    <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                        <img src="assets/images/sponsor_logo.png" alt="Image">
-                                                                    </div>
-                                                                    <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                        <img src="assets/images/sponsor_logo2.png" alt="Image">
-                                                                    </div>
-                                                                    <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                        <img src="assets/images/sponsor_logo3.png" alt="Image">
-                                                                    </div>
-                                                                    <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                        <img src="assets/images/sponsor_logo4.png" alt="Image">
-                                                                    </div>
-                                                                    <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                        <img src="assets/images/sponsor_logo2.png" alt="Image">
-                                                                    </div>
-                                                                    <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                        <img src="assets/images/sponsor_logo4.png" alt="Image">
-                                                                    </div>
-                                                                    <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                        <img src="assets/images/sponsor_logo3.png" alt="Image">
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                    <div class="sponsor__company" id="sponsor__company">
+                                                                        <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                            <img src="assets/images/sponsor_logo.png" alt="Image">
+                                                                        </div>
+                                                                        <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                            <img src="assets/images/sponsor_logo2.png" alt="Image">
+                                                                        </div>
+                                                                        <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                            <img src="assets/images/sponsor_logo3.png" alt="Image">
+                                                                        </div>
+                                                                        <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                            <img src="assets/images/sponsor_logo4.png" alt="Image">
+                                                                        </div>
+                                                                        <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                            <img src="assets/images/sponsor_logo2.png" alt="Image">
+                                                                        </div>
+                                                                        <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                            <img src="assets/images/sponsor_logo4.png" alt="Image">
+                                                                        </div>
+                                                                        <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                            <img src="assets/images/sponsor_logo3.png" alt="Image">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div> -->
+                                                        </div> -->
     <!-- sponsor end -->
 
     <!-- why-choose start -->
@@ -279,60 +279,62 @@
 
     @if (isset($blog) && !$blog->isEmpty())
         <!-- Client Testimonials start -->
-    <section class="testimonials testimonials--secondary section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section__header">
-                        <span class="section__header-sub-title headingFour wow fadeInDown" data-wow-duration="0.8s"><img
-                                src="assets/images/title_vector.png" alt="vector">Blogs
-                        </span>
-                        <h2 class="section__header-title wow fadeInUp" data-wow-duration="0.8s">Our Blogs</h2>
-                        <section class="blog section">
-                            <div class="container ">
-                                <div class="row g-4">
-                                    @if (isset($blog))
-                                        @foreach ($blog as $item)
-                                            <div class="col-12 col-md-4 col-xl-6">
-                                                <div class="card card--secondary wow fadeInUp" data-wow-duration="0.8s">
-                                                    <a href="blog-details.html"
-                                                        class="card--secondary__thumb zoom_effect">
-                                                        <img src="{{ asset('/images/' . $item->image) }}" alt="image">
-                                                    </a>
-                                                    <div class="card--secondary__content">
-                                                        <p class="card--secondary__time mb-4"><span class="gap-6"><i
-                                                                    class="bi bi-person-circle"></i>By Quick Rashi</span><i
-                                                                class="bi bi-dot"></i>
-                                                            <span class="gap-6"><i
-                                                                    class="bi bi-calendar3"></i>{{ date('Y-m-d h:i:s', strtotime($item->created_at)) }}
-                                                            </span>
-                                                        </p>
-                                                        <h4><a
-                                                                href="{{ url('blog/detail/' . $item->id) }}">{{ $item->title }}</a>
-                                                        </h4>
-                                                        <p class="mt-4">{{ $item->description }}</p>
-                                                        <a href="{{ url('blog/detail/' . $item->id) }}"
-                                                            class="mt_32 read_more">Read More <i
-                                                                class="bi bi-arrow-right"></i></a>
+        <section class="testimonials testimonials--secondary section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section__header">
+                            <span class="section__header-sub-title headingFour wow fadeInDown"
+                                data-wow-duration="0.8s"><img src="assets/images/title_vector.png" alt="vector">Blogs
+                            </span>
+                            <h2 class="section__header-title wow fadeInUp" data-wow-duration="0.8s">Our Blogs</h2>
+                            <section class="blog section">
+                                <div class="container ">
+                                    <div class="row g-4">
+                                        @if (isset($blog))
+                                            @foreach ($blog as $item)
+                                                <div class="col-12 col-md-4 col-xl-6">
+                                                    <div class="card card--secondary wow fadeInUp"
+                                                        data-wow-duration="0.8s">
+                                                        <a href="{{  url('blog/detail/' . $item->id) }}"
+                                                            class="card--secondary__thumb zoom_effect">
+                                                            <img src="{{ asset('/images/' . $item->image) }}"
+                                                                alt="image">
+                                                        </a>
+                                                        <div class="card--secondary__content">
+                                                            <p class="card--secondary__time mb-4"><span class="gap-6"><i
+                                                                        class="bi bi-person-circle"></i>By Quick
+                                                                    Rashi</span><i class="bi bi-dot"></i>
+                                                                <span class="gap-6"><i
+                                                                        class="bi bi-calendar3"></i>{{ date('Y-m-d h:i:s', strtotime($item->created_at)) }}
+                                                                </span>
+                                                            </p>
+                                                            <h4><a
+                                                                    href="{{ url('blog/detail/' . $item->id) }}">{{ $item->title }}</a>
+                                                            </h4>
+                                                            <p class="mt-4">{{ $item->description }}</p>
+                                                            <a href="{{ url('blog/detail/' . $item->id) }}"
+                                                                class="mt_32 read_more">Read More <i
+                                                                    class="bi bi-arrow-right"></i></a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        @endforeach
-                                    @endif
+                                            @endforeach
+                                        @endif
 
-                                    <div class="btn">
-                                        <a href="{{ route('user_blog_detail') }}">View More</a>
+                                        <div class="btn">
+                                            <a href="{{ route('user_blog_detail') }}">View More</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </section>
+                            </section>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
-    </section>
-    <!-- Client Testimonials end -->
+            </div>
+        </section>
+        <!-- Client Testimonials end -->
     @endif
 
     <!-- Client Testimonials start -->
