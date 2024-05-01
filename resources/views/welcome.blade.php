@@ -312,7 +312,7 @@
                                                             <h4><a
                                                                     href="{{ url('blog/detail/' . $item->id) }}">{{ $item->title }}</a>
                                                             </h4>
-                                                            <p class="mt-4">{{ $item->description }}</p>
+                                                            <p class="mt-4">{!! Str::substr($item->description, 0, 150) !!}</p>
                                                             <a href="{{ url('blog/detail/' . $item->id) }}"
                                                                 class="mt_32 read_more">Read More <i
                                                                     class="bi bi-arrow-right"></i></a>

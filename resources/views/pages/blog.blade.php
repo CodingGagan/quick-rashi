@@ -34,7 +34,7 @@
                     @foreach ($blog as $item)
                         <div class="col-12 col-md-4 col-xl-6">
                             <div class="card card--secondary wow fadeInUp" data-wow-duration="0.8s">
-                                <a href="blog-details.html" class="card--secondary__thumb zoom_effect">
+                                <a href="{{ url('blog/detail/'.$item->id) }}" class="card--secondary__thumb zoom_effect">
                                     <img src="{{ asset('/images/'.$item->image) }}" alt="image">
                                 </a>
                                 <div class="card--secondary__content">
@@ -42,7 +42,7 @@
                                                 class="bi bi-person-circle"></i>By Quick Rashi</span><i class="bi bi-dot"></i>
                                         <span class="gap-6"><i class="bi bi-calendar3"></i>{{ date('Y-m-d h:i:s', strtotime($item->created_at)) }} </span></p>
                                     <h4><a href="{{ url('blog/detail/'.$item->id) }}">{{ $item->title }}</a></h4>
-                                    <p class="mt-4">{{ $item->description }}</p>
+                                    <p class="mt-4">{!! Str::substr($item->description, 0, 150) !!}</p>
                                     <a href="{{ url('blog/detail/'.$item->id) }}" class="mt_32 read_more">Read More <i
                                             class="bi bi-arrow-right"></i></a>
                                 </div>
