@@ -1,6 +1,11 @@
 @extends('layout.default')
 
 @section('content')
+<style>
+    .bank_logo img {
+        object-fit: contain
+    }
+</style>
     @php
         $testimonials = [
             [
@@ -417,7 +422,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row bank_logo">
                 <div class="col-12">
                     <div class="testimonials-secondary_slider wow fadeInDown" data-wow-duration="0.8s">
                         
