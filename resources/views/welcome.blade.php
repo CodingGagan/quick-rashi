@@ -294,10 +294,10 @@
                                         @if (isset($blog))
                                             @foreach ($blog as $item)
                                                 <div class="col-12 col-md-4 col-xl-6">
-                                                    <div class="card card--secondary wow fadeInUp"
+                                                    <div class="card card--secondary wow fadeInUp blog_card"
                                                         data-wow-duration="0.8s">
                                                         <a href="{{  url('blog/detail/' . $item->id) }}"
-                                                            class="card--secondary__thumb zoom_effect">
+                                                            class="card--secondary__thumb zoom_effect blog_card_img">
                                                             <img src="{{ asset('/images/' . $item->image) }}"
                                                                 alt="image">
                                                         </a>
@@ -404,6 +404,124 @@
         </div>
     </section>
     <!-- Client Testimonials end -->
+
+     <!-- bank logo testimonial start -->
+     <section class="testimonials testimonials--secondary section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-6 col-xxl-5">
+                    <div class="section__header">
+                        <span class="section__header-sub-title headingFour wow fadeInDown" data-wow-duration="0.8s"><img
+                                src="assets/images/title_vector.png" alt="vector">Our Bank Partners</span>
+                   
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="testimonials-secondary_slider wow fadeInDown" data-wow-duration="0.8s">
+                        
+                        <div class="card card--secondary wow fadeInUp blog_card"
+                                data-wow-duration="0.8s">
+                                <a href="#"
+                                    class="card--secondary__thumb zoom_effect blog_card_img">
+                                        <img src="assets/images/icici.jpg"
+                                            alt="image">
+                                </a>
+                                <div class="card--secondary__content">
+                                    <h4><a href="#">Icici Bank</a> </h4>  
+                                </div>
+                        </div>
+
+                        <div class="card card--secondary wow fadeInUp blog_card"
+                                data-wow-duration="0.8s">
+                                <a href="#"
+                                    class="card--secondary__thumb zoom_effect blog_card_img">
+                                        <img src="assets/images/yesbank.png"
+                                            alt="image">
+                                </a>
+                                <div class="card--secondary__content">
+                                    <h4><a href="#">Yes Bank</a> </h4>  
+                                </div>
+                        </div>
+
+                        <div class="card card--secondary wow fadeInUp blog_card"
+                                data-wow-duration="0.8s">
+                                <a href="#"
+                                    class="card--secondary__thumb zoom_effect blog_card_img">
+                                        <img src="assets/images/hdfc.png"
+                                            alt="image">
+                                </a>
+                                <div class="card--secondary__content">
+                                    <h4><a href="#">Hdfc Credila</a> </h4>  
+                                </div>
+                        </div>
+
+                        <div class="card card--secondary wow fadeInUp blog_card"
+                                data-wow-duration="0.8s">
+                                <a href="#"
+                                    class="card--secondary__thumb zoom_effect blog_card_img">
+                                        <img src="assets/images/avanse.png"
+                                            alt="image">
+                                </a>
+                                <div class="card--secondary__content">
+                                    <h4><a href="#">Avanse</a> </h4>  
+                                </div>
+                        </div>
+
+                        <div class="card card--secondary wow fadeInUp blog_card"
+                                data-wow-duration="0.8s">
+                                <a href="#"
+                                    class="card--secondary__thumb zoom_effect blog_card_img">
+                                        <img src="assets/images/incred.jpg"
+                                            alt="image">
+                                </a>
+                                <div class="card--secondary__content">
+                                    <h4><a href="#">Incred</a> </h4>  
+                                </div>
+                        </div>
+
+                        <div class="card card--secondary wow fadeInUp blog_card"
+                                data-wow-duration="0.8s">
+                                <a href="#"
+                                    class="card--secondary__thumb zoom_effect blog_card_img">
+                                        <img src="assets/images/auxilo.png"
+                                            alt="image">
+                                </a>
+                                <div class="card--secondary__content">
+                                    <h4><a href="#">Auxilo</a> </h4>  
+                                </div>
+                        </div>
+
+                        <div class="card card--secondary wow fadeInUp blog_card"
+                                data-wow-duration="0.8s">
+                                <a href="#"
+                                    class="card--secondary__thumb zoom_effect blog_card_img">
+                                        <img src="assets/images/prodigy.png"
+                                            alt="image">
+                                </a>
+                                <div class="card--secondary__content">
+                                    <h4><a href="#">Prodigy</a> </h4>  
+                                </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="slider-navigation wow fadeInRight" data-wow-duration="1.2s">
+                        <button class="prev-testimonials pagination-button">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+
+                        <button class="next-testimonials pagination-button">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- bank logo testimonial end -->
 
     <section class="feature pt-5">
         <div class="animation">
@@ -646,9 +764,6 @@
     </section>
     <!-- how it works  end -->
 
-
-
-
     <!-- faq start -->
     <section class="section faq-section" id="faqa">
         <div class="container">
@@ -763,8 +878,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- Modal -->
     <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog"

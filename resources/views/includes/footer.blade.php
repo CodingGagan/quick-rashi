@@ -98,8 +98,8 @@
            <div class="col-12">
                <div class="footer__copyright">
                    <p class="copyright text-center">Copyright © <span id="copyYear"></span> <a href="#"
-                           class="secondary_color">Quick Rashi</a>. Designed By <a href="#"
-                           class="secondary_color">Straw Hat</a></p>
+                           class="secondary_color">Quick Rashi</a>. 
+                           Designed By <a href="#" class="secondary_color">Straw Hat</a></p>
                    <ul class="footer__copyright-conditions">
                        {{-- <li><a href="contact.html">Help & Support</a></li>
                        <li><a href="#">Privacy policy</a></li>
