@@ -284,7 +284,7 @@
 
     @if (isset($blog) && !$blog->isEmpty())
         <!-- Client Testimonials start -->
-        <section class="testimonials testimonials--secondary section">
+        <section class="testimonials testimonials--secondary pt-5">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -293,7 +293,7 @@
                                 data-wow-duration="0.8s"><img src="assets/images/title_vector.png" alt="vector">Blogs
                             </span>
                             <h2 class="section__header-title wow fadeInUp" data-wow-duration="0.8s">Our Blogs</h2>
-                            <section class="blog section">
+                            <section class="blog">
                                 <div class="container ">
                                     <div class="row g-4">
                                         @if (isset($blog))
@@ -343,7 +343,7 @@
     @endif
 
     <!-- Client Testimonials start -->
-    <section class="testimonials testimonials--secondary section">
+    <section class="testimonials testimonials--secondary">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-6 col-xxl-5">
