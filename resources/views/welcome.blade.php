@@ -1,11 +1,11 @@
 @extends('layout.default')
 
 @section('content')
-<style>
-    .bank_logo img {
-        object-fit: contain
-    }
-</style>
+    <style>
+        .bank_logo img {
+            object-fit: contain
+        }
+    </style>
     @php
         $testimonials = [
             [
@@ -58,8 +58,8 @@
     @endphp
     <!--  Preloader  -->
     <!-- <div class="preloader">
-                                                            <span class="loader"></span>
-                                                        </div> -->
+                                                                <span class="loader"></span>
+                                                            </div> -->
 
     <!-- Hero Section Start -->
     <section class="hero hero--secondary">
@@ -95,34 +95,34 @@
 
     <!-- sponsor start -->
     <!-- <div class="section sponsor-slider wow fadeInDown" data-wow-duration="0.8s">
-                                                            <div class="container">
-                                                                <div class="row">
-                                                                    <div class="sponsor__company" id="sponsor__company">
-                                                                        <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                            <img src="assets/images/sponsor_logo.png" alt="Image">
-                                                                        </div>
-                                                                        <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                            <img src="assets/images/sponsor_logo2.png" alt="Image">
-                                                                        </div>
-                                                                        <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                            <img src="assets/images/sponsor_logo3.png" alt="Image">
-                                                                        </div>
-                                                                        <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                            <img src="assets/images/sponsor_logo4.png" alt="Image">
-                                                                        </div>
-                                                                        <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                            <img src="assets/images/sponsor_logo2.png" alt="Image">
-                                                                        </div>
-                                                                        <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                            <img src="assets/images/sponsor_logo4.png" alt="Image">
-                                                                        </div>
-                                                                        <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
-                                                                            <img src="assets/images/sponsor_logo3.png" alt="Image">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div class="sponsor__company" id="sponsor__company">
+                                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                                <img src="assets/images/sponsor_logo.png" alt="Image">
+                                                                            </div>
+                                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                                <img src="assets/images/sponsor_logo2.png" alt="Image">
+                                                                            </div>
+                                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                                <img src="assets/images/sponsor_logo3.png" alt="Image">
+                                                                            </div>
+                                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                                <img src="assets/images/sponsor_logo4.png" alt="Image">
+                                                                            </div>
+                                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                                <img src="assets/images/sponsor_logo2.png" alt="Image">
+                                                                            </div>
+                                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                                <img src="assets/images/sponsor_logo4.png" alt="Image">
+                                                                            </div>
+                                                                            <div class="sponsor__logo wow fadeInUp" data-wow-duration="0.8s">
+                                                                                <img src="assets/images/sponsor_logo3.png" alt="Image">
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </div> -->
+                                                            </div> -->
     <!-- sponsor end -->
 
     <!-- why-choose start -->
@@ -301,7 +301,7 @@
                                                 <div class="col-12 col-md-4 col-xl-6">
                                                     <div class="card card--secondary wow fadeInUp blog_card"
                                                         data-wow-duration="0.8s">
-                                                        <a href="{{  url('blog/detail/' . $item->id) }}"
+                                                        <a href="{{ url('blog/detail/' . $item->id) }}"
                                                             class="card--secondary__thumb zoom_effect blog_card_img">
                                                             <img src="{{ asset('/images/' . $item->image) }}"
                                                                 alt="image">
@@ -410,104 +410,115 @@
     </section>
     <!-- Client Testimonials end -->
 
-     <!-- bank logo testimonial start -->
-     <section class="testimonials testimonials--secondary section">
+    <!-- bank logo testimonial start -->
+    <section class="testimonials testimonials--secondary section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-6 col-xxl-5">
                     <div class="section__header">
                         <span class="section__header-sub-title headingFour wow fadeInDown" data-wow-duration="0.8s"><img
                                 src="assets/images/title_vector.png" alt="vector">Our Bank Partners</span>
-                   
+
                     </div>
                 </div>
             </div>
             <div class="row bank_logo">
                 <div class="col-12">
                     <div class="testimonials-secondary_slider wow fadeInDown" data-wow-duration="0.8s">
-                        
-                        <div class="card card--secondary wow fadeInUp blog_card"
-                                data-wow-duration="0.8s">
-                                <a href="#"
-                                    class="card--secondary__thumb zoom_effect blog_card_img">
-                                        <img src="assets/images/icici.jpg"
-                                            alt="image">
-                                </a>
-                                <div class="card--secondary__content">
-                                    <h4><a href="#">Icici Bank</a> </h4>  
-                                </div>
+
+                        <div class="card card--secondary wow fadeInUp blog_card" data-wow-duration="0.8s">
+                            <a href="#" class="card--secondary__thumb zoom_effect blog_card_img">
+                                <img src="assets/images/icici.jpg" alt="image">
+                            </a>
+                            <div class="card--secondary__content">
+                                <h4><a href="#">Icici Bank</a> </h4>
+                                <p>
+                                    ICICI Bank, one of India's largest private sector banks, offers a range of loan products
+                                    in
+                                    collaboration with Quickrashi. The interest rates on ICICI Bank's loans vary depending
+                                    on the type of loan and the borrower's credit profile. ICICI Bank offers competitive
+                                    interest rates starting from (10.5% to 12% to the general public and to senior
+                                    citizens).
+                                </p>
+                            </div>
                         </div>
 
-                        <div class="card card--secondary wow fadeInUp blog_card"
-                                data-wow-duration="0.8s">
-                                <a href="#"
-                                    class="card--secondary__thumb zoom_effect blog_card_img">
-                                        <img src="assets/images/yesbank.png"
-                                            alt="image">
-                                </a>
-                                <div class="card--secondary__content">
-                                    <h4><a href="#">Yes Bank</a> </h4>  
-                                </div>
+                        <div class="card card--secondary wow fadeInUp blog_card" data-wow-duration="0.8s">
+                            <a href="#" class="card--secondary__thumb zoom_effect blog_card_img">
+                                <img src="assets/images/yesbank.png" alt="image">
+                            </a>
+                            <div class="card--secondary__content">
+                                <h4><a href="#">Yes Bank</a> </h4>
+                                <p>Yes Bank, known for its innovative financial solutions, partners with Quickrashi to
+                                    provide customized loan products to meet customers' diverse needs. Yes Bank offers
+                                    competitive interest rates on its loan offerings, with rates starting from 10%to 13%.</p>
+                            </div>
                         </div>
 
-                        <div class="card card--secondary wow fadeInUp blog_card"
-                                data-wow-duration="0.8s">
-                                <a href="#"
-                                    class="card--secondary__thumb zoom_effect blog_card_img">
-                                        <img src="assets/images/hdfc.png"
-                                            alt="image">
-                                </a>
-                                <div class="card--secondary__content">
-                                    <h4><a href="#">Hdfc Credila</a> </h4>  
-                                </div>
+                        <div class="card card--secondary wow fadeInUp blog_card" data-wow-duration="0.8s">
+                            <a href="#" class="card--secondary__thumb zoom_effect blog_card_img">
+                                <img src="assets/images/hdfc.png" alt="image">
+                            </a>
+                            <div class="card--secondary__content">
+                                <h4><a href="#">Hdfc Credila</a> </h4>
+                                <p>HDFC Credila, a subsidiary of HDFC Ltd., specializes in education loans and
+                                    collaborates with Quickrashi to offer tailored financing solutions for students pursuing
+                                    higher education. HDFC Credila provides education loans at competitive interest rates,
+                                    starting from (10% to 13% p.a).</p>
+                            </div>
                         </div>
 
-                        <div class="card card--secondary wow fadeInUp blog_card"
-                                data-wow-duration="0.8s">
-                                <a href="#"
-                                    class="card--secondary__thumb zoom_effect blog_card_img">
-                                        <img src="assets/images/avanse.png"
-                                            alt="image">
-                                </a>
-                                <div class="card--secondary__content">
-                                    <h4><a href="#">Avanse</a> </h4>  
-                                </div>
+                        <div class="card card--secondary wow fadeInUp blog_card" data-wow-duration="0.8s">
+                            <a href="#" class="card--secondary__thumb zoom_effect blog_card_img">
+                                <img src="assets/images/avanse.png" alt="image">
+                            </a>
+                            <div class="card--secondary__content">
+                                <h4><a href="#">Avanse</a> </h4>
+                                <p>Avanse Financial Services, a non-banking financial company (NBFC), partners with
+                                    Quickrashi to offer education loans to students aspiring to study in India and abroad.
+                                    Avanse provides education loans with competitive interest rates, starting from ( 10.76%
+                                    and 14%).
+                                    </p>
+
+                            </div>
                         </div>
 
-                        <div class="card card--secondary wow fadeInUp blog_card"
-                                data-wow-duration="0.8s">
-                                <a href="#"
-                                    class="card--secondary__thumb zoom_effect blog_card_img">
-                                        <img src="assets/images/incred.jpg"
-                                            alt="image">
-                                </a>
-                                <div class="card--secondary__content">
-                                    <h4><a href="#">Incred</a> </h4>  
-                                </div>
+                        <div class="card card--secondary wow fadeInUp blog_card" data-wow-duration="0.8s">
+                            <a href="#" class="card--secondary__thumb zoom_effect blog_card_img">
+                                <img src="assets/images/incred.jpg" alt="image">
+                            </a>
+                            <div class="card--secondary__content">
+                                <h4><a href="#">Incred</a> </h4>
+                                <p>Incred, another leading NBFC, collaborates with Quickrashi to offer a range of loan
+                                    products, including personal loans, business loans, and education loans. Incred
+                                    provides loans at competitive interest rates, with rates starting from (10.76%to 14%p.a).</p>
+                            </div>
                         </div>
 
-                        <div class="card card--secondary wow fadeInUp blog_card"
-                                data-wow-duration="0.8s">
-                                <a href="#"
-                                    class="card--secondary__thumb zoom_effect blog_card_img">
-                                        <img src="assets/images/auxilo.png"
-                                            alt="image">
-                                </a>
-                                <div class="card--secondary__content">
-                                    <h4><a href="#">Auxilo</a> </h4>  
-                                </div>
+                        <div class="card card--secondary wow fadeInUp blog_card" data-wow-duration="0.8s">
+                            <a href="#" class="card--secondary__thumb zoom_effect blog_card_img">
+                                <img src="assets/images/auxilo.png" alt="image">
+                            </a>
+                            <div class="card--secondary__content">
+                                <h4><a href="#">Auxilo</a> </h4>
+                                <p>Auxilo Finserve, an NBFC focused on education financing, partners with Quickrashi to
+                                    offer education loans to students pursuing higher education. Auxilo provides education
+                                    loans at competitive interest rates, starting from ( Auxilo Base Rate + Spread. Our
+                                    current Base Lending Rate is 10.76% and 14%).
+                                    </p>
+                            </div>
                         </div>
 
-                        <div class="card card--secondary wow fadeInUp blog_card"
-                                data-wow-duration="0.8s">
-                                <a href="#"
-                                    class="card--secondary__thumb zoom_effect blog_card_img">
-                                        <img src="assets/images/prodigy.png"
-                                            alt="image">
-                                </a>
-                                <div class="card--secondary__content">
-                                    <h4><a href="#">Prodigy</a> </h4>  
-                                </div>
+                        <div class="card card--secondary wow fadeInUp blog_card" data-wow-duration="0.8s">
+                            <a href="#" class="card--secondary__thumb zoom_effect blog_card_img">
+                                <img src="assets/images/prodigy.png" alt="image">
+                            </a>
+                            <div class="card--secondary__content" style="min-height: 250px">
+                                <h4><a href="#">Prodigy</a> </h4>
+                                <p>Prodigy Finance, a global fintech firm, partners with Quickrashi to offer education loans
+                                    to international students studying in top universities worldwide. Prodigy Finance
+                                    provides education loans with competitive interest rates, starting from (10%.15%).</p>
+                            </div>
                         </div>
 
                     </div>
